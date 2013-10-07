@@ -4,15 +4,6 @@
 }
 
 #view-american{
-    .subhead{
-        box-sizing: border-box;
-        width: 100vw;
-        padding-right: 1em;
-        font-size: 2.2rem;
-	    color: #f4edaa;
-        text-align: right;
-        line-height: 1.5em;
-    }
 
     h3{
         margin-top: 5rem;
@@ -23,6 +14,18 @@
         margin-left: 2rem;
     	z-index: 1;
 	}
+
+    .subhead{
+        position: relative;
+        box-sizing: border-box;
+        width: 100vw;
+        padding-right: 1em;
+        font-size: 2.2rem;
+	    color: #f4edaa;
+        text-align: right;
+        line-height: 1.5em;
+    	z-index: 1;
+    }
 
     .american-list{
         position: relative;

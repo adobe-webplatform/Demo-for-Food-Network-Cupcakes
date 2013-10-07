@@ -209,10 +209,23 @@
 //MIX-IN
 
 #view-frosting_mix-ins{
-    background-image: url(../assets/images/section-3/icing/palette.png), url(../assets/images/textures/Mix-ins_bg.jpg);
-    background-size: 100%, auto;
+    position: relative;
+    background-image: url(../assets/images/textures/Mix-ins_bg.jpg);
+    background-size: auto;
     background-position: right top;
-    background-repeat: no-repeat, repeat;
+    background-repeat: repeat;
+}
+
+#view-frostin-mix-in-palette{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    background-image: url(../assets/images/section-3/icing/palette.png);
+    background-size: 100%;
+    background-position: right top;
+    background-repeat: no-repeat;
 }
 
 .frosting-mix-item{
