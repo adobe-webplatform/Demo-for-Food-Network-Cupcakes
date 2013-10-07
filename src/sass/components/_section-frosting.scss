@@ -221,7 +221,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    max-width: 1000px;
+    max-width: 800px;
     background-image: url(../assets/images/section-3/icing/palette.png);
     background-size: 100%;
     background-position: right top;
@@ -236,9 +236,8 @@
     text-align: right;
     font-family: sofia;
     text-decoration: none;
-    width: 16vw;
-    height: 16vw;
-    // @include transition(color .2s);
+    width: 16%;
+    padding-top: 16%;
     
     &:hover{
         color: darken(#d84a1a, 20%);
@@ -248,14 +247,14 @@
         display: block;
         position: absolute;
         padding: .1em; /* fixes font drawing issue */
-        width: 16vw;
+        width: 100px;
         left: -100%;
     }
 }
 
 #frosting-mix-item-honey{
-    right: 1vw;
-    top: 15vw;
+    right: 1%;
+    margin-top: 15%;
 
     span{
         width: auto;
@@ -265,41 +264,52 @@
 }
 
 #frosting-mix-item-blueberry{
-    right: 20vw;
-    top: 5vw;
+    right: 20%;
+    margin-top: 5%;
 
+    span{
+        left: -50%;
+        bottom: 60%;
+    }
+}
+
+#frosting-mix-item-stout{
+    right: 42%;
+    margin-top: 7%;
+    span{
+        left: -50%;
+        bottom: 70%;
+    }
+}
+
+#frosting-mix-item-almond{
+    right: 56%;
+    margin-top: 20%;
     span{
         bottom: 70%;
     }
 }
 
-#frosting-mix-item-stout{
-    right: 42vw;
-    top: 7vw;
-}
-
-#frosting-mix-item-almond{
-    right: 56vw;
-    top: 20vw;
-}
-
 #frosting-mix-item-cherry{
-    right: 55vw;
-    top: 40vw;
+    right: 55%;
+    margin-top: 40%;
+    span{
+        bottom: 70%;
+    }
 }
 
 #frosting-mix-item-peanut{
-    right: 35vw;
-    top: 50vw;
+    right: 35%;
+    margin-top: 50%;
 
     span{
-        bottom: 0;
+        bottom: -30%;
     }
 }
 
 #frosting-mix-item-jam{
-    right: 14vw;
-    top: 47vw;
+    right: 14%;
+    margin-top: 47%;
 
     span{
         width: auto;
@@ -311,12 +321,11 @@
 #frosting-mix-in-slides{
     position: absolute;
     box-sizing: border-box;
-    right: 18vw;
-    top: 23vw;
-    height: 25vw;
-    width: 35vw;
+    right: 18%;
+    margin-top: 23%;
+    padding-bottom: 25%;
+    width: 35%;
     background: rgba(255, 255, 255, 0.5);
-    // border-radius: 30vw / 20vw;
     -webkit-clip-path: ellipse(50%, 50%, 50%, 50%);
     @include transition(-webkit-clip-path 1s);
 
@@ -331,13 +340,14 @@
     position: absolute;
     text-align: center;
     padding: 1.5em 1em;
-    height: 25vw;
-    width: 35vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 
     h3{
-        margin: 4rem 0;
-        font-size: 5vw;
+        margin: 1em 0;
+        // font-size: 5vw;
+        font-size: 2em;
         color: rgb(216, 74, 26);
     }
 
@@ -349,14 +359,14 @@
 
     small{
         display: block;
-        font-size: 1rem;
+        font-size: 1em;
         margin: 1em 0;
     }
 
     p{
         width: 100%;
         height: 100%;
-        font-size: 1.5vw;
+        font-size: 0.6em;
         -webkit-shape-inside: ellipse(50%, 30%, 50%, 50%);
     }
 }
