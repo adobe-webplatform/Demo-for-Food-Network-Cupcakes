@@ -888,74 +888,76 @@ body.menu-in #main-container {
 /* line 234, ../sass/components/_section-frosting.scss */
 .frosting-mix-item span {
   display: block;
-  width: 16vw;
   position: absolute;
+  padding: .1em;
+  /* fixes font drawing issue */
+  width: 16vw;
   left: -100%;
 }
 
-/* line 242, ../sass/components/_section-frosting.scss */
+/* line 243, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-honey {
   right: 1vw;
   top: 15vw;
 }
-/* line 246, ../sass/components/_section-frosting.scss */
+/* line 247, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-honey span {
   width: auto;
   left: 0px;
   bottom: 100%;
 }
 
-/* line 253, ../sass/components/_section-frosting.scss */
+/* line 254, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-blueberry {
   right: 20vw;
   top: 5vw;
 }
-/* line 257, ../sass/components/_section-frosting.scss */
+/* line 258, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-blueberry span {
   bottom: 70%;
 }
 
-/* line 262, ../sass/components/_section-frosting.scss */
+/* line 263, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-stout {
   right: 42vw;
   top: 7vw;
 }
 
-/* line 267, ../sass/components/_section-frosting.scss */
+/* line 268, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-almond {
   right: 56vw;
   top: 20vw;
 }
 
-/* line 272, ../sass/components/_section-frosting.scss */
+/* line 273, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-cherry {
   right: 55vw;
   top: 40vw;
 }
 
-/* line 277, ../sass/components/_section-frosting.scss */
+/* line 278, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-peanut {
   right: 35vw;
   top: 50vw;
 }
-/* line 281, ../sass/components/_section-frosting.scss */
+/* line 282, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-peanut span {
   bottom: 0;
 }
 
-/* line 286, ../sass/components/_section-frosting.scss */
+/* line 287, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-jam {
   right: 14vw;
   top: 47vw;
 }
-/* line 290, ../sass/components/_section-frosting.scss */
+/* line 291, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-jam span {
   width: auto;
   bottom: -20%;
   left: 0;
 }
 
-/* line 297, ../sass/components/_section-frosting.scss */
+/* line 298, ../sass/components/_section-frosting.scss */
 #frosting-mix-in-slides {
   position: absolute;
   box-sizing: border-box;
@@ -970,12 +972,12 @@ body.menu-in #main-container {
   -o-transition: -webkit-clip-path 1s;
   transition: -webkit-clip-path 1s;
 }
-/* line 309, ../sass/components/_section-frosting.scss */
+/* line 310, ../sass/components/_section-frosting.scss */
 #frosting-mix-in-slides.hide {
   -webkit-clip-path: ellipse(50%, 50%, 0, 0%);
 }
 
-/* line 314, ../sass/components/_section-frosting.scss */
+/* line 315, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide {
   display: none;
   box-sizing: border-box;
@@ -986,25 +988,25 @@ body.menu-in #main-container {
   width: 35vw;
   overflow: hidden;
 }
-/* line 324, ../sass/components/_section-frosting.scss */
+/* line 325, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide h3 {
   margin: 4rem 0;
   font-size: 5vw;
   color: #d84a1a;
 }
-/* line 330, ../sass/components/_section-frosting.scss */
+/* line 331, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide h4 {
   font-weight: bold;
   text-transform: uppercase;
   color: #d84a1a;
 }
-/* line 336, ../sass/components/_section-frosting.scss */
+/* line 337, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide small {
   display: block;
   font-size: 1rem;
   margin: 1em 0;
 }
-/* line 342, ../sass/components/_section-frosting.scss */
+/* line 343, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide p {
   width: 100%;
   height: 100%;

@@ -233,8 +233,9 @@
 
     span{
         display: block;
-        width: 16vw;
         position: absolute;
+        padding: .1em; /* fixes font drawing issue */
+        width: 16vw;
         left: -100%;
     }
 }
