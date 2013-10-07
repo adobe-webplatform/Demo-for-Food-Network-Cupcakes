@@ -534,9 +534,11 @@ body.menu-in #main-container {
 }
 /* line 21, ../sass/components/_section-american.scss */
 #view-american h3, #view-american h2 {
+  position: relative;
   margin-left: 2rem;
+  z-index: 1;
 }
-/* line 25, ../sass/components/_section-american.scss */
+/* line 27, ../sass/components/_section-american.scss */
 #view-american .american-list {
   position: relative;
   box-sizing: border-box;
@@ -551,7 +553,7 @@ body.menu-in #main-container {
   z-index: 2;
 }
 
-/* line 40, ../sass/components/_section-american.scss */
+/* line 42, ../sass/components/_section-american.scss */
 .american-item {
   display: inline-block;
   padding: .5em 1em;
@@ -567,14 +569,14 @@ body.menu-in #main-container {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 52, ../sass/components/_section-american.scss */
+/* line 54, ../sass/components/_section-american.scss */
 .american-item:before {
   content: '•';
   margin-top: .7rem;
   margin-right: .5rem;
 }
 
-/* line 59, ../sass/components/_section-american.scss */
+/* line 61, ../sass/components/_section-american.scss */
 #section-2-img-bottom {
   position: absolute;
   left: -5em;
@@ -583,7 +585,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 68, ../sass/components/_section-american.scss */
+/* line 70, ../sass/components/_section-american.scss */
 #view-american_brownie img {
   position: absolute;
   right: 0px;
@@ -593,7 +595,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 79, ../sass/components/_section-american.scss */
+/* line 81, ../sass/components/_section-american.scss */
 #view-american_chocolate-chip img, #view-american_tiramisu img {
   position: absolute;
   right: 0px;
@@ -603,7 +605,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 90, ../sass/components/_section-american.scss */
+/* line 92, ../sass/components/_section-american.scss */
 #view-american_red-velvet img, #view-american_brownie img, #view-american_key-lime img, #view-american_cheesecake img, #view-american_boston-cream img, #view-american_smores img, #view-american_peach-cobbler img {
   position: absolute;
   right: 0px;

@@ -19,8 +19,10 @@
     }
 
     h3, h2{
+		position: relative;
         margin-left: 2rem;
-    }
+    	z-index: 1;
+	}
 
     .american-list{
         position: relative;
