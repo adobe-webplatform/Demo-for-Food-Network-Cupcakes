@@ -108,8 +108,12 @@ h3{
 	width: 100vw;
 	height: 100vh;
 	z-index: 1;
-	-webkit-mask-image: -webkit-canvas(mask);
-	-webkit-mask-size: 100% 100%;
+    -webkit-mask-image: none;
+
+    &.mask{
+    	-webkit-mask-image: -webkit-canvas(mask);
+	    -webkit-mask-size: 100% 100%;
+    }
 }
 
 #notification{

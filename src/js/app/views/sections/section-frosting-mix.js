@@ -28,6 +28,10 @@ define([], function (require) {
             e.preventDefault();
 
             this.next = $(e.target).data('int');
+            if (!this.next) {
+                this.next = $(e.target).parent().data('int');
+            }
+
             this.slideHolder.addClass('hide');
         },
 

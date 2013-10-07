@@ -1,12 +1,10 @@
 #cover-canvas{
 	position: absolute;
-    top: 50%;
-	left: 50%;
-    // margin-top: -50%;
-    // margin-left: -25%;
-    margin-top: -70%;
-    margin-left: -35%;
-    width: 70vw;
+    top: -10em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 #view-cover{

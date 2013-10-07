@@ -34,6 +34,8 @@ define([], function (require) {
                 return;
             }
 
+            this.$viewcontainer = $('#view-container');
+
 			this.canvas = {width: window.innerWidth, height: window.innerHeight};
             this.setSize();
 			this.ctx = document.getCSSCanvasContext('2d', 'mask', this.canvas.width, this.canvas.height);
@@ -63,13 +65,18 @@ define([], function (require) {
 			var page = Vars.get('pages').findWhere({id: num});
 			this.nextTransition = page.get('mask');
 			
+            this.$viewcontainer.addClass('mask'); //add mask
 			this.transitions[this.currentTransition].animOut(this.handle_ANIM_OUT.bind(this));
 		},
 		
 		handle_ANIM_OUT: function () {
 			this.currentTransition = this.nextTransition;
-			this.transitions[this.currentTransition].animIn(null);
+			this.transitions[this.currentTransition].animIn(this.handle_ANIM_OUT_COMPLETE.bind(this));
 		},
+
+        handle_ANIM_OUT_COMPLETE: function () {
+            this.$viewcontainer.removeClass('mask'); //remove mask
+        },
 		
 		render: function () {
 			

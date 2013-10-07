@@ -339,18 +339,18 @@ body.menu-in #main-container {
 /* line 1, ../sass/components/_sections.scss */
 #cover-canvas {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -70%;
-  margin-left: -35%;
-  width: 70vw;
+  top: -10em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-/* line 13, ../sass/components/_sections.scss */
+/* line 11, ../sass/components/_sections.scss */
 #view-cover h1 {
   z-index: 1;
 }
-/* line 17, ../sass/components/_sections.scss */
+/* line 15, ../sass/components/_sections.scss */
 #view-cover img {
   z-index: 1;
 }
@@ -544,7 +544,6 @@ body.menu-in #main-container {
   box-sizing: border-box;
   margin-top: 2rem;
   margin-right: 2rem;
-  padding-left: 40vw;
   padding-right: 1em;
   text-align: right;
   font-size: 1.3rem;
@@ -2073,11 +2072,15 @@ h3 {
   width: 100vw;
   height: 100vh;
   z-index: 1;
+  -webkit-mask-image: none;
+}
+/* line 113, ../sass/_main.scss */
+#view-container.mask {
   -webkit-mask-image: -webkit-canvas(mask);
   -webkit-mask-size: 100% 100%;
 }
 
-/* line 115, ../sass/_main.scss */
+/* line 119, ../sass/_main.scss */
 #notification {
   display: none;
   position: absolute;
@@ -2090,7 +2093,7 @@ h3 {
   background: white;
   z-index: 20000;
 }
-/* line 127, ../sass/_main.scss */
+/* line 131, ../sass/_main.scss */
 #notification div {
   position: absolute;
   top: 0;
@@ -2103,7 +2106,7 @@ h3 {
   overflow: auto;
 }
 
-/* line 140, ../sass/_main.scss */
+/* line 144, ../sass/_main.scss */
 #preloader {
   display: none;
   position: absolute;
@@ -2120,11 +2123,11 @@ h3 {
   -o-transition: opacity 0.2s linear 0.2s;
   transition: opacity 0.2s linear 0.2s;
 }
-/* line 152, ../sass/_main.scss */
+/* line 156, ../sass/_main.scss */
 #preloader.out {
   opacity: 0;
 }
-/* line 156, ../sass/_main.scss */
+/* line 160, ../sass/_main.scss */
 #preloader .spinner {
   position: absolute;
   margin: auto;
@@ -2136,44 +2139,44 @@ h3 {
   height: 150px;
 }
 
-/* line 169, ../sass/_main.scss */
+/* line 173, ../sass/_main.scss */
 #spinner-cup {
   fill: #380d0d;
 }
 
 @-webkit-keyframes super-rainbow {
-  /* line 174, ../sass/_main.scss */
+  /* line 178, ../sass/_main.scss */
   0% {
     fill: #ffff00;
   }
 
-  /* line 175, ../sass/_main.scss */
+  /* line 179, ../sass/_main.scss */
   20% {
     fill: #ffcd00;
   }
 
-  /* line 176, ../sass/_main.scss */
+  /* line 180, ../sass/_main.scss */
   40% {
     fill: #c3d74b;
   }
 
-  /* line 177, ../sass/_main.scss */
+  /* line 181, ../sass/_main.scss */
   60% {
     fill: #c3d7d7;
   }
 
-  /* line 178, ../sass/_main.scss */
+  /* line 182, ../sass/_main.scss */
   80% {
     fill: #ffc39b;
   }
 
-  /* line 179, ../sass/_main.scss */
+  /* line 183, ../sass/_main.scss */
   100% {
     fill: #ffff00;
   }
 }
 
-/* line 182, ../sass/_main.scss */
+/* line 186, ../sass/_main.scss */
 #spinner-frosting-top {
   -webkit-animation: super-rainbow 1s infinite linear;
 }
