@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--
+Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CUPCAKES</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable = no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="apple-touch-icon" href="assets/images/icon/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icon/apple-touch-icon-57x57-precomposed.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icon/apple-touch-icon-72x72-precomposed.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icon/apple-touch-icon-114x114-precomposed.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icon/apple-touch-icon-144x144-precomposed.png" />
+
+        <!-- <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> -->
+
+        <style>
+
+html{
+    overflow: hidden;
+}
+
+#notification{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+    background: white;
+    z-index: 20000;
+}
+
+#notification div{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    overflow: auto;
+}
+
+#preloader{
+    display: none;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 10000;
+    @include transition(opacity .2s linear .2s);
+}
+
+#preloader.out{
+    opacity: 0;
+}
+
+        </style>
+        <script src="js/vendor/modernizr-2.6.2.js"></script>
+    </head>
+    <body>
+	
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="main-container">
+            <canvas id="background" width="1000px" height="800px"></canvas>
+            
+            <div id="view-container">
+                <section id="view-cover" class="view flex" data-title="cover" data-transition="0" data-mask="0" data-color="#ee3640">
+                    <canvas id="cover-canvas" width="500px" height="800px"></canvas>
+                    <img src="assets/images/logo-food-network.svg">
+                    <h1 class="cliptext">CUPCAKES!</h1>
+                    <nav id="navigation"></nav>
+                </section>
+                
+                <section id="view-go-to" class="view" data-title="go-to cupcakes" data-transition="4" data-mask="1" data-color="#1bb1b2">
+                    <img id="section-1-img-right" src="assets/images/section-1/white_cupcake.png" alt="">
+                    <img id="section-1-img-left" src="assets/images/section-1/black_cupcake.png" alt="">
+                    
+                    <h2 class="cliptext">
+                        GO-TO<br/> 
+                        CUPCAKES
+                    </h2>
+                    <p class="subhead balance-text">
+                        SUPER BASIC AND COMPLETELY FOOLPROOF CHOCOLATE AND VANILLA CUPCAKES AND FROSTINGS TO RELY ON
+                    </p>
+                    <ul>
+                        <li id="go-to-v-bc" class="go-to-item" data-url="v-buttercream">Vanilla Buttercream Frosting</li>
+                        <li id="go-to-c-bc" class="go-to-item" data-url="c-buttercream">Chocolate Buttercream Frosting</li>
+                        <li id="go-to-c" class="go-to-item" data-url="chocolate">Go-To Chocolate Cupcakes</li>
+                        <li id="go-to-v" class="go-to-item" data-url="vanilla">Go-To Vanilla Cupcakes</li>
+                        <li id="go-to-v-m" class="go-to-item" data-url="vanilla-mix">Vanilla Mix-Ins</li>
+                        <li id="go-to-c-m" class="go-to-item" data-url="chocolate-mix">Chocolate Mix-Ins</li>
+                        <li id="go-to-m" class="go-to-item" data-url="marbling">Marbling Techniques</li>
+                    </ul>
+
+                </section>	
+                
+                <section id="view-american" class="view" data-title="great american cup-cakeover" data-transition="5" data-mask="1" data-color="#be001f">
+                    <img id="section-2-img-bottom" src="assets/images/section-2/american_cupcake_cover.png" alt="">
+                    <h3 class="cliptext">
+                        THE GREAT AMERICAN
+                    </h3>
+                    <h2 class="cliptext">
+                        CUP-CAKEOVER
+                    </h2>
+                    <p class="subhead balance-text">
+                        FAVORITE CLASSIC DESSERTS REIMAGINED THROUGH CUPCAKE-COLORED GLASSES
+                    </p>
+                    <div class="american-list">
+                        <a href="#" class="american-item" data-url="brownie">Brownie Cupcakes a la Mode</a>
+                        <a href="#" class="american-item" data-url="key-lime">Key Lime Pie Cupcakes</a>
+                        <a href="#" class="american-item" data-url="boston-cream">Boston Cream Pie Cupcakes</a>
+                        <a href="#" class="american-item" data-url="cheesecake">Cheesecake Cupcakes</a>
+                        <a href="#" class="american-item" data-url="smores">S'mores Cupcakes</a>
+                        <a href="#" class="american-item" data-url="red-velvet">Red Velvet Cone Cupcakes</a>
+                        <a href="#" class="american-item" data-url="chocolate-chip">Chocolate Chip Cookie Cupcakes</a>
+                        <a href="#" class="american-item" data-url="peach-cobbler">Peach Cobbler Cupcakes</a>
+                        <a href="#" class="american-item" data-url="tiramisu">Tiramisu "Cup"cakes</a>
+                    </div>
+                </section>
+                
+                <section id="view-frosting" class="view flex" data-title="frosting guide" data-transition="6" data-mask="1" data-color="#ff8a00">
+                    <h3 class="cliptext">FROSTING GUIDE</h3>
+                    <div class="frosting-title-icing">
+                        <h2 class="cliptext">ICING</h2>
+                        <span class="frosting-title-rotated">on the</span>
+                    </div>
+                    <h2 class="cliptext">(CUP)CAKE</h1>
+                    <h3 class="balance-text">NO CUPCAKE'S COMPLETE WITHOUT A TASTY FROSTING TOPPER – CHOOSE ONE HERE</h3>
+                    
+                    <a href="#" class="frosting-item frosting-item--cream" data-url="recipe/cream-cheese">Cream Cheese</a>
+                    <a href="#" class="frosting-item frosting-item--swiss" data-url="recipe/swiss-butter-cream">Swiss Buttercream</a>
+                    <a href="#" class="frosting-item frosting-item--mix" data-url="mix-ins">Mix-Ins</a>
+                    <a href="#" class="frosting-item frosting-item--alton" data-url="alton">Alton's Recipes</a>
+                    <a href="#" class="frosting-item frosting-item--seven" data-url="recipe/seven-minute">Seven Minute</a>
+
+                    <img id="view-frosting-img-alton" src="assets/images/section-3/alton.png">
+                    <img id="view-frosting-img-mix-ins" src="assets/images/section-3/mix-ins.png">
+                    <img id="view-frosting-img-whipped" src="assets/images/section-3/whipped.png">
+                    <img id="view-frosting-img-spoon" src="assets/images/section-3/spoon.png">
+                    <img id="view-frosting-img-knife" src="assets/images/section-3/knife.png">
+                </section>
+
+                <!---GO TO views-->
+                <section id="view-go-to_chocolate" class="view marble_bg" data-url="view-go-to/chocolate" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">GO-TO CHOCOLATE CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Ultimate: Moist and deeply chocolatey, these cupcakes are divine with virtually any frosting, but they are are also delicious with a dusting of confectioners’ sugar.
+                        </p>
+                        <a class="recipe-btn" href="#" data-recipe="chocolate-cupcake">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GotoChocolateCupcake.png">
+                </section>
+                
+                <section id="view-go-to_vanilla" class="view marble_bg" data-url="view-go-to/vanilla" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">GO-TO VANILLA CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Golden memories: Smelling sweetly of butter, sugar and vanilla, these classic little cakes bring you right back to when you were a kid and Mom baked you birthday cupcakes.
+                        </p>
+                        <a class="recipe-btn" href="#" data-recipe="vanilla-cupcake">Recipe</a>
+                    </div>
+                    <!--
+                    <a class="video-btn" href="#" data-video="vanilla-cupcake">
+                        <span>quick how-to</span>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="67.903px" height="66.452px" viewBox="0 0 67.903 66.452" enable-background="new 0 0 67.903 66.452" xml:space="preserve">
+                            <path class="video-color" d="M34.138,1.933c-17.234,0-31.205,13.971-31.205,31.205s13.971,31.205,31.205,31.205s31.205-13.971,31.205-31.205S51.373,1.933,34.138,1.933z"/>
+                            <path class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" d="M34.138,1.933c-17.234,0-31.205,13.971-31.205,31.205s13.971,31.205,31.205,31.205s31.205-13.971,31.205-31.205S51.373,1.933,34.138,1.933z"/>
+                            <circle class="video-white" fill="#FFFFFF" cx="34.138" cy="33.138" r="20.903"/>
+                            <circle class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" cx="34.138" cy="33.138" r="20.903"/>
+                            <path class="video-color" d="M28.901,21.71l-1.511,0.96c0,0,1.595,7.865,1.595,11.556s-1.529,9.996-1.529,9.996l1.423,0.915l16.182-10.478l-0.003-2.432	L28.901,21.71z"/>
+                            <path class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" d="M28.901,21.71l-1.511,0.96c0,0,1.595,7.865,1.595,11.556s-1.529,9.996-1.529,9.996l1.423,0.915l16.182-10.478l-0.003-2.432L28.901,21.71z"/>
+                            <circle class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" cx="34.138" cy="-36.862" r="20.903"/>
+                        </svg>
+                    </a>
+                    -->
+                    <img src="assets/images/section-1/cupcakes/GotoVanillaCupcake.png">
+                </section>
+
+                <section id="view-go-to_v-buttercream" class="view marble_bg" data-url="view-go-to/v-buttercream" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">VANILLA AMERICAN BUTTERCREAM FROSTING</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Frosting of champions: It doesn’t get any easier, more delicious or more classic than this sweet buttercream scented with vanilla.
+                        </p>
+                        <a class="recipe-btn" href="#" data-recipe="v-buttercream">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GoToMiniCupcakesVanilla.png">
+                </section>
+                
+                <section id="view-go-to_c-buttercream" class="view marble_bg" data-url="view-go-to/c-buttercream" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">CHOCOLATE AMERICAN BUTTERCREAM FROSTING</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Chocolate love: The quickest version of buttercream, this glossy topping looks cute swirled into place with an offset spatula or piped on with a piping bag and star tip.
+                        </p>
+                        <a class="recipe-btn" href="#" data-recipe="c-buttercream">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GoToMiniCupcakesChocolate.png">
+                </section>
+
+                <section id="view-go-to_chocolate-mix" class="view marble_bg" data-url="view-go-to/chocolate-mix" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_toggle">
+                        <h5 class="balance-text">GO-TO CHOCOLATE CUPCAKE MIXINS</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+
+                        <div id="chocoloate-mixin-toggle" class="toggle-gallery-view">
+                            <ul class="list-toggle">
+                                <li class="list-toggle-button">MOCHA</li>
+                                <li class="list-toggle-button lavanderia">rum raisin</li>
+                                <li class="list-toggle-button quicksand">orange</li>
+                            </ul>
+                            <div class="container-toggle">
+
+                                <div class="container-toggle-section">
+                                    <figure>
+                                        <img src="assets/images/section-1/mixins/GoToMix-insChocolateCupcakeMocha.jpg">
+                                        <figcaption class="mix-mocha mix-figcaption">Stir 2 tablespoons instant espresso powder into the batter and bake.</figcaption>
+                                    </figure>
+                                    <aside>
+                                        <h6>TOPPING SUGGESTION</h6>
+                                        <a href="#page/view-go-to/c-buttercream">Chocolate Swiss Buttercream</a> and chocolate-covered espresso beans
+                                    </aside>
+                                </div>
+
+                                <div class="container-toggle-section">
+                                    <figure>
+                                        <img src="assets/images/section-1/mixins/GoToMix-insChocolateCupcakeRumRaisin.jpg">
+                                        <figcaption class="mix-rum-raisin mix-figcaption">Soak &frac34; cup raisins in &frac12; cup rum until softened; drain and reserve 2 tablespoons for garnish. Finely chop and fold the remaining raisins into the batter and bake.</figcaption>
+                                    </figure>
+                                    <aside>
+                                        <h6>TOPPING SUGGESTION</h6>
+                                        <a href="#page/view-go-to/v-buttercream">Vanilla American Buttercream</a> and more rum-soaked raisins
+                                    </aside>
+                                </div>
+
+                                <div class="container-toggle-section">
+                                    <figure>
+                                        <img src="assets/images/section-1/mixins/GoToMix-insChocolateCupcakeOrange.jpg">
+                                        <figcaption class="mix-orange mix-figcaption">Stir 1 tablespoon finely chopped candied orange peel and 2 teaspoons orange zest into the batter and bake</figcaption>
+                                    </figure>
+                                    <aside>
+                                        <h6>TOPPING SUGGESTION</h6>
+                                        <a href="#recipe/swiss-butter-cream">Swiss Buttercream</a> or <a href="#recipe/cream-cheese">Cream Cheese Frosting</a> with more diced candied orange peel
+                                    </aside>
+                                </div>
+
+                            </div>
+                        </div> <!-- / toggle-gallery-view -->
+
+                    </div>
+                </section>
+                
+                <section id="view-go-to_vanilla-mix" class="view marble_bg" data-url="view-go-to/vanilla-mix" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_toggle">
+                        <h5 class="balance-text">GO-TO VANILLA CUPCAKE MIXINS</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+
+                        <div id="vanilla-mixin-toggle" class="toggle-gallery-view">
+                            
+                            <ul class="list-toggle">
+                                <li class="list-toggle-button mini-chocolate-chips">
+                                    <div>MINI</div> 
+                                    <div>CHOCOLATE</div>
+                                    <div>CHIPS</div>
+                                </li>
+                                <li class="list-toggle-button lavanderia">lemon poppy</li>
+                                <li class="list-toggle-button quicksand">sprinkles</li>
+                            </ul>
+
+                            <div class="container-toggle">
+
+                                <div class="container-toggle-section">
+                                    <figure>
+                                        <img src="assets/images/section-1/mixins/GoToMix-insVanillaCupcakeChocolateChips.jpg">
+                                        <figcaption class="mix-chips mix-figcaption">Stir ½ cup mini chocolate chips into your batter and bake.</figcaption>
+                                    </figure>
+                                    <aside>
+                                        <h6>TOPPING SUGGESTION</h6>
+                                        <a href="#page/view-go-to/c-buttercream">Chocolate American Buttercream</a> garnished with more mini chocolate chips
+                                    </aside>
+                                </div>
+
+                                <div class="container-toggle-section">
+                                    <figure>
+                                        <img src="assets/images/section-1/mixins/GoToMix-insVanillaCupcakeLemonPoppy.jpg">
+                                        <figcaption class="mix-poppy mix-figcaption">Stir 2 teaspoons poppy seeds and 1 teaspoon lemon zest into batter and bake.</figcaption>
+                                    </figure>
+                                    <aside>
+                                        <h6>TOPPING SUGGESTION</h6>
+                                        <a href="#recipe/seven-minute">Seven-Minute Frosting</a>
+                                    </aside>
+                                </div>
+
+                                <div class="container-toggle-section">
+                                    <figure>
+                                        <img src="assets/images/section-1/mixins/GoToMix-insVanillaCupcakeSprinkles.jpg">
+                                        <figcaption class="mix-sprinkles mix-figcaption">Stir ¼ cup colorful sprinkles into your batter and bake.</figcaption>
+                                    </figure>
+                                    <aside>
+                                        <h6>TOPPING SUGGESTION</h6>
+                                        <a href="#page/view-go-to/v-buttercream">Vanilla American Buttercream</a> garnished with more sprinkles
+                                    </aside>
+                                </div>
+
+                            </div>
+                        </div> <!-- / toggle-gallery-view -->
+
+                    </div>
+                </section>
+                
+                <section id="view-go-to_marbling" class="view marble_bg" data-url="view-go-to/marbling" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">GO-TO MARBLE CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>Can’t decide? Make chocolate and vanilla — these are fun to look at, fun to make and, best of all, fun to eat.</p>
+                        <a class="recipe-btn" href="#" data-recipe="marbling">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GoToMarbledCupcake3Ways.png">
+                </section>
+
+                <!-- american views -->
+                <section id="view-american_brownie" class="view paper_bg" data-url="view-american/brownie" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">BROWNIE CUPCAKES Á LA MODE</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>Deep and dark: Fudgy and brownie-like, these cupcakes would be excellent candidates for a gathering with a toppings bar. </p>
+                        <a class="recipe-btn" href="#" data-recipe="brownie">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/BrownieCupcakeALaMode.png">
+                </section>
+
+                <section id="view-american_key-lime" class="view paper_bg" data-url="view-american/key-lime" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">KEY LIME PIE CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>Full of zest: Enticing from your first glance, these cupcakes are even better once you bite into their delightfully creamy center. They perfectly capture a Key lime pie’s signature combination of sweet-sour citrus and cool lusciousness. </p>
+                        <a class="recipe-btn" href="#" data-recipe="key-lime">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/KeylimeCupcake.png">
+                </section>
+
+                <section id="view-american_boston-cream" class="view paper_bg" data-url="view-american/boston-cream" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">BOSTON CREAM PIE CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Sandra Lee</div>
+                        <p>Eat one if by land: Sandra Lee included everything you love about Boston cream pie, but made it instantly more irresistible with its hand-held proportions. </p>
+                        <a class="recipe-btn" href="#" data-recipe="boston-cream">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/BostonCreamCupcake.png">
+                </section>
+                
+                <section id="view-american_cheesecake" class="view paper_bg" data-url="view-american/cheesecake" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">CHEESECAKE CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>Small wonders: These cupcakes have all the richness of cheesecake, but in a sweet little package, complete with a creamy frosting and graham cracker crust.</p>
+                        <a class="recipe-btn" href="#" data-recipe="cheesecake">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/CheeseCakeCupcake.png">
+                </section>
+
+                <section id="view-american_smores" class="view paper_bg" data-url="view-american/smores" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">S'MORES CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>S’more, please: Tuck into this campfire treat in cupcake form. Essentially a seven-minute frosting, its topping toasts up beautifully under the broiler for the most authentic fireside flavor.</p>
+                        <a class="recipe-btn" href="#" data-recipe="smores">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/SmoreBrownieCupcake.png">
+                </section>
+
+                <section id="view-american_red-velvet" class="view paper_bg" data-url="view-american/red-velvet" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">RED VELVET CONE CAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>We all scream: The Neelys bake these cupcakes right inside the wafer cones, making them extra-fun to eat out of hand. To enhance the theme, use an ice cream scoop to top each cupcake with a scoop of frosting. Or mix some mini chocolate chips into the frosting to evoke chocolate chip ice cream.</p>
+                        <a class="recipe-btn" href="#" data-recipe="red-velvet">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/RedVelvetConeCake.png">
+                </section>
+
+                <section id="view-american_chocolate-chip" class="view paper_bg" data-url="view-american/chocolate-chip" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">CHOCOLATE CHIP COOKIE CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>Dunk and crunch: Pour the milk and revel in this celebration of our national cookie — with an actual cookie surprise buried within.</p>
+                        <a class="recipe-btn" href="#" data-recipe="chocolate-chip">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/MiniChocolateChipCupcakes.png">
+                </section>
+
+                <section id="view-american_peach-cobbler" class="view paper_bg" data-url="view-american/peach-cobbler" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">PEACH COBBLER CUPCAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>Just peachy: With a crunchy crumble topping and juicy peaches, these cupcakes give you a little taste of Georgia kindness — no matter where you are. </p>
+                        <a class="recipe-btn" href="#" data-recipe="peach-cobbler">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/PeachCobblerCupcake.png">
+                </section>
+
+                <section id="view-american_tiramisu" class="view paper_bg" data-url="view-american/tiramisu" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5 class="balance-text">TIRAMISU "CUP"CAKES</h5>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>Grande fun: With fresh cake (in place of ladyfingers) soaked in coffee and coffee liqueur, and a mascarpone-frosting froth, these adorable cups turn traditional tiramisu on its head.</p>
+                        <a class="recipe-btn" href="#" data-recipe="tiramisu">Recipe</a>
+                    </div>
+                    <img src="assets/images/section-2/cupcakes/TiramisuCupcake.png">
+                </section>
+
+                <!-- frosting views -->
+                <section id="view-frosting_alton" class="view" data-url="view-frosting/alton" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <h3 class="cliptext">ALTON'S FROSTINGS:</h5>
+                    <h2 class="cliptext">TWICE AS NICE</h3>
+                    <div class="alton-paragraph">
+                        <img src="assets/images/section-3/alton/Alton.jpg">
+                        <p>
+                            Try your hand at variety. Whether you prefer a glossy glaze-like chocolate ganache or a traditional royal icing, you’ll find the deliciousness in the details: Follow Alton’s simple step-by-step tips for results that can’t be topped.
+                        </p>
+                    </div>
+                    <img id="alton-cupcakes" src="assets/images/section-3/alton/AltonBrownCupcakes.png">
+                    <a href="#" id="alton-item-ganache" class="alton-item" data-url="recipe/ganache-frosting">ganache frosting</a>
+                    <a href="#" id="alton-item-royal" class="alton-item" data-url="recipe/royal-icing">royal icing</a>
+                    <a href="#" id="alton-item-chiffon" class="alton-item" data-url="recipe/chocolate-chiffon">chocolate chiffon cupcakes</a>
+                </section>
+                
+                <section id="view-frosting_mix-ins" class="view" data-url="view-frosting/mix-ins" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div id="frosting-mix-in-slides">
+                        <div id="f-mix-slide-1" class="frosting-mix-slide">
+                            <h3 class="balance-text">FROSTING MIX-INS</h5>
+                        </div>
+                        <div id="f-mix-slide-2" class="frosting-mix-slide">
+                            <h4>Jam</h4> 
+                            <small>Makes 2½ cups</small>
+                            <p>
+                            Swirl 3 tablespoons of your favorite 
+                            jam or preserves into 2 cups of 
+                            Vanilla American Buttercream 
+                            or Swiss Buttercream.
+                            (We love apricot and raspberry!) 
+                            </p>
+                        </div>
+                        <div id="f-mix-slide-3" class="frosting-mix-slide">
+                            <h4>peanut & PRETZELS</h4>
+                            <small>Makes 2 cups</small>
+                            <p>
+                            Stir ¹/³ cup chopped honey-roasted 
+                            peanuts into 2 cups of Seven-Minute Frosting. Pipe onto cupcakes and 
+                            garnish with pretzel sticks and 
+                            more peanuts.
+                            </p>
+                        </div>
+                        <div id="f-mix-slide-4" class="frosting-mix-slide">
+                            <h4>cherry</h4>
+                            <small>Makes 2¾ cups</small>
+                            <p>
+                            Simmer ½ cup cherry jam, ¼ cup 
+                            finely chopped maraschinos, 2 tablespoons each maraschino liquid and water until 
+                            thickened, 8 minutes. Add ¼ teaspoon 
+                            almond extract. Cool. Make Vanilla 
+                            American Buttercream without milk. 
+                            Beat in cherry mixture. 
+                            </p>
+                        </div>
+                        <div id="f-mix-slide-5" class="frosting-mix-slide">
+                            <h4>toasted almond</h4>
+                            <small>Makes 2¾ cups</small>
+                            <p>
+                            Melt 2 tablespoons butter in a skillet with 
+                            ½ cup sliced almonds, 2 tablespoons sugar 
+                            and ¼ teaspoon salt. Cook, stirring, until 
+                            golden. Cool. Save some for garnish. 
+                            Coarsely chop the rest and beat into 
+                            Vanilla American Buttercream.
+                            </p>
+                        </div>
+                        <div id="f-mix-slide-6" class="frosting-mix-slide">
+                            <h4>stout syrup</h4>
+                            <small>Makes 2 cups</small>
+                            <p>
+                            Simmer 15 ounces stout with ¹/³ cup sugar 
+                            in saucepan until syrupy, 15 minutes. Whisk 
+                            in 1 tablespoon butter away from heat. Cool. Beat 2 tablespoons syrup into 2 cups 
+                            Chocolate Swiss Buttercream. 
+                            Frost cupcakes and drizzle with 
+                            more syrup.
+                            </p>
+                        </div>
+                        <div id="f-mix-slide-7" class="frosting-mix-slide">
+                            <h4>blueberry</h4>
+                            <small>Makes 2½ - 3 cups</small>
+                            <p>
+                            Heat 2 cups blueberries with ½ cup sugar in saucepan on medium heat, mashing to release juices. When sugar dissolves, reduce heat and simmer until syrupy, 25 minutes. Whisk in 
+                            1 tablespoon lemon juice. Cool. Beat into 
+                            2 cups Swiss Buttercream.
+                            </p>
+                        </div>
+                        <div id="f-mix-slide-8" class="frosting-mix-slide">
+                            <h4>honey</h4>
+                            <small>Makes 2 cups</small>
+                            <p>
+                            Beat 2 tablespoons of spun or whipped 
+                            raw honey into 2 cups Swiss Buttercream 
+                            (we love this on our frangipane cupcake). 
+                            Garnish with a piece of candied honeycomb 
+                            if desired (our chocolate-almond bees also make a great garnish). 
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#" id="frosting-mix-item-honey" class="frosting-mix-item" data-int="8"><span>Honey</span></a>
+                    <a href="#" id="frosting-mix-item-blueberry" class="frosting-mix-item" data-int="7"><span>Blue Berry</span></a>
+                    <a href="#" id="frosting-mix-item-stout" class="frosting-mix-item" data-int="6"><span>Stout Syrup</span></a>
+                    <a href="#" id="frosting-mix-item-almond" class="frosting-mix-item" data-int="5"><span>Toasted Almond</span></a>
+                    <a href="#" id="frosting-mix-item-cherry" class="frosting-mix-item" data-int="4"><span>Cherry</span></a>
+                    <a href="#" id="frosting-mix-item-peanut" class="frosting-mix-item" data-int="3"><span>Peanut & Pretzels</span></a>
+                    <a href="#" id="frosting-mix-item-jam" class="frosting-mix-item" data-int="2"><span>Jam</span></a>
+                </section>
+
+            </div><!-- / view-container -->
+
+            <div id="recipe">
+                <div id="recipe-content">
+
+                </div>
+
+                <div id="timer">
+                    <div id="timer-btn"></div>
+                    <div id="timer-ui">
+                        <div id="timer-pause-btn"></div>
+                        <div id="timer-time"></div>
+                    </div>
+                </div>
+            </div><!-- / recipe -->
+
+            <div id="speech-ui">
+                <div id="speech-btn"><span id="speech-label">OFF</span></div>
+                <div id="speech-bubble">...</div> 
+            </div>
+
+            <div id="close-btn">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="59.868px" height="60.667px" viewBox="0 0 59.868 60.667" enable-background="new 0 0 59.868 60.667" xml:space="preserve">
+                    <path class="close-stroke" fill="#010101" d="M30.107,60.215C13.506,60.215,0,46.709,0,30.107S13.506,0,30.107,0s30.108,13.506,30.108,30.107S46.709,60.215,30.107,60.215z M30.107,2.208c-15.384,0-27.899,12.516-27.899,27.899c0,15.384,12.516,27.9,27.899,27.9c15.384,0,27.9-12.516,27.9-27.9C58.007,14.723,45.492,2.208,30.107,2.208z"/>
+                    <path class="close-fill" fill="#010101" d="M30.107,4.56C15.998,4.56,4.56,15.998,4.56,30.108c0,14.109,11.438,25.547,25.547,25.547c14.109,0,25.547-11.438,25.547-25.547C55.655,15.998,44.217,4.56,30.107,4.56z M40.256,36.845l-3.292,3.292l-6.737-6.737l-6.737,6.737l-3.292-3.292l6.737-6.737l-6.737-6.737l3.292-3.292l6.737,6.737l6.737-6.737l3.292,3.292l-6.737,6.737L40.256,36.845z"/>
+                </svg>
+            </div>
+
+        </div><!-- / main-container -->
+
+        <nav id="menu"></nav>
+
+        <div id="notification">
+            <div>
+                <p>This example demonstrates cutting-edge features that the <a href="http://html.adobe.com/webplatform/">Adobe Web Platform Team</a> is working on. To see these features in action, <a href="http://html.adobe.com/webplatform/enable/">enable CSS Regions and CSS Shapes</a> in browsers that support them: <a href="http://html.adobe.com/webplatform/layout/regions/browser-support/">CSS Regions Support Matrix</a>, <a href="http://html.adobe.com/webplatform/layout/shapes/browser-support/">CSS Shapes Support Matrix</a>.</p> 
+            </div>
+        </div>
+        
+        <div id="preloader">
+            <div class="spinner">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="154px" height="154px" viewBox="0 0 154 154" enable-background="new 0 0 154 154" xml:space="preserve">
+<path id="spinner-cup" fill="#EE3740" d="M143.459,72.861l0.961-1.647l-3.706-1.373l-0.137-0.824l-3.706-1.098v-1.235c0,0-2.501-0.798-7.208-1.874
+	c-0.452,1.039-0.902,1.93-1.291,2.602c3.959,3.927,4.976,7.05,4.976,7.05l-0.915,1.83c0,0-1.647-0.366-2.379,0.549
+	c-0.732,0.915-0.549,2.013-0.549,2.013s-4.209-1.647-5.857-0.915c-1.647,0.732-0.732,2.379-0.732,2.379s-3.66-1.647-5.308,0
+	c-1.647,1.647-0.915,3.294-0.915,3.294s-3.843-2.562-7.138-2.379c-3.294,0.183-1.83,3.294-1.83,3.294s-2.745-2.196-6.772-2.013
+	c-4.026,0.183-4.576,3.66-4.576,3.66s-1.464-3.477-5.674-2.928c-4.209,0.549-4.026,3.843-4.026,3.843s-2.562-3.294-6.955-3.111
+	c-4.392,0.183-5.857,3.66-5.857,3.66s-0.549-3.66-4.758-3.66c-4.21,0-6.772,3.843-6.772,3.843s0.183-4.392-4.026-4.759
+	c-4.209-0.366-7.504,3.294-7.504,3.294s1.83-3.843-2.196-4.026c-4.026-0.183-7.687,2.379-7.687,2.379s2.379-2.928-1.281-3.477
+	c-3.66-0.549-7.504,2.379-7.504,2.379s1.464-3.111-0.366-3.294c-1.83-0.183-8.053,1.098-8.053,1.098s3.111-2.379,0-3.111
+	c-3.111-0.732-6.406,0.366-6.406,0.366s2.379-1.281,0.549-2.013c-1.83-0.732-2.379-2.013-2.379-2.013s1.937-5.231,9.353-10.692
+	c-0.602-0.43-1.18-0.884-1.726-1.365C12.231,64.47,8.802,66.41,8.802,66.41l0.137,0.686l-3.294,1.235l0.824,1.51l-2.059,0.961
+	l0.412,0.961l-2.196,1.098c0,0,13.726,43.925,16.472,58.475s21.413,17.707,54.082,17.707s53.396-0.824,57.377-21.825
+	c3.981-21.002,14.001-53.533,14.001-53.533L143.459,72.861z"/>
+<path id="spinner-frosting-top" fill="#EE3740" d="M51.72,75.012c0,0-2.562-6.955-10.615-7.321c-8.053-0.366-20.864-6.223-20.132-16.472
+	s29.649-23.793,29.649-23.793s1.464-5.125,7.321-10.249s11.713-5.491,11.713-5.491s2.928-4.392,7.687-5.491
+	C82.101,5.098,83.2,6.562,83.2,6.562S83.932,4,87.226,4c3.294,0,3.294,0,3.294,0s-4.026,2.928-2.928,5.125s0.549,4.438,1.098,7.733
+	s3.157,5.353,3.157,5.353s2.059,0.686,2.745,2.608c0.686,1.922,0.686,3.569,0.686,3.569s25.074,3.249,31.983,16.197
+	c4.577,8.578,0,19.354-1.922,22.237c-1.922,2.883-6.04,5.216-6.04,5.216s-7.138-2.471-11.118-2.196
+	c-3.981,0.275-5.216,1.647-5.216,1.647s0.275,2.334-2.059,3.432c-2.334,1.098-5.079,3.981-5.079,3.981s-5.216-2.059-14.276-4.53
+	C75.69,72.772,60.551,72.45,51.72,75.012z"/>
+</svg>
+            </div>
+        </div>
+
+        <script>
+if (!regionsSupported() || !Modernizr.canvas) {
+    var _notification = document.getElementById('notification');
+    _notification.style.display = "block";
+} else {
+    var _preloader = document.getElementById('preloader'),
+        _head = document.getElementsByTagName('head')[0];
+    _preloader.style.display = "block";
+    _head.innerHTML += '<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />';
+}
+
+/**
+* check regions support
+*/
+function regionsSupported() {
+    var flowFromProperty = "webkitFlowFrom",
+        flowIntoProperty = "webkitFlowInto",
+        container,
+        content,
+        region,
+        delta,
+        flowName,
+        flowedRect,
+        plainRect;
+
+    if (!flowFromProperty || !flowIntoProperty) {
+        return false;
+    }
+
+    container = document.createElement('div');
+    content = document.createElement('div');
+    region = document.createElement('div');
+
+    flowName = 'modernizr_flow_for_regions_check';
+
+    content.innerText = 'M';
+    container.style.cssText = 'top: 150px; left: 150px; padding: 0px;';
+    region.style.cssText = 'width: 50px; height: 50px; padding: 42px;';
+
+    region.style[flowFromProperty] = flowName;
+    container.appendChild(content);
+    container.appendChild(region);
+    document.body.appendChild(container);
+
+    plainRect = content.getBoundingClientRect();
+
+    content.style[flowIntoProperty] = flowName;
+    flowedRect = content.getBoundingClientRect();
+
+    delta = parseInt(flowedRect.left - plainRect.left, 10);
+    document.body.removeChild(container);
+    content = region = container = undefined;
+
+    return (delta == 42);
+}
+
+        </script>
+        <script data-main="js/main" src="js/vendor/requirejs/require.js"></script>
+		<script src="//use.edgefonts.net/sofia;quicksand;merienda-one;arvo.js"></script> 
+		
+    </body>
+</html>

@@ -1,0 +1,69 @@
+#speech-ui{
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    font-family: arvo;
+    font-size: 1rem;
+    z-index: 5;
+}
+
+#speech-btn{
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    width: 95px;
+    height: 90px;
+    padding-top: 70px;
+    text-align: center;
+    background-image: url(../assets/images/icons/mic.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #bd6e6e;
+    color: darken(#bd6e6e, 60%);
+    cursor: pointer;
+    border-radius: 0 1em 1em 0;
+    -webkit-mask: url(../assets/images/textures/red_texture.png);
+    @include transform(translateX(-100px));
+    @include transition(-webkit-transform 1s, background-color .2s);
+
+    &.in{
+        display: block;
+        @include transform(translateX(0px));
+    }
+
+    &.active{
+        background-color: #6ebd70;
+        color: lighten(#6ebd70, 40%);
+        // color: green;
+    }
+}
+
+#speech-label{
+    font-size: .7rem;
+}
+
+#speech-bubble{
+    position: absolute;
+    top: 10px;
+    left: 8rem;
+    padding: .5rem 1rem;
+    font-family: lavanderia;
+    font-size: 3rem;
+    background-color: orange;
+    border-radius: .5em;
+    opacity: 0;
+    -webkit-mask: url(../assets/images/textures/red_texture.png);
+    @include transition(opacity .2s linear, background-color .2s);
+
+    &.in{
+        opacity: 1;
+    }
+
+    &.good{
+        background-color: green;
+    }
+
+    &.bad{
+        background-color: red;
+    }
+}

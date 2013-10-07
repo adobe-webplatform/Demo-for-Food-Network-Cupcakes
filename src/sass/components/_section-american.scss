@@ -1,0 +1,99 @@
+
+.paper_bg{
+    background-color: #e9e8e6;
+}
+
+#view-american{
+    .subhead{
+        box-sizing: border-box;
+        width: 100vw;
+        padding-right: 1em;
+        font-size: 2.2rem;
+	    color: #f4edaa;
+        text-align: right;
+        line-height: 1.5em;
+    }
+
+    h3{
+        margin-top: 5rem;
+    }
+
+    h3, h2{
+        margin-left: 2rem;
+    }
+
+    .american-list{
+        position: relative;
+        box-sizing: border-box;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        padding-left: 40vw;
+        padding-right: 1em;
+        text-align: right;
+        font-size: 1.3rem;
+        font-weight: bold;
+        width: 100vw;
+        z-index: 2;
+    }
+}
+
+.american-item{
+    display: inline-block;
+    padding: .5em 1em;
+    margin: .3em .1em;
+    color: white;
+    font-family: arvo;
+    font-weight: normal;
+    letter-spacing: .2em;
+    text-decoration: none;
+    border-radius: .2em;
+    @include transition(color .2s);
+
+    &:before{
+        content: '•';
+        margin-top: .7rem;
+        margin-right: .5rem;
+    }
+}
+
+#section-2-img-bottom{
+    position: absolute;
+    left: -5em;
+    bottom: -10em;
+    width: 35em;
+    z-index: 0;
+}
+
+#view-american_brownie{
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 70vw;
+        max-width: 700px;
+        z-index: 0;
+    }
+}
+
+#view-american_chocolate-chip, #view-american_tiramisu{
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 50vw;
+        max-width: 600px;
+        z-index: 0;
+    }
+}
+
+#view-american_red-velvet, #view-american_brownie, #view-american_key-lime, #view-american_cheesecake, #view-american_boston-cream, #view-american_smores, #view-american_peach-cobbler{
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 50vw;
+        max-width: 500px;
+        z-index: 0;
+    }
+}
+

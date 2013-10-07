@@ -1,0 +1,17 @@
+.recipe-btn{
+    float: right;
+    display: block;
+    padding: .7rem 1.5rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    font-family: sofia;
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(0, 78, 113);
+    border: 2px solid;
+    border-bottom: 4px solid;
+    background: url('../assets/images/textures/recipe_btn_bg.jpg'), #fefefe;
+    background-blend-mode: multiply;
+    border-radius: 3px;
+    @include transition(color .2s, background-color 1s);
+}

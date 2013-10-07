@@ -1,0 +1,63 @@
+.video-btn{
+    position: absolute;
+    font-family: lavanderia;
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(0, 78, 113);
+    @include transition(color .2s);
+    -webkit-mask: url(../assets/images/textures/video_btn_bg.png);
+    
+    span{
+        display: block;
+        box-sizing: border-box;
+        height: 65px;
+        width: 220px;
+        padding: 1rem 0 1rem 4.5rem;
+        background: white;
+        -webkit-mask: url(../assets/images/vector/video_btn_mask.svg);
+        @include transition(background-color .5s ease-in-out);
+    }
+
+    svg{
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        @include transition(-webkit-transform .5s ease-in-out);
+    }
+
+    .video-color{
+        fill: rgb(0, 78, 113);
+        @include transition(fill 2s);
+    }
+
+    .video-white{
+        fill: white;
+        @include transition(fill 2s);
+    }
+
+    .video-stroke{
+        stroke: white;
+        @include transition(stroke 2s);
+    }
+
+    &:hover{
+        color: white;
+
+        span{
+            background-color: rgb(0, 78, 113);
+        }
+
+        .video-color{
+            fill: white;
+        }
+
+        .video-white{
+            fill: rgb(0, 78, 113);
+        }
+
+        .video-stroke{
+            stroke: rgb(0, 78, 113);
+        }
+    }
+}
+

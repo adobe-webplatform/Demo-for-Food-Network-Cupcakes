@@ -1,0 +1,140 @@
+$teal: rgb(33, 176, 178);
+
+.list-toggle{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    background: $teal;
+    padding: .3em .5em;
+    border-radius: .3em;
+    -webkit-mask: url(../assets/images/textures/red_texture.png);
+
+    li{
+        padding: .5em .3em;
+        border-bottom: 5px double white;
+        text-align: center;
+        cursor: pointer;
+        @include transition(color .2s);
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .lavanderia{
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    .mini-chocolate-chips{
+        div{
+            pointer-events: none;
+        }
+
+        div:nth-child(1) {
+            font-size: .2em;
+        }
+
+        div:nth-child(2) {
+            font-size: .5em;
+        }
+
+        div:nth-child(3) {
+            font-size: 1em;
+        }
+    }
+}
+
+.container-toggle{
+    position: absolute;
+    margin-left: 13em;
+    padding: 1.5em;
+    width: 663px;
+    font-size: 1rem;
+    border-radius: 1.2em;
+    background: white;
+
+    figure{
+        position: relative;
+        display: inline-block;
+    }
+
+    figcaption{
+        font-size: 1.2em;
+    }
+
+    img{
+        height: 35em;
+        max-height: 381px;
+    }
+
+    aside{
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0 1em 0 1em;
+        padding-top: .7em;
+        font-size: .7em;
+        line-height: 1.5;
+        border-top: double 5px $teal;
+        width: 140px;
+
+        h6{
+            font-size: 1em;
+            font-weight: bold;
+            line-height: 1.2em;
+            margin-bottom: .2em;
+        }
+    }
+
+    a{
+        color: rgb(0, 79, 115);
+        text-decoration: none;
+        border-bottom: 2px dotted;
+        @include transition(color .2s);
+
+        &:hover{
+            color: $teal;
+        }
+    }
+}
+
+.mix-figcaption{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 1rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.mix-rum-raisin{
+    font-size: 1.3rem;
+    -webkit-shape-inside: polygon(nonzero, -4px 143px, 139px 143px, 149px 211px, 334px 402px, -7px 397px);
+}
+
+.mix-mocha{
+    height: 70%;
+    -webkit-shape-inside: polygon(nonzero, 2px 28px, 178px 28px, 181px 194px, 122px 387px, 0px 389px);
+}
+
+.mix-orange{
+    -webkit-shape-inside: polygon(nonzero, 0px 0px, 151px 1px, 216px 64px, 402px 96px, 420px 170px, -1px 170px);
+}
+
+.mix-chips{
+    -webkit-shape-inside: polygon(nonzero, -3px 30px, 150px 30px, 292px 386px, 0px 385px);
+}
+
+.mix-poppy{
+    height: 100%;
+    text-align: right;
+    -webkit-shape-inside: polygon(nonzero, 0px 24px, 428px 24px, 429px 356px, 276px 202px, 0px 102px);
+}
+
+.mix-sprinkles{
+    height: 100%;
+    -webkit-shape-inside: polygon(nonzero, -2px 24px, 153px 24px, 135px 177px, 169px 388px, 0px 389px);
+}

@@ -1,0 +1,173 @@
+/* ipad mini: landscape*/
+@media screen 
+    and (max-device-width: 1024px) 
+    and (min-device-width: 768px) 
+    and (orientation: landscape) {
+
+    html{
+        font-size: 12px;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+    }
+
+    #menu{
+        overflow-y: auto;
+        -webkit-overflow-scroll: touch;
+    }
+
+    #navigation{
+        margin-top: 3rem;
+    }
+
+    #view-go-to{
+        img{
+           /* @include transform(scale(.5));*/
+        }
+
+        ul {
+            width: 80vw;
+        }
+
+        .subhead{
+            width: 70%;
+        }
+    }
+
+    .go-to-item{
+        margin-left: 1.5em;
+        margin-right: 2em;
+        font-size: 1.2rem;
+        max-width: 10em;
+        width: 10em;
+
+        &:before{
+            top: -20px;
+            left: -50px;
+            @include transform(scale(.5));
+        }
+
+        &:hover{
+            &:before{
+                @include transform(rotate(360deg) scale(.5));
+                opacity: 1;
+            }
+        }
+
+    }
+
+    #view-american{
+        img{
+            left: -100px;
+            bottom: -350px;
+            @include transform(scale(.55));
+        }
+
+        .subhead{
+            position: relative;
+            width: 100vw;
+            font-size: 2rem;
+            text-align: center;
+            z-index: 1;
+        }
+    }
+
+    .american-item{
+        font-size: .9rem;
+    }
+
+    #view-frosting{
+        font-size: .75rem;
+
+        .frosting-title-rotated{
+            right: -2.8em;
+        }
+
+        img{
+            @include transform(scale(.75));
+        }
+    }
+
+    #view-frosting_mix-ins{
+        font-size: .9rem;
+        background-size: auto 100%;
+    }
+
+    #frosting-mix-item-blueberry{
+        right: 30vw;
+        top: 5vw;
+    }
+
+    #frosting-mix-item-stout{
+        right: 55vw;
+        top: 12vw;
+    }
+
+    #frosting-mix-item-almond{
+        right: 68vw;
+    }
+
+    #frosting-mix-item-cherry{
+        right: 67vw;
+    }
+
+    #frosting-mix-item-peanut{
+        right: 35vw;
+        top: 60vw;
+    }
+
+    #frosting-mix-item-jam{
+        right: 20vw;
+        top: 60vw;
+    }
+
+    #frosting-mix-in-slides{
+        right: 15vw;
+        top: 20vw;
+    }
+
+    .alton-paragraph{
+        display: none;
+    }
+
+    #recipe{
+        .recipe-ingredients{
+            max-width: 250px;
+        }
+
+        .recipe-directions{
+            width: calc(100% - 250px - 6rem);
+            
+            &.flow{
+                width: auto;
+            }
+        }
+    }
+
+    #recipe-slide-title{
+        margin-top: 5rem;
+    }
+
+    .recipe_toggle{
+        h5{
+            font-size: 3rem;
+        }
+    }
+
+    .recipe_description{
+        h5{
+            font-size: 3rem;
+        }
+    }
+
+    .list-toggle{
+        font-size: 1.5rem;
+    }
+    
+    .container-toggle{
+        img{
+            height: 25em;
+        }
+    }
+
+}
+

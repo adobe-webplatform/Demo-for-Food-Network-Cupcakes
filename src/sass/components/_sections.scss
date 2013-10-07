@@ -1,0 +1,20 @@
+#cover-canvas{
+	position: absolute;
+    top: 50%;
+	left: 50%;
+    // margin-top: -50%;
+    // margin-left: -25%;
+    margin-top: -70%;
+    margin-left: -35%;
+    width: 70vw;
+}
+
+#view-cover{
+    h1{
+        z-index: 1;
+    }
+
+    img{
+        z-index: 1;
+    }
+}

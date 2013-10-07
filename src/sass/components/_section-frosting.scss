@@ -1,0 +1,348 @@
+
+#view-frosting{
+    font-size: 1rem;
+
+    .frosting-title-icing{
+        position: relative;
+    }
+
+    h2{
+        font-size: 8em;
+    }
+
+    h3{
+        margin-top: 1em;
+        color: rgb(255, 140, 0);
+        line-height: 1.5;
+        font-size: 1.5em;
+        width: 50vw;
+    }
+
+    .frosting-title-rotated{
+        position: absolute;
+        top: 0;
+        right: -2.7em;
+        color: rgb(255, 140, 0);
+        font-family: sofia;
+        font-size: 7em;
+        @include transform(rotate(-10deg));
+    }
+
+    .frosting-item{
+        position: absolute;
+        font-size: 1.4em;
+        color: white;
+        font-family: arvo;
+        font-weight: normal;
+        text-decoration: none;
+        text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.7);
+        z-index: 2;
+    }
+}
+
+#view-frosting-img-alton{
+    position: absolute;
+    bottom: 0;
+    right: 70vw;
+    width: 20em;
+    z-index: 0;
+    @include transform-origin(center, bottom);
+}
+
+#view-frosting-img-mix-ins{
+    position: absolute;
+    bottom: 0;
+    left: 55vw;
+    width: 25em;
+    z-index: 0;
+    @include transform-origin(center, bottom);
+}
+
+#view-frosting-img-whipped{
+    position: absolute;
+    bottom: 20vh;
+    left: 0;
+    width: 14em;
+    z-index: 0;
+    @include transform-origin(left, center);
+}
+
+#view-frosting-img-spoon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15em;
+    z-index: 0;
+    @include transform-origin(right, bottom);
+}
+
+#view-frosting-img-knife{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 12em;
+    z-index: 0;
+    @include transform-origin(right, top);
+}
+
+.frosting-item--seven{
+    left: 8em;
+    top: 30%;
+}
+
+.frosting-item--alton{
+    margin-right: -5em;
+    right: 70vw;
+    bottom: 5em;
+}
+
+.frosting-item--cream{
+    right: 13em;
+    top: 7em;
+}
+
+.frosting-item--swiss{
+    right: 5em;
+    bottom: 20vh;
+}
+
+.frosting-item--mix{
+    right: 40vw;
+    bottom: 5em;
+}
+
+
+//ALTON
+
+#view-frosting_alton{
+    box-sizing: border-box;
+    padding: 5rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background: url(../assets/images/section-3/alton/AltonBrownPage.jpg);
+    background-size: cover;
+    background-position: bottom center;
+
+    h2, h3{
+        font-family: quicksand, sans-serif;
+    }
+
+    h2{
+        font-size: 7rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        line-height: 1.5;
+    }
+
+    .alton-paragraph{
+        margin: auto;
+        width: 70vw;
+
+        img{
+            float: left;
+            margin-right: 1em;
+            border: 3px solid white;
+            border-radius: 80px;
+            -webkit-shape-outside: circle(90px, 90px, 90px);
+        }
+    }
+
+    .alton-item{
+        position: absolute;
+        font-size: 2rem;
+        color: white;
+        font-family: sofia;
+        text-decoration: none;
+
+        &:before{
+            content: '';
+            display: block;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background-image: url('../assets/images/textures/White.png');
+            -webkit-mask: url('../assets/images/vector/bubble.svg');
+            opacity: 0.7;
+            @include transition(-webkit-transform 1s, opacity .2s);
+        }
+    }
+}
+
+#alton-item-ganache{
+    bottom: 25vw;
+    left: 10vw;
+
+    &:before{
+        right: -4em;
+    }
+}
+
+#alton-item-royal{
+    bottom: 30vw;
+    right: 10vw;
+
+    &:before{
+        top: 3em;
+        left: -2em;
+    }
+}
+
+#alton-item-chiffon{
+    bottom: 5vw;
+    left: 39vw;
+    
+    &:before{
+        left: -1em;
+    }
+}
+
+#alton-cupcakes{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 80%;
+    margin-left: -40%;
+}
+
+//MIX-IN
+
+#view-frosting_mix-ins{
+    background-image: url(../assets/images/section-3/icing/palette.png), url(../assets/images/textures/Mix-ins_bg.jpg);
+    background-size: 100%, auto;
+    background-position: right top;
+    background-repeat: no-repeat, repeat;
+}
+
+.frosting-mix-item{
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    color: white;
+    text-align: right;
+    font-family: sofia;
+    text-decoration: none;
+    width: 16vw;
+    height: 16vw;
+    // @include transition(color .2s);
+    
+    &:hover{
+        color: darken(#d84a1a, 20%);
+    }
+
+    span{
+        display: block;
+        width: 16vw;
+        position: absolute;
+        left: -100%;
+    }
+}
+
+#frosting-mix-item-honey{
+    right: 1vw;
+    top: 15vw;
+
+    span{
+        width: auto;
+        left: 0px;
+        bottom: 100%;
+    }
+}
+
+#frosting-mix-item-blueberry{
+    right: 20vw;
+    top: 5vw;
+
+    span{
+        bottom: 70%;
+    }
+}
+
+#frosting-mix-item-stout{
+    right: 42vw;
+    top: 7vw;
+}
+
+#frosting-mix-item-almond{
+    right: 56vw;
+    top: 20vw;
+}
+
+#frosting-mix-item-cherry{
+    right: 55vw;
+    top: 40vw;
+}
+
+#frosting-mix-item-peanut{
+    right: 35vw;
+    top: 50vw;
+
+    span{
+        bottom: 0;
+    }
+}
+
+#frosting-mix-item-jam{
+    right: 14vw;
+    top: 47vw;
+
+    span{
+        width: auto;
+        bottom: -20%;
+        left: 0;
+    }
+}
+
+#frosting-mix-in-slides{
+    position: absolute;
+    box-sizing: border-box;
+    right: 18vw;
+    top: 23vw;
+    height: 25vw;
+    width: 35vw;
+    background: rgba(255, 255, 255, 0.5);
+    // border-radius: 30vw / 20vw;
+    -webkit-clip-path: ellipse(50%, 50%, 50%, 50%);
+    @include transition(-webkit-clip-path 1s);
+
+    &.hide{
+        -webkit-clip-path: ellipse(50%, 50%, 0, 0%);
+    }
+}
+
+.frosting-mix-slide{
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    padding: 1.5em 1em;
+    height: 25vw;
+    width: 35vw;
+    overflow: hidden;
+
+    h3{
+        margin: 4rem 0;
+        font-size: 5vw;
+        color: rgb(216, 74, 26);
+    }
+
+    h4{
+        font-weight: bold;
+        text-transform: uppercase;
+        color: rgb(216, 74, 26);
+    }
+
+    small{
+        display: block;
+        font-size: 1rem;
+        margin: 1em 0;
+    }
+
+    p{
+        width: 100%;
+        height: 100%;
+        font-size: 1.5vw;
+        -webkit-shape-inside: ellipse(50%, 30%, 50%, 50%);
+    }
+}

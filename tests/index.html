@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tests</title>
+  <link rel="stylesheet" href="../src/js/vendor/qunit/qunit/qunit.css">
+	<style>
+		#pseudo-dom{
+			display: none;
+		}
+	</style>
+	<script src="../src/js/vendor/modernizr-2.6.2.js"></script>
+
+	<script>
+		var testing = true;
+	
+		console.log('run testing', testing);
+	</script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+	<div id="pseudo-dom">
+	
+		 <div id="main-container">
+            <canvas id="background" width="1000px" height="800px"></canvas>
+            
+            <div id="view-container">
+                <section id="view-cover" class="view flex" data-title="cover" data-transition="0" data-mask="0" data-color="#ee3640">
+                    <canvas id="cover-canvas" width="500px" height="800px"></canvas>
+                    <img src="assets/images/logo-food-network.svg">
+                    <h1 class="cliptext">CUPCAKES!</h1>
+                    <nav id="navigation"></nav>
+                </section>
+                
+                <section id="view-go-to" class="view" data-title="go-to cupcakes" data-transition="4" data-mask="1" data-color="#1bb1b2">
+                    <img id="section-1-img-right" src="assets/images/section-1/white_cupcake.png" alt="">
+                    <img id="section-1-img-left" src="assets/images/section-1/black_cupcake.png" alt="">
+                    
+                    <h2 class="cliptext">
+                        GO-TO<br/> 
+                        CUPCAKES
+                    </h2>
+                    <p class="subhead balance">
+                        SUPER BASIC AND COMPLETELY FOOLPROOF CHOCOLATE AND VANILLA CUPCAKES AND FROSTINGS TO RELY ON
+                    </p>
+                    <ul>
+                        <li id="go-to-v-bc" class="go-to-item" data-url="v-buttercream">Vanilla American Buttercream</li>
+                        <li id="go-to-c-bc" class="go-to-item" data-url="c-buttercream">Chocolate American Buttercream</li>
+                        <li id="go-to-c" class="go-to-item" data-url="chocolate">Go-To Chocolate Cupcakes</li>
+                        <li id="go-to-v" class="go-to-item" data-url="vanilla">Go-To Vanilla Cupcakes</li>
+                        <li id="go-to-v-m" class="go-to-item" data-url="vanilla-mix">Vanilla Mix-Ins</li>
+                        <li id="go-to-c-m" class="go-to-item" data-url="chocolate-mix">Chocolate Mix-Ins</li>
+                        <li id="go-to-m" class="go-to-item" data-url="marbling">Marbling Techniques</li>
+                    </ul>
+
+                </section>	
+                
+                <section id="view-american" class="view" data-title="great american cup-cakeover" data-transition="5" data-mask="1" data-color="#be001f">
+                    <img id="section-2-img-bottom" src="assets/images/section-2/american_cupcake_cover.png" alt="">
+                    <h3 class="cliptext">
+                        THE GREAT AMERICAN
+                    </h3>
+                    <h2 class="cliptext">
+                        CUP-CAKEOVER
+                    </h2>
+                    <p class="subhead balance">
+                        FAVORITE CLASSIC DESSERTS REIMAGINED THROUGH CUPCAKE-COLORED GLASSES
+                    </p>
+                </section>
+                
+                <section id="view-frosting" class="view flex" data-title="frosting guide" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <h1 class="cliptext">FROSTING GUIDE</h1>
+                </section>
+
+                <!---GO TO views-->
+                <section id="view-go-to_chocolate" class="view marble_bg" data-url="view-go-to/chocolate" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5>GO-TO CHOCOLATE CUPCAKES</h3>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Ultimate: Moist and deeply chocolatey, these cupcakes are divine with virtually any frosting, but they are are also delicious with a dusting of confectioners’ sugar.
+                        </p>
+                        <a class="recipe-btn" href="#" data-recipe="chocolate-cupcake">recipe</a>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GotoChocolateCupcake.png">
+                </section>
+                
+                <section id="view-go-to_vanilla" class="view marble_bg" data-url="view-go-to/vanilla" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5>GO-TO VANILLA CUPCAKES</h3>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Golden memories: Smelling sweetly of butter, sugar and vanilla, these classic little cakes bring you right back to when you were a kid and Mom baked you birthday cupcakes.
+                        </p>
+                        <a class="recipe-btn" href="#" data-recipe="vanilla-cupcake">recipe</a>
+                    </div>
+                    <a class="video-btn" href="#" data-video="vanilla-cupcake">
+                        <span>quick how-to</span>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="67.903px" height="66.452px" viewBox="0 0 67.903 66.452" enable-background="new 0 0 67.903 66.452" xml:space="preserve">
+                            <path class="video-color" d="M34.138,1.933c-17.234,0-31.205,13.971-31.205,31.205s13.971,31.205,31.205,31.205s31.205-13.971,31.205-31.205S51.373,1.933,34.138,1.933z"/>
+                            <path class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" d="M34.138,1.933c-17.234,0-31.205,13.971-31.205,31.205s13.971,31.205,31.205,31.205s31.205-13.971,31.205-31.205S51.373,1.933,34.138,1.933z"/>
+                            <circle class="video-white" fill="#FFFFFF" cx="34.138" cy="33.138" r="20.903"/>
+                            <circle class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" cx="34.138" cy="33.138" r="20.903"/>
+                            <path class="video-color" d="M28.901,21.71l-1.511,0.96c0,0,1.595,7.865,1.595,11.556s-1.529,9.996-1.529,9.996l1.423,0.915l16.182-10.478l-0.003-2.432	L28.901,21.71z"/>
+                            <path class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" d="M28.901,21.71l-1.511,0.96c0,0,1.595,7.865,1.595,11.556s-1.529,9.996-1.529,9.996l1.423,0.915l16.182-10.478l-0.003-2.432L28.901,21.71z"/>
+                            <circle class="video-stroke" fill="none" stroke="#6B6B6B" stroke-miterlimit="10" cx="34.138" cy="-36.862" r="20.903"/>
+                        </svg>
+                    </a>
+                    <img src="assets/images/section-1/cupcakes/GotoVanillaCupcake.png">
+                </section>
+
+                <section id="view-go-to_v-buttercream" class="view marble_bg" data-url="view-go-to/v-buttercream" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5>VANILLA AMERICAN BUTTERCREAM CUPCAKES</h3>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Frosting of champions: It doesn’t get any easier, more delicious or more classic than this sweet buttercream scented with vanilla.
+                        </p>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GoToMiniCupcakesVanilla.png">
+                </section>
+                
+                <section id="view-go-to_c-buttercream" class="view marble_bg" data-url="view-go-to/c-buttercream" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5>CHOCOLATE AMERICAN BUTTERCREAM CUPCAKES</h3>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                        <p>
+                            Chocolate love: The quickest version of buttercream, this glossy topping looks cute swirled into place with an offset spatula or piped on with a piping bag and star tip.
+                        </p>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GoToMiniCupcakesChocolate.png">
+                </section>
+
+                <section id="view-go-to_chocolate-mix" class="view marble_bg" data-url="view-go-to/chocolate-mix" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5>GO-TO CHOCOLATE CUPCAKE MIXINS</h3>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                    </div>
+                </section>
+                
+                <section id="view-go-to_vanilla-mix" class="view marble_bg" data-url="view-go-to/vanilla-mix" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5>GO-TO VANILLA CUPCAKE MIXINS</h3>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                    </div>
+                </section>
+                
+                <section id="view-go-to_marbling" class="view marble_bg" data-url="view-go-to/marbling" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">
+                    <div class="recipe_description">
+                        <h5>GO-TO MARBLE CUPCAKES</h3>
+                        <div class="byline">Recipe courtesy Food Network Kitchens</div>
+                    </div>
+                    <img src="assets/images/section-1/cupcakes/GoToMarbledCupcake3Ways.png">
+                </section>
+
+                <div id="preloader">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <div id="recipe">
+                <div id="recipe-content">
+
+                </div>
+                <div id="timer">
+                    <div id="timer-btn"></div>
+                    <div id="timer-ui">
+                        <div id="timer-pause-btn"></div>
+                        <div id="timer-time"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="speech-ui">
+                <div id="speech-btn"></div>
+                <div id="speech-bubble">...</div> 
+            </div>
+
+            <div id="close-btn">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="59.868px" height="60.667px" viewBox="0 0 59.868 60.667" enable-background="new 0 0 59.868 60.667" xml:space="preserve">
+                    <path class="close-stroke" fill="#010101" d="M30.107,60.215C13.506,60.215,0,46.709,0,30.107S13.506,0,30.107,0s30.108,13.506,30.108,30.107S46.709,60.215,30.107,60.215z M30.107,2.208c-15.384,0-27.899,12.516-27.899,27.899c0,15.384,12.516,27.9,27.899,27.9c15.384,0,27.9-12.516,27.9-27.9C58.007,14.723,45.492,2.208,30.107,2.208z"/>
+                    <path class="close-fill" fill="#010101" d="M30.107,4.56C15.998,4.56,4.56,15.998,4.56,30.108c0,14.109,11.438,25.547,25.547,25.547c14.109,0,25.547-11.438,25.547-25.547C55.655,15.998,44.217,4.56,30.107,4.56z M40.256,36.845l-3.292,3.292l-6.737-6.737l-6.737,6.737l-3.292-3.292l6.737-6.737l-6.737-6.737l3.292-3.292l6.737,6.737l6.737-6.737l3.292,3.292l-6.737,6.737L40.256,36.845z"/>
+                </svg>
+            </div>
+
+        </div>
+
+        <nav id="menu"></nav>
+
+        <div id="region-content">
+            <!-- TODO: region content goes here -->
+        </div>
+
+	
+	</div>
+  <script src="../src/js/vendor/qunit/qunit/qunit.js"></script>
+  <script src="../src/js/vendor/jquery/jquery.js"></script>
+  <script src="../src/js/vendor/jquery.balancetext.js"></script>
+  <script data-main="test" src="../src/js/vendor/requirejs/require.js"></script>
+</body>
+</html>

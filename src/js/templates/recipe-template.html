@@ -1,0 +1,53 @@
+<div class="recipe-inside">
+    <h5><%= recipe.title %></h5>
+    <div class="byline">Recipe courtesy Food Network Kitchens</div>
+
+    <div>
+        <% if (recipe.makes.amt != "") { %>
+        <table class="recipe-table">
+            <tr>
+                <td class="recipe-table-makes">
+                    <div class="recipe-table-header">MAKES</div>
+                    <div><span class="red"><%= recipe.makes.amt %></span></div>
+                    <% if (recipe.makes.alt != "") { %>
+                    <div><small>(<%= recipe.makes.alt %>)</small></div>
+                    <% } %>
+                </td>
+                <td class="recipe-table-center">
+                    <div class="recipe-table-header">ACTIVE TIME</div>
+                    <div><span class="red"><%= recipe.time.active %></span></div>
+                </td>
+                <td>
+                    <div class="recipe-table-header">TOTAL TIME</div>
+                    <div><span class="red"><%= recipe.time.total %></span></div>
+                    <div><small>(includes cooling time)</small></div>
+                </td>
+            </tr>
+        </table>
+        <% } %>
+
+        <a href="#" id="slide-btn-view">slide view</a>
+    </div>
+    <!-- <div id="recipe-quantity-ui"> -->
+    <!--     <input type="range" name="points" min="1" max="10"> -->
+    <!-- </div> -->
+
+    <div class="recipe-bottom">
+        <div class="recipe-ingredients">
+            <h6 class="red">Ingredients</h6>
+            <table>
+                <% _.each(recipe.ingredients, function(ing){ %>
+                <tr>
+                    <td class="recipe-ingredient-amount"><span class="red"><%= ing.amt %></span></td>
+                    <td><span class="recipe-ingredient-desc"><%= ing.desc %></span></td>
+                </tr>
+                <% }); %>
+            </table>
+        </div>
+
+        <div class="recipe-directions">
+            <h6 class="red">Directions</h6>
+            <%= recipe.directions %>
+        </div>
+    </div>
+</div>

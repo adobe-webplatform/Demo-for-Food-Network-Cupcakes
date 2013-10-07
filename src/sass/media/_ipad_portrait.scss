@@ -1,0 +1,66 @@
+/* ipad mini: portrait*/
+@media screen 
+    and (max-device-width: 1024px) 
+    and (min-device-width: 768px) 
+    and (orientation: portrait) {
+    
+    html{
+        font-size: 14px;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+    }
+
+    #cover-canvas{
+        width: 80vw;
+        margin-left: -40%;
+        margin-top: -80%;
+    }
+
+    #view-go-to{
+        .subhead{
+            font-size: 1.5rem;
+        }
+    }
+    
+    .go-to-item{
+        font-size: 1.6rem;
+    }
+
+    #view-american{
+        h3{
+            font-size: 4rem;
+        }
+
+        .american-list{
+            padding-left: 50vw;
+        }
+    }
+
+    #view-frosting{
+        font-size: .75rem;
+
+        .frosting-title-rotated{
+            right: -2.3em;
+        }
+    }
+
+    #recipe{
+        .recipe-ingredients{
+            max-width: 200px;
+        }
+
+        .recipe-directions{
+            width: calc(100% - 200px - 6rem);
+            
+            &.flow{
+                width: auto;
+            }
+        }
+    }
+
+    #recipe-slide-title{
+        margin-top: 5rem;
+    }
+
+}
+

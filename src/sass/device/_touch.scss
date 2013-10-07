@@ -1,0 +1,87 @@
+.touch{
+
+    #nav-button:active{
+        color: #f2ba19;
+        background-color: rgb(0, 78, 113);
+    }
+
+    #nav-sub-button{
+        &:active{
+            color: #1bb1b2;
+            background: white;
+        }
+
+        &.american{
+            &:active{
+                color: rgb(200, 38, 64);
+                background: white;
+            }
+        }
+
+        &.frosting{
+            &:active{
+                color: rgb(255, 140, 0);
+                background: white;
+            }
+        }
+    }
+
+    #slide-btn-view:active{
+        background-color: rgb(200, 200, 200);
+    }
+
+    #close-btn:active{
+        // opacity: 1;
+        .close-fill{
+            fill: #c8253f;
+        }
+
+        .close-stroke{
+            fill: purple;
+        }
+    }
+
+    .recipe-btn:active{
+        color: lighten(rgb(0, 78, 113), 10%);
+    }
+
+    #speech-btn:active{
+        background-color: darken(#bd6e6e, 20%);
+    }
+
+    #timer-btn:active{
+        background-color: #0084bf;
+    }
+
+    #timer-pause-btn:active{
+        background-color: #669d10;
+    }
+
+    #timer-pause-btn.play:active{
+        background-color: #b98e13;
+    }
+
+    .american-item:active{
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .alton-item:active{
+        &:before{
+            @include transform(rotate(360deg));
+            opacity: 1;
+        }
+    }
+
+    .go-to-item:active{
+        &:before{
+            @include transform(rotate(360deg));
+            opacity: 1;
+        }
+    }
+
+    .list-toggle li:active{
+        color: darken($teal, 20%);
+    }
+
+}
+

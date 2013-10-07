@@ -1,0 +1,100 @@
+
+// @media screen and (max-width: 1200px) {
+@media screen and (max-width: 75em) {
+    html{
+        font-size: 14px;
+    }
+
+    #view-go-to, #view-frosting, #view-american{
+        img{
+            @include transform(scale(.8));
+        }
+    }
+}
+
+// @media screen and (max-width: 900px) {
+@media screen and (max-width: 56em) {
+    html{
+        font-size: 12px;
+    }
+
+    #view-go-to{
+        img{
+            top: auto;
+            bottom: -20%;
+        }
+    }
+
+    .container-toggle{
+        width: auto;
+
+        aside{
+            display: none;
+        }
+    }
+}
+
+// @media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
+    html{
+        font-size: 10px;
+    }
+}
+
+// @media screen and (max-width: 700px) {
+@media screen and (max-width: 43em) {
+    html{
+        font-size: 8px;
+    }
+
+    #view-go-to{
+        ul{
+            width: 40vw;
+        }
+
+        img{
+            display: none;
+        }
+    }
+
+    .go-to-item{
+        display: block;
+        font-size: 2rem;
+
+        &:before{
+            display: none;
+        }
+    }
+
+    #view-american{
+        img{
+            display: none;
+        }
+    }
+
+    #view-frosting {
+        .frosting-item {
+            position: static;
+            margin: 1em 0;
+        }
+
+        img{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #recipe{
+
+        .recipe-ingredients{ 
+            position: static;    
+        }
+
+        .recipe-directions{
+            width: auto;
+            min-width: auto;
+        }
+
+    }
+}

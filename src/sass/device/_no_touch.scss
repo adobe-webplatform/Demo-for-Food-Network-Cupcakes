@@ -1,0 +1,86 @@
+.no-touch{
+
+    #nav-button:hover{
+        color: #f2ba19;
+        background-color: rgb(0, 78, 113);
+    }
+
+    #nav-sub-button{
+        &:hover{
+            color: #1bb1b2;
+            background: white;
+        }
+
+        &.american{
+            &:hover{
+                color: rgb(200, 38, 64);
+                background: white;
+            }
+        }
+
+        &.frosting{
+            &:hover{
+                color: rgb(255, 140, 0);
+                background: white;
+            }
+        }
+    }
+
+    #slide-btn-view:hover{
+        background-color: rgb(200, 200, 200);
+    }
+
+    #close-btn:hover{
+        // opacity: 1;
+        .close-fill{
+            fill: #c8253f;
+        }
+
+        .close-stroke{
+            fill: purple;
+        }
+    }
+
+    .recipe-btn:hover{
+        color: white;
+        background-color: rgb(0, 78, 113);
+    }
+
+    #speech-btn:hover{
+        background-color: darken(#bd6e6e, 20%);
+    }
+
+    #timer-btn:hover{
+        background-color: #0084bf;
+    }
+
+    #timer-pause-btn:hover{
+        background-color: #669d10;
+    }
+
+    #timer-pause-btn.play:hover{
+        background-color: #b98e13;
+    }
+
+    .american-item:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .alton-item:hover{
+        &:before{
+            @include transform(rotate(360deg));
+            opacity: 1;
+        }
+    }
+
+    .go-to-item:hover{
+        &:before{
+            @include transform(rotate(360deg));
+            opacity: 1;
+        }
+    }
+
+    .list-toggle li:hover{
+        color: darken($teal, 20%);
+    }
+}

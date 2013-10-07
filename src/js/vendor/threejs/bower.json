@@ -1,0 +1,9 @@
+{
+  "name": "threejs",
+  "version": "0.0.0",
+  "commit": "9792a0fa2c803eb96cf45869d184d91fc99f934d",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrdoob/three.js.git"
+  }
+}

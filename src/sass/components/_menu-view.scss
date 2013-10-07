@@ -1,0 +1,169 @@
+
+body.menu-in{
+    #menu{
+        @include transform(translate3d(0, 0, 0));
+        opacity: 1;
+    }
+
+    #main-container{
+        @include transform(translate3d(150px, 0, 0));
+    }
+}
+
+#menu{
+    position: absolute;
+    top: -40px;
+    height: 100vh;
+    width: 150px;
+    padding-top: 80px;
+    padding-right: 10px;
+    background: url(../assets/images/menu-bg.jpg);
+    overflow: hidden;
+    opacity: 0;
+    z-index: 4;
+    -webkit-mask-image: url(../assets/images/menu-mask.png);
+    -webkit-mask-repeat: repeat-y;
+    -webkit-mask-position: right center;
+    @include transform-origin(right, center);
+    @include transform(translate3d(-150px, 0, 0) rotateY(-45deg));
+}
+
+#main-container, #menu{
+    @include transition(-webkit-transform .4s ease-out, opacity .4s ease-out);
+}
+
+.menu-item{
+    position: relative;
+	cursor: pointer;
+    margin-bottom: 40px;
+    padding: 0 70px;
+	width: 200px;
+	height: 100px;
+	color: white;
+	-webkit-mask: url(../assets/images/textures/nav_item_bg.png);
+    @include transform(rotate(-45deg) translate(-40%, 0px));
+    @include transition(color .4s, background .4s);
+}
+
+.menu-item-title{
+    display: -webkit-flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 800;
+	pointer-events: none;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-transform: translateZ(0);
+}
+
+#menu-item-view-cover{
+    font-size: 2rem;
+}
+
+//TODO: Make these classes for both nav & menu
+#menu-item-view-go-to{
+    .menu-item-title {
+        :nth-child(1) {
+            font-size: 2.2rem;
+        }
+
+        :nth-child(2) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+#menu-item-view-american{
+    .menu-item-title {
+        :nth-child(1) {
+            font-size: 2.2rem;
+        }
+
+        :nth-child(2) {
+            font-size: 1.4rem;
+        }
+
+        :nth-child(3) {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+#menu-item-view-frosting{
+    .menu-item-title {
+        :nth-child(1) {
+            font-size: 1.3rem;
+        }
+
+        :nth-child(2) {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+#nav-button-container{
+    position: fixed;
+    left: 0;
+    top: 1rem;
+    z-index: 100;
+}
+
+#nav-button{
+    position: relative;
+    box-sizing: border-box;
+    padding: .1rem 3rem .2rem 1rem;
+    color: rgb(0, 78, 113);
+    font-family: sofia;
+    font-size: 2.3rem;
+    line-height: 1em;
+    background-color: #f2ba19;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-mask: url(../assets/images/textures/nav_btn.png) no-repeat;
+    -webkit-mask-size: 100% 100%;
+    @include user-select(none);
+    @include transition(color .2s);
+}
+
+#nav-sub-button{
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 8rem;
+    width: 0px;
+    height: 1.4em;
+    padding: .4rem 1.5rem;
+    color: white;
+    font-family: sofia;
+    font-size: 1.8rem;
+    font-weight: 100;
+    line-height: 1em;
+    background: #1bb1b2;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    -webkit-mask-box-image: url(../assets/images/textures/nav_extended.png) 3 16 3 16 stretch;
+    @include transition(width .5s, opacity .2s, color .2s);
+
+    &.in{
+        opacity: 1;
+        width: 15rem;
+    }
+
+    &.american{
+        background: rgb(200, 38, 64);
+    }
+
+    &.frosting{
+        background: rgb(255, 140, 0);
+    }
+}
+

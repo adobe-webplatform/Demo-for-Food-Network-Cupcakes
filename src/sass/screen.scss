@@ -1,0 +1,30 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/* import base css */
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "components/menu-view";
+@import "components/nav-items";
+@import "components/sections";
+@import "components/section-goto";
+@import "components/section-american";
+@import "components/section-frosting";
+@import "components/video-btn";
+@import "components/recipe-btn";
+@import "components/recipe-view";
+@import "components/recipe-slide";
+@import "components/close-btn";
+@import "components/timer-view";
+@import "components/speech-btn";
+@import "components/toggle-gallery";
+@import "main";
+@import "media/desktop";
+@import "media/ipad_landscape";
+@import "media/ipad_portrait";
+@import "device/ipad";
+@import "device/touch";
+@import "device/no_touch";

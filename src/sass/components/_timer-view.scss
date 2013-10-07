@@ -1,0 +1,83 @@
+#timer{
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    z-index: 2;
+    @include transform(translateX(200px));
+
+    &.in{
+        @include transform(translateX(0px));
+    }
+}
+
+#timer-btn{
+    position: relative;
+    width: 95px;
+    height: 90px;
+    background-image: url(../assets/images/icons/timer.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #004e71;
+    background-blend-mode: overlay;
+    z-index: 1;
+    cursor: pointer;
+    @include transition(background-color .2s);
+    -webkit-clip-path: polygon(95.873px 0px, 15.83px 0px, 0px 45.409px, 15.83px 90.818px, 95.873px 90.818px);
+    -webkit-mask: url(../assets/images/textures/red_texture.png);
+}
+
+#timer-ui{
+    position: absolute;
+    top: 0;
+    right: 80px;
+    height: 90px;
+    width: 300px;
+    font-family: sofia;
+    font-size: 2rem;
+    letter-spacing: .1em;
+    color: rgb(200, 37, 63);
+    z-index: 0;
+    @include transform-origin(right, center);
+    @include transition(-webkit-clip-path 1s);
+    -webkit-clip-path: polygon(300px 0px, 300px 0px, 285px 45px, 300px 90px, 300px 90px);
+
+    &.in{
+        -webkit-clip-path: polygon(300px 0, 15px 0px, 0px 45px, 15px 90px, 300px 90px);
+    }
+}
+
+#timer-time{
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+    padding: 2rem;
+    padding-left: 2rem;
+    width: 300px;
+    height: 90px;
+    z-index: 1;
+    background-color: white;
+    -webkit-clip-path: polygon(210.333px 90.993px, 82.375px 90.993px, 15.86px 90.993px, 0px 45.496px, 15.86px 0px, 82.375px 0px, 210.333px 0px, 194.473px 45.496px);
+    -webkit-mask: url(../assets/images/textures/red_texture.png);
+}
+
+#timer-pause-btn{
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 90px;
+    background-color: #79ba13;
+    background-image: url(../assets/images/icons/play.svg);
+    background-position: 40% center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    cursor: pointer;
+    z-index: 2;
+    @include transition(background-color .2s);
+    -webkit-clip-path: polygon(95px 0px, 15px 0px, 0px 45px, 15px 90px, 95px 90px, 79px 45px);
+    -webkit-mask: url(../assets/images/textures/red_texture.png);
+
+    &.play{
+        background-image: url(../assets/images/icons/pause.svg);
+        background-color: #f2ba19;
+    }
+}

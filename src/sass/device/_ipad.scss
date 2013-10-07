@@ -1,0 +1,37 @@
+.ipad{
+    #view-container{
+        -webkit-mask: none;
+    }
+
+    #menu{
+        @include transform(translate3d(-150px, 0, 0));
+    }
+
+    #recipe{
+        @include transform(translate3d(0, 2000px, 0));
+
+        &.in{
+            @include transform(translate3d(0, 0px, 0));
+        }
+    }
+
+    #view-cover{
+        background-image: url(../assets/images/textures/fabric-brown-dots.jpg);
+        background-color: #75514b;
+    }
+
+    #view-go-to{
+        background-image: url(../assets/images/textures/fabric-turqoise.jpg);
+        background-color: #8aedf5;
+    }
+
+    #view-american{
+        background-image: url(../assets/images/textures/fabric-red.jpg);
+        background-color: #c71e3b;
+    }
+
+    #view-frosting{
+        background-image: url(../assets/images/textures/fabric-brown.jpg);
+        background-color: #c71e3b;
+    }
+}

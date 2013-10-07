@@ -1,0 +1,21 @@
+#close-btn{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+    z-index: 100;
+    cursor: pointer;
+    -webkit-mask: url(../assets/images/textures/nav_btn.png) repeat-y;
+    @include transform(translateX(200px));
+    @include transition(opacity .2s .8s);
+
+    .close-fill, .close-stroke{
+        @include transition(fill .2s);
+    }
+
+    &.in{
+        opacity: 1;
+        @include transform(translateX(0px));
+    }
+}

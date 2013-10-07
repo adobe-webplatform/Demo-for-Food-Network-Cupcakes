@@ -1,0 +1,163 @@
+
+///////go to
+
+#view-go-to{
+    h2{
+        margin-top: 5rem;
+    }
+    
+    .subhead{
+	    color: rgb(0, 79, 114);
+    }
+
+    ul{
+        width: 70vw;
+        height: 400px;
+        margin: auto;
+        text-align: center;
+        // display: -webkit-flex;
+    }
+}
+
+.go-to-item{
+    display: inline-block;
+    position: relative;
+    max-width: 7em;
+    margin: 2rem 1rem 1rem 5rem;
+    vertical-align: top;
+    line-height: 1.5em;
+    font-family: arvo;
+    // font-family: lavanderia, sans-serif;
+    // font-size: 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: -70px;
+        width: 60px;
+        height: 60px;
+        background-image: url('../assets/images/textures/go_to_bullet.png');
+        -webkit-mask: url('../assets/images/vector/bubble.svg');
+        opacity: 0.7;
+        // z-index: -1;
+        @include transition(-webkit-transform 1s, opacity .2s);
+    }
+}
+
+#section-1-img-left{
+	position: absolute;
+    top: -10vh;
+	left: -60vh;
+    height: 120vh;
+	// z-index: -1;
+}
+
+#section-1-img-right{
+	position: absolute;
+    top: -10vh;
+	right: -60vh;
+    height: 120vh;
+	// z-index: -1;
+}
+
+/////goto subsections
+.marble_bg{
+    background-image: url(../assets/images/section-1/marble_surface.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.recipe_toggle{
+    position: relative;
+    margin: 5rem 5rem; 
+    font-family: arvo;
+
+    h5{
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    .byline{
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
+
+.recipe_description{
+    position: relative;
+    margin: 5rem 5rem; 
+    width: 40vw;
+    font-family: arvo;
+    color: rgb(64, 64, 64);
+    z-index: 2;
+    
+    h5{
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    .byline{
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
+
+#view-go-to_chocolate, #view-go-to_vanilla{
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 70vw;
+        max-width: 700px;
+        z-index: 0;
+    }
+}
+
+#view-go-to_c-buttercream, #view-go-to_v-buttercream{
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 50vw;
+        max-width: 700px;
+        z-index: 0;
+    }
+}
+
+#view-go-to_marbling{
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 80vw;
+        max-width: 1000px;
+        z-index: 0;
+    }
+}
+
+#view-go-to_vanilla{
+    .video-btn{
+        position: absolute;
+        right: 100px;
+        bottom: 200px;
+        z-index: 1;
+    }
+}
