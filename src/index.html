@@ -37,6 +37,7 @@ limitations under the License.
         <style>
 
 html{
+    width: 100%;
     height: 100%;               
     overflow: hidden;
 }
@@ -82,12 +83,43 @@ body{
     left: 0;
     right: 0;
     background: white;
+    background: orange;
     z-index: 10000;
     @include transition(opacity .2s linear .2s);
 }
 
 #preloader.out{
     opacity: 0;
+}
+
+#prealoader .spinner{
+    background: blue;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 150px;
+    height: 150px;
+}
+
+#spinner-cup{
+    fill: #380d0d;
+}
+
+@-webkit-keyframes super-rainbow {
+  0%   { fill: #ffff00; } 
+  20%  { fill: #ffcd00; }
+  40%  { fill: #c3d74b; }
+  60%  { fill: #c3d7d7; }
+  80%  { fill: #ffc39b; }
+  100% { fill: #ffff00; }
+}
+
+#spinner-frosting-top{
+    -webkit-animation: super-rainbow 1s infinite linear;
 }
 
         </style>
