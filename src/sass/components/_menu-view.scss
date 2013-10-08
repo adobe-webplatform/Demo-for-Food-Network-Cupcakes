@@ -26,6 +26,21 @@ body.menu-in{
     -webkit-mask-position: right center;
     @include transform-origin(right, center);
     @include transform(translate3d(-150px, 0, 0) rotateY(-45deg));
+
+    @media screen and (max-height: 700px) {
+        padding-top: 30px;
+        height: 130vh;
+    }
+
+    @media screen and (max-height: 640px) {
+        padding-top: 0px;
+        height: 150vh;
+    }
+
+    @media screen and (max-height: 450px) {
+        padding-top: 50px;
+        top: 0;
+    }
 }
 
 #main-container, #menu{
@@ -43,6 +58,16 @@ body.menu-in{
 	-webkit-mask: url(../assets/images/textures/nav_item_bg.png);
     @include transform(rotate(-45deg) translate(-40%, 0px));
     @include transition(color .4s, background .4s);
+
+    @media screen and (max-height: 600px) {
+        height: 80px;
+        margin-bottom: 30px;
+    }
+    
+    @media screen and (max-height: 450px) {
+        @include transform(translate(-30%, 0px));
+        margin: 0;
+    }
 }
 
 .menu-item-title{

@@ -93,7 +93,6 @@ h3{
     -webkit-justify-content: center;
 	position: absolute;
     width: 100vw;
-    height: 100px;
     margin-top: 5rem;
 	z-index: 3;
     @include transform(scale(0.8));
@@ -104,6 +103,11 @@ h3{
         margin-top: 0rem;
         @include transform(none);
 	    -webkit-mask: url(../assets/images/textures/nav_item_bg.png);
+    }
+
+    @media screen and (max-height: 640px) {
+        position: absolute;
+        bottom: 0;
     }
 }
 

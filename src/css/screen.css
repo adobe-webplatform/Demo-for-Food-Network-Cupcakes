@@ -112,8 +112,29 @@ body.menu-in #main-container {
   -o-transform: translate3d(-150px, 0, 0) rotateY(-45deg);
   transform: translate3d(-150px, 0, 0) rotateY(-45deg);
 }
+@media screen and (max-height: 700px) {
+  /* line 13, ../sass/components/_menu-view.scss */
+  #menu {
+    padding-top: 30px;
+    height: 130vh;
+  }
+}
+@media screen and (max-height: 640px) {
+  /* line 13, ../sass/components/_menu-view.scss */
+  #menu {
+    padding-top: 0px;
+    height: 150vh;
+  }
+}
+@media screen and (max-height: 450px) {
+  /* line 13, ../sass/components/_menu-view.scss */
+  #menu {
+    padding-top: 50px;
+    top: 0;
+  }
+}
 
-/* line 31, ../sass/components/_menu-view.scss */
+/* line 46, ../sass/components/_menu-view.scss */
 #main-container, #menu {
   -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.4s ease-out;
   -moz-transition: -webkit-transform 0.4s ease-out, opacity 0.4s ease-out;
@@ -121,7 +142,7 @@ body.menu-in #main-container {
   transition: -webkit-transform 0.4s ease-out, opacity 0.4s ease-out;
 }
 
-/* line 35, ../sass/components/_menu-view.scss */
+/* line 50, ../sass/components/_menu-view.scss */
 .menu-item {
   position: relative;
   cursor: pointer;
@@ -141,8 +162,26 @@ body.menu-in #main-container {
   -o-transition: color 0.4s, background 0.4s;
   transition: color 0.4s, background 0.4s;
 }
+@media screen and (max-height: 600px) {
+  /* line 50, ../sass/components/_menu-view.scss */
+  .menu-item {
+    height: 80px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-height: 450px) {
+  /* line 50, ../sass/components/_menu-view.scss */
+  .menu-item {
+    -webkit-transform: translate(-30%, 0px);
+    -moz-transform: translate(-30%, 0px);
+    -ms-transform: translate(-30%, 0px);
+    -o-transform: translate(-30%, 0px);
+    transform: translate(-30%, 0px);
+    margin: 0;
+  }
+}
 
-/* line 48, ../sass/components/_menu-view.scss */
+/* line 73, ../sass/components/_menu-view.scss */
 .menu-item-title {
   display: -webkit-flex;
   position: absolute;
@@ -160,43 +199,43 @@ body.menu-in #main-container {
   -webkit-transform: translateZ(0);
 }
 
-/* line 65, ../sass/components/_menu-view.scss */
+/* line 90, ../sass/components/_menu-view.scss */
 #menu-item-view-cover {
   font-size: 2rem;
 }
 
-/* line 72, ../sass/components/_menu-view.scss */
+/* line 97, ../sass/components/_menu-view.scss */
 #menu-item-view-go-to .menu-item-title :nth-child(1) {
   font-size: 2.2rem;
 }
-/* line 76, ../sass/components/_menu-view.scss */
+/* line 101, ../sass/components/_menu-view.scss */
 #menu-item-view-go-to .menu-item-title :nth-child(2) {
   font-size: 1.2rem;
 }
 
-/* line 84, ../sass/components/_menu-view.scss */
+/* line 109, ../sass/components/_menu-view.scss */
 #menu-item-view-american .menu-item-title :nth-child(1) {
   font-size: 2.2rem;
 }
-/* line 88, ../sass/components/_menu-view.scss */
+/* line 113, ../sass/components/_menu-view.scss */
 #menu-item-view-american .menu-item-title :nth-child(2) {
   font-size: 1.4rem;
 }
-/* line 92, ../sass/components/_menu-view.scss */
+/* line 117, ../sass/components/_menu-view.scss */
 #menu-item-view-american .menu-item-title :nth-child(3) {
   font-size: 0.8rem;
 }
 
-/* line 100, ../sass/components/_menu-view.scss */
+/* line 125, ../sass/components/_menu-view.scss */
 #menu-item-view-frosting .menu-item-title :nth-child(1) {
   font-size: 1.3rem;
 }
-/* line 104, ../sass/components/_menu-view.scss */
+/* line 129, ../sass/components/_menu-view.scss */
 #menu-item-view-frosting .menu-item-title :nth-child(2) {
   font-size: 2.3rem;
 }
 
-/* line 110, ../sass/components/_menu-view.scss */
+/* line 135, ../sass/components/_menu-view.scss */
 #nav-button-container {
   position: fixed;
   left: 0;
@@ -204,7 +243,7 @@ body.menu-in #main-container {
   z-index: 100;
 }
 
-/* line 117, ../sass/components/_menu-view.scss */
+/* line 142, ../sass/components/_menu-view.scss */
 #nav-button {
   position: relative;
   box-sizing: border-box;
@@ -227,7 +266,7 @@ body.menu-in #main-container {
   transition: color 0.2s;
 }
 
-/* line 134, ../sass/components/_menu-view.scss */
+/* line 159, ../sass/components/_menu-view.scss */
 #nav-sub-button {
   position: absolute;
   box-sizing: border-box;
@@ -253,16 +292,16 @@ body.menu-in #main-container {
   -o-transition: width 0.5s, opacity 0.2s, color 0.2s;
   transition: width 0.5s, opacity 0.2s, color 0.2s;
 }
-/* line 156, ../sass/components/_menu-view.scss */
+/* line 181, ../sass/components/_menu-view.scss */
 #nav-sub-button.in {
   opacity: 1;
   width: 15rem;
 }
-/* line 161, ../sass/components/_menu-view.scss */
+/* line 186, ../sass/components/_menu-view.scss */
 #nav-sub-button.american {
   background: #c82640;
 }
-/* line 165, ../sass/components/_menu-view.scss */
+/* line 190, ../sass/components/_menu-view.scss */
 #nav-sub-button.frosting {
   background: darkorange;
 }
@@ -1441,7 +1480,7 @@ body.menu-in #main-container {
   }
 }
 
-/* line 174, ../sass/components/_recipe-view.scss */
+/* line 173, ../sass/components/_recipe-view.scss */
 #slide-btn-view {
   display: inline-block;
   vertical-align: top;
@@ -1459,7 +1498,7 @@ body.menu-in #main-container {
   box-shadow: 0px 1px 0px #c8c8c8;
 }
 
-/* line 191, ../sass/components/_recipe-view.scss */
+/* line 190, ../sass/components/_recipe-view.scss */
 #recipe-content {
   position: absolute;
   box-sizing: border-box;
@@ -1469,7 +1508,7 @@ body.menu-in #main-container {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 200, ../sass/components/_recipe-view.scss */
+/* line 199, ../sass/components/_recipe-view.scss */
 #recipe-content p {
   break-after: region;
   -webkit-region-break-after: always;
@@ -1477,13 +1516,13 @@ body.menu-in #main-container {
   orphans: 3;
 }
 
-/* line 208, ../sass/components/_recipe-view.scss */
+/* line 207, ../sass/components/_recipe-view.scss */
 .recipe-inside {
   max-width: 1000px;
   margin: auto;
 }
 
-/* line 213, ../sass/components/_recipe-view.scss */
+/* line 212, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui {
   position: absolute;
   margin-top: -16px;
@@ -1501,19 +1540,19 @@ body.menu-in #main-container {
   -o-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
-/* line 227, ../sass/components/_recipe-view.scss */
+/* line 226, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui.in {
   opacity: 1;
 }
-/* line 231, ../sass/components/_recipe-view.scss */
+/* line 230, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input {
   background: white;
 }
-/* line 234, ../sass/components/_recipe-view.scss */
+/* line 233, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input:focus {
   outline: none;
 }
-/* line 239, ../sass/components/_recipe-view.scss */
+/* line 238, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui button {
   font-size: 1.2rem;
   color: white;
@@ -1524,7 +1563,7 @@ body.menu-in #main-container {
   cursor: pointer;
 }
 
-/* line 250, ../sass/components/_recipe-view.scss */
+/* line 249, ../sass/components/_recipe-view.scss */
 #selectBlocker {
   position: fixed;
   top: 0;
@@ -2272,7 +2311,6 @@ h3 {
   -webkit-justify-content: center;
   position: absolute;
   width: 100vw;
-  height: 100px;
   margin-top: 5rem;
   z-index: 3;
   -webkit-transform: scale(0.8);
@@ -2295,8 +2333,15 @@ h3 {
     -webkit-mask: url(../assets/images/textures/nav_item_bg.png);
   }
 }
+@media screen and (max-height: 640px) {
+  /* line 89, ../sass/_main.scss */
+  #navigation {
+    position: absolute;
+    bottom: 0;
+  }
+}
 
-/* line 110, ../sass/_main.scss */
+/* line 114, ../sass/_main.scss */
 .subhead {
   width: 50%;
   margin: auto;
@@ -2305,7 +2350,7 @@ h3 {
   text-align: center;
 }
 
-/* line 118, ../sass/_main.scss */
+/* line 122, ../sass/_main.scss */
 #background {
   position: absolute;
   width: 100vw;
@@ -2313,13 +2358,13 @@ h3 {
   z-index: 0;
 }
 
-/* line 125, ../sass/_main.scss */
+/* line 129, ../sass/_main.scss */
 #main-container {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 130, ../sass/_main.scss */
+/* line 134, ../sass/_main.scss */
 #view-container {
   position: absolute;
   width: 100vw;
@@ -2327,7 +2372,7 @@ h3 {
   z-index: 1;
   -webkit-mask-image: none;
 }
-/* line 137, ../sass/_main.scss */
+/* line 141, ../sass/_main.scss */
 #view-container.mask {
   -webkit-mask-image: -webkit-canvas(mask);
   -webkit-mask-size: 100% 100%;
