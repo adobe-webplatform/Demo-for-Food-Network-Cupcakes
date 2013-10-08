@@ -274,7 +274,7 @@ body.menu-in #main-container {
   left: 8rem;
   width: 0px;
   height: 1.4em;
-  padding: .4rem 1.5rem;
+  padding: .4rem 2rem;
   color: white;
   font-family: sofia;
   font-size: 1.8rem;
@@ -286,22 +286,22 @@ body.menu-in #main-container {
   cursor: pointer;
   z-index: 2;
   opacity: 0;
-  -webkit-mask-box-image: url(../assets/images/textures/nav_extended.png) 3 16 3 16 stretch;
+  -webkit-mask-box-image: url(../assets/images/textures/nav_extended.png) 3 1 3 1 stretch;
   -webkit-transition: width 0.5s, opacity 0.2s, color 0.2s;
   -moz-transition: width 0.5s, opacity 0.2s, color 0.2s;
   -o-transition: width 0.5s, opacity 0.2s, color 0.2s;
   transition: width 0.5s, opacity 0.2s, color 0.2s;
 }
-/* line 181, ../sass/components/_menu-view.scss */
+/* line 182, ../sass/components/_menu-view.scss */
 #nav-sub-button.in {
   opacity: 1;
   width: 15rem;
 }
-/* line 186, ../sass/components/_menu-view.scss */
+/* line 187, ../sass/components/_menu-view.scss */
 #nav-sub-button.american {
   background: #c82640;
 }
-/* line 190, ../sass/components/_menu-view.scss */
+/* line 191, ../sass/components/_menu-view.scss */
 #nav-sub-button.frosting {
   background: darkorange;
 }
