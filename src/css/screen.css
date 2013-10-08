@@ -722,11 +722,6 @@ body.menu-in #main-container {
   width: 35em;
   max-width: 500px;
   z-index: 0;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
 }
 @media screen and (max-width: 800px) {
   /* line 89, ../sass/components/_section-american.scss */

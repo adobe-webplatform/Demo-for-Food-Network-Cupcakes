@@ -145,14 +145,13 @@ define([], function (require) {
          */
 		navigate: function (name) {
             
-            console.log('transitioning??', this.transitioning);
+            //prevent if same page
             if (this.transitioning === true) {
                 return;
             }
 
-            this.transitioning = true;
-
 			this.router.navigate('page/' + name, {trigger: true});
+
 		},
 
         /**
@@ -235,12 +234,14 @@ define([], function (require) {
                 var prevPage = this.pages.findWhere({id: this.prevPage});
                 prevPage.get('view').stop();
             }
+            
+            this.transitioning = true;
 
 			new TweenMax.to($('.view.in'), Vars.get('transitionTime'), {
 				opacity: 0, 
+				ease: Quad.easeIn,
 				onComplete: this.handle_TRANSITION_COMPLETE.bind(this), 
-				onCompleteParams: [id],
-				ease: Quad.easeIn
+				onCompleteParams: [id]
 			});
 		},
 		

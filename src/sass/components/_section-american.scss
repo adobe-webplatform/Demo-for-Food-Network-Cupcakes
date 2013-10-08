@@ -93,7 +93,7 @@
     width: 35em;
     max-width: 500px;
     z-index: 0;
-    @include transform(scale(0.9));
+    // @include transform(scale(0.9));
 
     @media screen and (max-width: 800px) {
         @include transform(scale(0.75));
