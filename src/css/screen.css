@@ -377,19 +377,29 @@ body.menu-in #main-container {
   z-index: 1;
 }
 
-/* line 5, ../sass/components/_section-goto.scss */
+/* line 4, ../sass/components/_section-goto.scss */
+#view-go-to {
+  font-size: 1.2rem;
+}
+@media screen and (max-height: 650px) {
+  /* line 4, ../sass/components/_section-goto.scss */
+  #view-go-to {
+    font-size: 1rem;
+  }
+}
+/* line 11, ../sass/components/_section-goto.scss */
 #view-go-to h2 {
   position: relative;
   margin-top: 5rem;
   z-index: 1;
 }
-/* line 11, ../sass/components/_section-goto.scss */
+/* line 17, ../sass/components/_section-goto.scss */
 #view-go-to .subhead {
   position: relative;
   color: #004f72;
   z-index: 1;
 }
-/* line 17, ../sass/components/_section-goto.scss */
+/* line 23, ../sass/components/_section-goto.scss */
 #view-go-to ul {
   width: 70vw;
   height: 400px;
@@ -397,7 +407,7 @@ body.menu-in #main-container {
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
-  /* line 24, ../sass/components/_section-goto.scss */
+  /* line 30, ../sass/components/_section-goto.scss */
   #view-go-to img {
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
@@ -407,7 +417,7 @@ body.menu-in #main-container {
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 24, ../sass/components/_section-goto.scss */
+  /* line 30, ../sass/components/_section-goto.scss */
   #view-go-to img {
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
@@ -424,7 +434,7 @@ body.menu-in #main-container {
   }
 }
 
-/* line 41, ../sass/components/_section-goto.scss */
+/* line 47, ../sass/components/_section-goto.scss */
 .go-to-item {
   display: inline-block;
   position: relative;
@@ -433,14 +443,14 @@ body.menu-in #main-container {
   vertical-align: top;
   line-height: 1.5em;
   font-family: arvo;
-  font-size: 1.2rem;
+  font-size: 1em;
   font-weight: 400;
   text-align: left;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
   color: white;
   cursor: pointer;
 }
-/* line 56, ../sass/components/_section-goto.scss */
+/* line 62, ../sass/components/_section-goto.scss */
 .go-to-item:before {
   content: '';
   position: absolute;
@@ -456,7 +466,7 @@ body.menu-in #main-container {
   transition: -webkit-transform 1s, opacity 0.2s;
 }
 
-/* line 70, ../sass/components/_section-goto.scss */
+/* line 76, ../sass/components/_section-goto.scss */
 #section-1-img-left {
   position: absolute;
   top: -10vh;
@@ -465,7 +475,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 78, ../sass/components/_section-goto.scss */
+/* line 84, ../sass/components/_section-goto.scss */
 #section-1-img-right {
   position: absolute;
   top: -10vh;
@@ -474,37 +484,37 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 87, ../sass/components/_section-goto.scss */
+/* line 93, ../sass/components/_section-goto.scss */
 .marble_bg {
   background-image: url(../assets/images/section-1/marble_surface.jpg);
   background-size: cover;
   background-position: bottom;
 }
 
-/* line 93, ../sass/components/_section-goto.scss */
+/* line 99, ../sass/components/_section-goto.scss */
 .recipe_toggle {
   position: relative;
   margin: 5rem 5rem;
   font-family: arvo;
 }
-/* line 98, ../sass/components/_section-goto.scss */
+/* line 104, ../sass/components/_section-goto.scss */
 .recipe_toggle h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 103, ../sass/components/_section-goto.scss */
+/* line 109, ../sass/components/_section-goto.scss */
 .recipe_toggle .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 109, ../sass/components/_section-goto.scss */
+/* line 115, ../sass/components/_section-goto.scss */
 .recipe_toggle p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 115, ../sass/components/_section-goto.scss */
+/* line 121, ../sass/components/_section-goto.scss */
 .recipe_description {
   position: relative;
   margin: 5rem 5rem;
@@ -513,24 +523,24 @@ body.menu-in #main-container {
   color: #404040;
   z-index: 2;
 }
-/* line 123, ../sass/components/_section-goto.scss */
+/* line 129, ../sass/components/_section-goto.scss */
 .recipe_description h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 128, ../sass/components/_section-goto.scss */
+/* line 134, ../sass/components/_section-goto.scss */
 .recipe_description .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 134, ../sass/components/_section-goto.scss */
+/* line 140, ../sass/components/_section-goto.scss */
 .recipe_description p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 141, ../sass/components/_section-goto.scss */
+/* line 147, ../sass/components/_section-goto.scss */
 #view-go-to_chocolate img, #view-go-to_vanilla img {
   position: absolute;
   right: 0px;
@@ -540,7 +550,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 152, ../sass/components/_section-goto.scss */
+/* line 158, ../sass/components/_section-goto.scss */
 #view-go-to_c-buttercream img, #view-go-to_v-buttercream img {
   position: absolute;
   right: 0px;
@@ -550,7 +560,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 163, ../sass/components/_section-goto.scss */
+/* line 169, ../sass/components/_section-goto.scss */
 #view-go-to_marbling img {
   position: absolute;
   right: 0px;
@@ -560,7 +570,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 174, ../sass/components/_section-goto.scss */
+/* line 180, ../sass/components/_section-goto.scss */
 #view-go-to_vanilla .video-btn {
   position: absolute;
   right: 100px;

@@ -2,6 +2,12 @@
 ///////go to
 
 #view-go-to{
+    font-size: 1.2rem;
+
+    @media screen and (max-height: 650px) {
+        font-size: 1rem;
+    }
+
     h2{
         position: relative;
         margin-top: 5rem;
@@ -46,7 +52,7 @@
     vertical-align: top;
     line-height: 1.5em;
     font-family: arvo;
-    font-size: 1.2rem;
+    font-size: 1em;
     font-weight: 400;
     text-align: left;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
