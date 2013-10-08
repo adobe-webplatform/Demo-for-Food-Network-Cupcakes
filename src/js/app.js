@@ -280,7 +280,7 @@ define([], function (require) {
          * resize events
          */
 		handle_RESIZE: function (e) {
-            $('.balance-text').balanceText();
+            //$('.balance-text').balanceText();
 			UserEvent.trigger('resize', e);	
 		},
 		

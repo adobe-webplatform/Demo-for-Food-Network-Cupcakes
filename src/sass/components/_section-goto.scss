@@ -3,11 +3,15 @@
 
 #view-go-to{
     h2{
+        position: relative;
         margin-top: 5rem;
+        z-index: 1;
     }
     
     .subhead{
+        position: relative;
 	    color: rgb(0, 79, 114);
+        z-index: 1;
     }
 
     ul{
@@ -15,7 +19,12 @@
         height: 400px;
         margin: auto;
         text-align: center;
-        // display: -webkit-flex;
+    }
+
+    img{
+        @media screen and (max-width: 1200px) {
+            @include transform(scale(.8));
+        }
     }
 }
 
@@ -27,8 +36,6 @@
     vertical-align: top;
     line-height: 1.5em;
     font-family: arvo;
-    // font-family: lavanderia, sans-serif;
-    // font-size: 2rem;
     font-size: 1.2rem;
     font-weight: 400;
     text-align: left;
@@ -55,7 +62,7 @@
     top: -10vh;
 	left: -60vh;
     height: 120vh;
-	// z-index: -1;
+	z-index: 0;
 }
 
 #section-1-img-right{
@@ -63,7 +70,7 @@
     top: -10vh;
 	right: -60vh;
     height: 120vh;
-	// z-index: -1;
+	z-index: 0;
 }
 
 /////goto subsections

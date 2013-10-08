@@ -2,6 +2,22 @@
 html{
     height: 100%;
     overflow: hidden;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 900px) {
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 10px;
+    }
+
+    // @media screen and (max-width: 700px) {
+    //     font-size: 8px;
+    // }
 }
 
 body{
@@ -81,6 +97,14 @@ h3{
     margin-top: 5rem;
 	z-index: 3;
     @include transform(scale(0.8));
+
+    @media screen and (max-width: 800px) {
+        position: absolute;
+        bottom: 0;
+        margin-top: 0rem;
+        @include transform(none);
+	    -webkit-mask: url(../assets/images/textures/nav_item_bg.png);
+    }
 }
 
 .subhead{

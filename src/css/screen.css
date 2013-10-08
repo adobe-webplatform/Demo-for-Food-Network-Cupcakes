@@ -276,13 +276,23 @@ body.menu-in #main-container {
   cursor: pointer;
   -webkit-mask: url(../assets/images/textures/nav_item_bg.png);
   -webkit-clip-path: polygon(94.251px 22.122px, 82.255px 18.092px, 73.919px 27.612px, 61.289px 26.824px, 55.701px 38.177px, 43.298px 40.684px, 40.839px 53.096px, 29.506px 58.728px, 30.342px 71.354px, 20.854px 79.728px, 24.93px 91.707px, 17.932px 102.25px, 24.97px 112.766px, 20.938px 124.763px, 30.459px 133.098px, 29.672px 145.729px, 41.023px 151.317px, 43.53px 163.72px, 55.943px 166.181px, 61.576px 177.513px, 74.2px 176.676px, 82.575px 186.164px, 94.552px 182.088px, 105.096px 189.086px, 115.612px 182.049px, 127.609px 186.079px, 135.944px 176.56px, 148.574px 177.347px, 154.162px 165.994px, 166.567px 163.486px, 169.026px 151.075px, 180.358px 145.442px, 179.522px 132.816px, 189.01px 124.443px, 184.934px 112.464px, 191.932px 101.92px, 184.893px 91.404px, 188.924px 79.409px, 179.405px 71.074px, 180.193px 58.442px, 168.84px 52.855px, 166.333px 40.45px, 153.92px 37.99px, 148.288px 26.659px, 135.665px 27.496px, 127.29px 18.007px, 115.31px 22.082px, 104.768px 15.086px);
-  -webkit-transition: color 0.4s, background 0.4s;
-  -moz-transition: color 0.4s, background 0.4s;
-  -o-transition: color 0.4s, background 0.4s;
-  transition: color 0.4s, background 0.4s;
+  -webkit-transition: color 0.4s, background-color 0.4s;
+  -moz-transition: color 0.4s, background-color 0.4s;
+  -o-transition: color 0.4s, background-color 0.4s;
+  transition: color 0.4s, background-color 0.4s;
+}
+@media screen and (max-width: 800px) {
+  /* line 2, ../sass/components/_nav-items.scss */
+  .nav-item {
+    -webkit-clip-path: none;
+    -webkit-mask: none;
+    opacity: 0.9;
+    height: 100px;
+    width: 200px;
+  }
 }
 
-/* line 16, ../sass/components/_nav-items.scss */
+/* line 21, ../sass/components/_nav-items.scss */
 .nav-item-title {
   display: -webkit-flex;
   position: absolute;
@@ -300,38 +310,38 @@ body.menu-in #main-container {
   -webkit-transform: translateZ(0);
 }
 
-/* line 33, ../sass/components/_nav-items.scss */
+/* line 38, ../sass/components/_nav-items.scss */
 #nav-item-view-cover {
   font-size: 2rem;
 }
 
-/* line 39, ../sass/components/_nav-items.scss */
+/* line 44, ../sass/components/_nav-items.scss */
 #nav-item-view-go-to .nav-item-title :nth-child(1) {
   font-size: 2.2rem;
 }
-/* line 43, ../sass/components/_nav-items.scss */
+/* line 48, ../sass/components/_nav-items.scss */
 #nav-item-view-go-to .nav-item-title :nth-child(2) {
   font-size: 1.2rem;
 }
 
-/* line 51, ../sass/components/_nav-items.scss */
+/* line 56, ../sass/components/_nav-items.scss */
 #nav-item-view-american .nav-item-title :nth-child(1) {
   font-size: 2.2rem;
 }
-/* line 55, ../sass/components/_nav-items.scss */
+/* line 60, ../sass/components/_nav-items.scss */
 #nav-item-view-american .nav-item-title :nth-child(2) {
   font-size: 1.4rem;
 }
-/* line 59, ../sass/components/_nav-items.scss */
+/* line 64, ../sass/components/_nav-items.scss */
 #nav-item-view-american .nav-item-title :nth-child(3) {
   font-size: 0.8rem;
 }
 
-/* line 67, ../sass/components/_nav-items.scss */
+/* line 72, ../sass/components/_nav-items.scss */
 #nav-item-view-frosting .nav-item-title :nth-child(1) {
   font-size: 1.3rem;
 }
-/* line 71, ../sass/components/_nav-items.scss */
+/* line 76, ../sass/components/_nav-items.scss */
 #nav-item-view-frosting .nav-item-title :nth-child(2) {
   font-size: 2.3rem;
 }
@@ -345,33 +355,59 @@ body.menu-in #main-container {
   right: 0;
   margin: auto;
 }
+@media screen and (max-width: 500px) {
+  /* line 1, ../sass/components/_sections.scss */
+  #cover-canvas {
+    width: 90%;
+  }
+}
 
-/* line 11, ../sass/components/_sections.scss */
+/* line 15, ../sass/components/_sections.scss */
 #view-cover h1 {
   z-index: 1;
 }
-/* line 15, ../sass/components/_sections.scss */
+@media screen and (max-width: 500px) {
+  /* line 15, ../sass/components/_sections.scss */
+  #view-cover h1 {
+    font-size: 10vw;
+  }
+}
+/* line 23, ../sass/components/_sections.scss */
 #view-cover img {
   z-index: 1;
 }
 
 /* line 5, ../sass/components/_section-goto.scss */
 #view-go-to h2 {
+  position: relative;
   margin-top: 5rem;
+  z-index: 1;
 }
-/* line 9, ../sass/components/_section-goto.scss */
+/* line 11, ../sass/components/_section-goto.scss */
 #view-go-to .subhead {
+  position: relative;
   color: #004f72;
+  z-index: 1;
 }
-/* line 13, ../sass/components/_section-goto.scss */
+/* line 17, ../sass/components/_section-goto.scss */
 #view-go-to ul {
   width: 70vw;
   height: 400px;
   margin: auto;
   text-align: center;
 }
+@media screen and (max-width: 1200px) {
+  /* line 24, ../sass/components/_section-goto.scss */
+  #view-go-to img {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
 
-/* line 22, ../sass/components/_section-goto.scss */
+/* line 31, ../sass/components/_section-goto.scss */
 .go-to-item {
   display: inline-block;
   position: relative;
@@ -387,7 +423,7 @@ body.menu-in #main-container {
   color: white;
   cursor: pointer;
 }
-/* line 39, ../sass/components/_section-goto.scss */
+/* line 46, ../sass/components/_section-goto.scss */
 .go-to-item:before {
   content: '';
   position: absolute;
@@ -403,53 +439,55 @@ body.menu-in #main-container {
   transition: -webkit-transform 1s, opacity 0.2s;
 }
 
-/* line 53, ../sass/components/_section-goto.scss */
+/* line 60, ../sass/components/_section-goto.scss */
 #section-1-img-left {
   position: absolute;
   top: -10vh;
   left: -60vh;
   height: 120vh;
+  z-index: 0;
 }
 
-/* line 61, ../sass/components/_section-goto.scss */
+/* line 68, ../sass/components/_section-goto.scss */
 #section-1-img-right {
   position: absolute;
   top: -10vh;
   right: -60vh;
   height: 120vh;
+  z-index: 0;
 }
 
-/* line 70, ../sass/components/_section-goto.scss */
+/* line 77, ../sass/components/_section-goto.scss */
 .marble_bg {
   background-image: url(../assets/images/section-1/marble_surface.jpg);
   background-size: cover;
   background-position: bottom;
 }
 
-/* line 76, ../sass/components/_section-goto.scss */
+/* line 83, ../sass/components/_section-goto.scss */
 .recipe_toggle {
   position: relative;
   margin: 5rem 5rem;
   font-family: arvo;
 }
-/* line 81, ../sass/components/_section-goto.scss */
+/* line 88, ../sass/components/_section-goto.scss */
 .recipe_toggle h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 86, ../sass/components/_section-goto.scss */
+/* line 93, ../sass/components/_section-goto.scss */
 .recipe_toggle .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 92, ../sass/components/_section-goto.scss */
+/* line 99, ../sass/components/_section-goto.scss */
 .recipe_toggle p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 98, ../sass/components/_section-goto.scss */
+/* line 105, ../sass/components/_section-goto.scss */
 .recipe_description {
   position: relative;
   margin: 5rem 5rem;
@@ -458,24 +496,24 @@ body.menu-in #main-container {
   color: #404040;
   z-index: 2;
 }
-/* line 106, ../sass/components/_section-goto.scss */
+/* line 113, ../sass/components/_section-goto.scss */
 .recipe_description h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 111, ../sass/components/_section-goto.scss */
+/* line 118, ../sass/components/_section-goto.scss */
 .recipe_description .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 117, ../sass/components/_section-goto.scss */
+/* line 124, ../sass/components/_section-goto.scss */
 .recipe_description p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 124, ../sass/components/_section-goto.scss */
+/* line 131, ../sass/components/_section-goto.scss */
 #view-go-to_chocolate img, #view-go-to_vanilla img {
   position: absolute;
   right: 0px;
@@ -485,7 +523,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 135, ../sass/components/_section-goto.scss */
+/* line 142, ../sass/components/_section-goto.scss */
 #view-go-to_c-buttercream img, #view-go-to_v-buttercream img {
   position: absolute;
   right: 0px;
@@ -495,7 +533,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 146, ../sass/components/_section-goto.scss */
+/* line 153, ../sass/components/_section-goto.scss */
 #view-go-to_marbling img {
   position: absolute;
   right: 0px;
@@ -505,7 +543,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 157, ../sass/components/_section-goto.scss */
+/* line 164, ../sass/components/_section-goto.scss */
 #view-go-to_vanilla .video-btn {
   position: absolute;
   right: 100px;
@@ -1328,16 +1366,16 @@ body.menu-in #main-container {
 #recipe .recipe-ingredients td .red {
   font-size: 1.5rem;
 }
-/* line 126, ../sass/components/_recipe-view.scss */
+/* line 130, ../sass/components/_recipe-view.scss */
 #recipe .recipe-ingredient-amount {
   width: 4em;
 }
 
-/* line 132, ../sass/components/_recipe-view.scss */
+/* line 136, ../sass/components/_recipe-view.scss */
 .recipe-table-makes .recipe-table-header {
   position: relative;
 }
-/* line 135, ../sass/components/_recipe-view.scss */
+/* line 139, ../sass/components/_recipe-view.scss */
 .recipe-table-makes .recipe-table-header:after {
   content: '';
   position: absolute;
@@ -1349,23 +1387,30 @@ body.menu-in #main-container {
   background-image: url(../assets/images/icons/arrows-updown.svg);
 }
 
-/* line 148, ../sass/components/_recipe-view.scss */
+/* line 152, ../sass/components/_recipe-view.scss */
 .recipe-directions {
   max-width: 40em;
   min-width: 200px;
 }
-/* line 155, ../sass/components/_recipe-view.scss */
+/* line 156, ../sass/components/_recipe-view.scss */
 .recipe-directions.flow {
   width: auto;
   font-size: 2.5rem;
   -webkit-flow-into: recipeFlow;
 }
-/* line 160, ../sass/components/_recipe-view.scss */
+/* line 161, ../sass/components/_recipe-view.scss */
 .recipe-directions.flow h6 {
   display: none;
 }
+@media screen and (max-width: 550px) {
+  /* line 152, ../sass/components/_recipe-view.scss */
+  .recipe-directions {
+    width: auto;
+    min-width: auto;
+  }
+}
 
-/* line 166, ../sass/components/_recipe-view.scss */
+/* line 173, ../sass/components/_recipe-view.scss */
 #slide-btn-view {
   display: inline-block;
   vertical-align: top;
@@ -1383,7 +1428,7 @@ body.menu-in #main-container {
   box-shadow: 0px 1px 0px #c8c8c8;
 }
 
-/* line 183, ../sass/components/_recipe-view.scss */
+/* line 190, ../sass/components/_recipe-view.scss */
 #recipe-content {
   position: absolute;
   box-sizing: border-box;
@@ -1393,7 +1438,7 @@ body.menu-in #main-container {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 192, ../sass/components/_recipe-view.scss */
+/* line 199, ../sass/components/_recipe-view.scss */
 #recipe-content p {
   break-after: region;
   -webkit-region-break-after: always;
@@ -1401,13 +1446,13 @@ body.menu-in #main-container {
   orphans: 3;
 }
 
-/* line 200, ../sass/components/_recipe-view.scss */
+/* line 207, ../sass/components/_recipe-view.scss */
 .recipe-inside {
   max-width: 1000px;
   margin: auto;
 }
 
-/* line 205, ../sass/components/_recipe-view.scss */
+/* line 212, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui {
   position: absolute;
   margin-top: -16px;
@@ -1425,19 +1470,19 @@ body.menu-in #main-container {
   -o-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
-/* line 219, ../sass/components/_recipe-view.scss */
+/* line 226, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui.in {
   opacity: 1;
 }
-/* line 223, ../sass/components/_recipe-view.scss */
+/* line 230, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input {
   background: white;
 }
-/* line 226, ../sass/components/_recipe-view.scss */
+/* line 233, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input:focus {
   outline: none;
 }
-/* line 231, ../sass/components/_recipe-view.scss */
+/* line 238, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui button {
   font-size: 1.2rem;
   color: white;
@@ -1448,7 +1493,7 @@ body.menu-in #main-container {
   cursor: pointer;
 }
 
-/* line 242, ../sass/components/_recipe-view.scss */
+/* line 249, ../sass/components/_recipe-view.scss */
 #selectBlocker {
   position: fixed;
   top: 0;
@@ -2019,8 +2064,26 @@ html {
   height: 100%;
   overflow: hidden;
 }
+@media screen and (max-width: 1200px) {
+  /* line 2, ../sass/_main.scss */
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 2, ../sass/_main.scss */
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 2, ../sass/_main.scss */
+  html {
+    font-size: 10px;
+  }
+}
 
-/* line 7, ../sass/_main.scss */
+/* line 23, ../sass/_main.scss */
 body {
   width: 100%;
   height: 100%;
@@ -2035,69 +2098,69 @@ body {
   perspective: 1000px;
 }
 
-/* line 17, ../sass/_main.scss */
+/* line 33, ../sass/_main.scss */
 h1, h2, h3 {
   font-size: 7rem;
   font-weight: 800;
   color: white;
   text-align: center;
 }
-/* line 24, ../sass/_main.scss */
+/* line 40, ../sass/_main.scss */
 h1.cliptext.clipping, h2.cliptext.clipping, h3.cliptext.clipping {
   background: url(../assets/images/textures/White.png) repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* line 32, ../sass/_main.scss */
+/* line 48, ../sass/_main.scss */
 h2 {
   font-size: 6rem;
 }
 
-/* line 36, ../sass/_main.scss */
+/* line 52, ../sass/_main.scss */
 h3 {
   font-size: 5rem;
 }
 
-/* line 40, ../sass/_main.scss */
+/* line 56, ../sass/_main.scss */
 .quicksand {
   font-family: quicksand;
 }
 
-/* line 44, ../sass/_main.scss */
+/* line 60, ../sass/_main.scss */
 .lavanderia {
   font-family: sofia;
 }
 
-/* line 48, ../sass/_main.scss */
+/* line 64, ../sass/_main.scss */
 .balance-text {
   text-wrap: balanced;
 }
 
-/* line 52, ../sass/_main.scss */
+/* line 68, ../sass/_main.scss */
 .view {
   display: none;
   position: absolute;
   width: 100vw;
   height: 100vh;
 }
-/* line 58, ../sass/_main.scss */
+/* line 74, ../sass/_main.scss */
 .view.in {
   display: block;
 }
 
-/* line 63, ../sass/_main.scss */
+/* line 79, ../sass/_main.scss */
 .flex {
   -webkit-flex-direction: column;
   -webkit-align-items: center;
   -webkit-justify-content: center;
 }
-/* line 68, ../sass/_main.scss */
+/* line 84, ../sass/_main.scss */
 .flex.in {
   display: -webkit-flex;
 }
 
-/* line 73, ../sass/_main.scss */
+/* line 89, ../sass/_main.scss */
 #navigation {
   display: -webkit-flex;
   -webkit-flex-direction: row;
@@ -2114,8 +2177,22 @@ h3 {
   -o-transform: scale(0.8);
   transform: scale(0.8);
 }
+@media screen and (max-width: 800px) {
+  /* line 89, ../sass/_main.scss */
+  #navigation {
+    position: absolute;
+    bottom: 0;
+    margin-top: 0rem;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    -webkit-mask: url(../assets/images/textures/nav_item_bg.png);
+  }
+}
 
-/* line 86, ../sass/_main.scss */
+/* line 110, ../sass/_main.scss */
 .subhead {
   width: 50%;
   margin: auto;
@@ -2124,7 +2201,7 @@ h3 {
   text-align: center;
 }
 
-/* line 94, ../sass/_main.scss */
+/* line 118, ../sass/_main.scss */
 #background {
   position: absolute;
   width: 100vw;
@@ -2132,13 +2209,13 @@ h3 {
   z-index: 0;
 }
 
-/* line 101, ../sass/_main.scss */
+/* line 125, ../sass/_main.scss */
 #main-container {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 106, ../sass/_main.scss */
+/* line 130, ../sass/_main.scss */
 #view-container {
   position: absolute;
   width: 100vw;
@@ -2146,105 +2223,12 @@ h3 {
   z-index: 1;
   -webkit-mask-image: none;
 }
-/* line 113, ../sass/_main.scss */
+/* line 137, ../sass/_main.scss */
 #view-container.mask {
   -webkit-mask-image: -webkit-canvas(mask);
   -webkit-mask-size: 100% 100%;
 }
 
-@media screen and (max-width: 75em) {
-  /* line 4, ../sass/media/_desktop.scss */
-  html {
-    font-size: 14px;
-  }
-
-  /* line 9, ../sass/media/_desktop.scss */
-  #view-go-to img, #view-frosting img, #view-american img {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-}
-@media screen and (max-width: 56em) {
-  /* line 17, ../sass/media/_desktop.scss */
-  html {
-    font-size: 12px;
-  }
-
-  /* line 22, ../sass/media/_desktop.scss */
-  #view-go-to img {
-    top: auto;
-    bottom: -20%;
-  }
-
-  /* line 28, ../sass/media/_desktop.scss */
-  .container-toggle {
-    width: auto;
-  }
-  /* line 31, ../sass/media/_desktop.scss */
-  .container-toggle aside {
-    display: none;
-  }
-}
-@media screen and (max-width: 48em) {
-  /* line 39, ../sass/media/_desktop.scss */
-  html {
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 43em) {
-  /* line 46, ../sass/media/_desktop.scss */
-  html {
-    font-size: 8px;
-  }
-
-  /* line 51, ../sass/media/_desktop.scss */
-  #view-go-to ul {
-    width: 40vw;
-  }
-  /* line 55, ../sass/media/_desktop.scss */
-  #view-go-to img {
-    display: none;
-  }
-
-  /* line 60, ../sass/media/_desktop.scss */
-  .go-to-item {
-    display: block;
-    font-size: 2rem;
-  }
-  /* line 64, ../sass/media/_desktop.scss */
-  .go-to-item:before {
-    display: none;
-  }
-
-  /* line 70, ../sass/media/_desktop.scss */
-  #view-american img {
-    display: none;
-  }
-
-  /* line 76, ../sass/media/_desktop.scss */
-  #view-frosting .frosting-item {
-    position: static;
-    margin: 1em 0;
-  }
-  /* line 81, ../sass/media/_desktop.scss */
-  #view-frosting img {
-    display: none;
-  }
-}
-@media screen and (max-width: 550px) {
-  /* line 90, ../sass/media/_desktop.scss */
-  #recipe .recipe-ingredients {
-    position: static;
-  }
-  /* line 94, ../sass/media/_desktop.scss */
-  #recipe .recipe-directions {
-    width: auto;
-    min-width: auto;
-  }
-}
 /* ipad mini: landscape*/
 @media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
   /* line 7, ../sass/media/_ipad_landscape.scss */

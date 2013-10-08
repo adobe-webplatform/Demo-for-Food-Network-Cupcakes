@@ -5,11 +5,19 @@
     left: 0;
     right: 0;
     margin: auto;
+
+    @media screen and (max-width: 500px) {
+        width: 90%;
+    }
 }
 
 #view-cover{
     h1{
         z-index: 1;
+
+        @media screen and (max-width: 500px) {
+            font-size: 10vw;
+        }
     }
 
     img{

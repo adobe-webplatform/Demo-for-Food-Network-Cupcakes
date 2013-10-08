@@ -121,11 +121,15 @@
                 font-size: 1.5rem;
             }
         }
+
+        // @media screen and (max-width: 550px) {
+        //     position: static;    
+        // }
     }
 
     .recipe-ingredient-amount{
         width: 4em;
-    }
+    }   
 }
 
 .recipe-table-makes{
@@ -146,9 +150,6 @@
 }
 
 .recipe-directions{
-    // width: calc(100% - 350px - 6rem);
-    // width: calc(100% - 350px - 6rem);
-    // max-width: 30em;
     max-width: 40em;
     min-width: 200px;
 
@@ -160,6 +161,12 @@
         h6{
             display: none;
         }
+    }
+
+
+    @media screen and (max-width: 550px) {
+        width: auto;
+        min-width: auto;
     }
 }
 

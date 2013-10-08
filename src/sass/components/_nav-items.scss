@@ -1,16 +1,21 @@
 
 .nav-item{
     position: relative;
-    // top: -200px;
-	// margin: 0 1%;
 	width: 210px;
-	// min-width: 200px;
 	height: 200px;
 	color: white;
 	cursor: pointer;
 	-webkit-mask: url(../assets/images/textures/nav_item_bg.png);
     -webkit-clip-path: polygon(94.251px 22.122px, 82.255px 18.092px, 73.919px 27.612px, 61.289px 26.824px, 55.701px 38.177px, 43.298px 40.684px, 40.839px 53.096px, 29.506px 58.728px, 30.342px 71.354px, 20.854px 79.728px, 24.93px 91.707px, 17.932px 102.25px, 24.97px 112.766px, 20.938px 124.763px, 30.459px 133.098px, 29.672px 145.729px, 41.023px 151.317px, 43.53px 163.72px, 55.943px 166.181px, 61.576px 177.513px, 74.2px 176.676px, 82.575px 186.164px, 94.552px 182.088px, 105.096px 189.086px, 115.612px 182.049px, 127.609px 186.079px, 135.944px 176.56px, 148.574px 177.347px, 154.162px 165.994px, 166.567px 163.486px, 169.026px 151.075px, 180.358px 145.442px, 179.522px 132.816px, 189.01px 124.443px, 184.934px 112.464px, 191.932px 101.92px, 184.893px 91.404px, 188.924px 79.409px, 179.405px 71.074px, 180.193px 58.442px, 168.84px 52.855px, 166.333px 40.45px, 153.92px 37.99px, 148.288px 26.659px, 135.665px 27.496px, 127.29px 18.007px, 115.31px 22.082px, 104.768px 15.086px);
-    @include transition(color .4s, background .4s);
+    @include transition(color .4s, background-color .4s);
+
+    @media screen and (max-width: 800px) {
+        -webkit-clip-path: none;
+	    -webkit-mask: none;
+        opacity: 0.9;
+	    height: 100px;
+	    width: 200px;
+    }
 }
 
 .nav-item-title{
