@@ -34,7 +34,6 @@
     &:hover{
         background-color: rgb(200, 200, 200);
     }
-
 }
 
 .recipe-slide{
@@ -68,6 +67,11 @@
     width: 70vw;
     overflow: hidden;
     -webkit-flow-from: recipeFlow;
+
+
+    @media screen and (max-height: 400px) {
+        @include transform(scale(.6));
+    }
 }
 
 #recipe-slide-ui{
@@ -87,6 +91,10 @@
     padding: 1em;
     text-align: center;
     text-transform: uppercase;
+
+    @media screen and (max-height: 400px) {
+        display: none; 
+    }
 }
 
 #recipe-slide-state{

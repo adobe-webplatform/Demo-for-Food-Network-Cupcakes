@@ -1583,7 +1583,7 @@ body.menu-in #main-container {
   background-color: #c8c8c8;
 }
 
-/* line 40, ../sass/components/_recipe-slide.scss */
+/* line 39, ../sass/components/_recipe-slide.scss */
 .recipe-slide {
   position: absolute;
   display: -webkit-flex;
@@ -1598,7 +1598,7 @@ body.menu-in #main-container {
   -o-transition: opacity 0.2s, -webkit-transform 0.5s;
   transition: opacity 0.2s, -webkit-transform 0.5s;
 }
-/* line 51, ../sass/components/_recipe-slide.scss */
+/* line 50, ../sass/components/_recipe-slide.scss */
 .recipe-slide.right {
   -webkit-transform: translate3d(1000px, 0, 0);
   -moz-transform: translate3d(1000px, 0, 0);
@@ -1606,7 +1606,7 @@ body.menu-in #main-container {
   -o-transform: translate3d(1000px, 0, 0);
   transform: translate3d(1000px, 0, 0);
 }
-/* line 55, ../sass/components/_recipe-slide.scss */
+/* line 54, ../sass/components/_recipe-slide.scss */
 .recipe-slide.left {
   -webkit-transform: translate3d(-1000px, 0, 0);
   -moz-transform: translate3d(-1000px, 0, 0);
@@ -1614,7 +1614,7 @@ body.menu-in #main-container {
   -o-transform: translate3d(-1000px, 0, 0);
   transform: translate3d(-1000px, 0, 0);
 }
-/* line 59, ../sass/components/_recipe-slide.scss */
+/* line 58, ../sass/components/_recipe-slide.scss */
 .recipe-slide.in {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -1624,7 +1624,7 @@ body.menu-in #main-container {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 65, ../sass/components/_recipe-slide.scss */
+/* line 64, ../sass/components/_recipe-slide.scss */
 .recipe-slide-card {
   height: 50vh;
   min-height: 15em;
@@ -1632,8 +1632,18 @@ body.menu-in #main-container {
   overflow: hidden;
   -webkit-flow-from: recipeFlow;
 }
+@media screen and (max-height: 400px) {
+  /* line 64, ../sass/components/_recipe-slide.scss */
+  .recipe-slide-card {
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+}
 
-/* line 73, ../sass/components/_recipe-slide.scss */
+/* line 77, ../sass/components/_recipe-slide.scss */
 #recipe-slide-ui {
   position: fixed;
   top: 0;
@@ -1644,7 +1654,7 @@ body.menu-in #main-container {
   -webkit-user-select: none;
 }
 
-/* line 83, ../sass/components/_recipe-slide.scss */
+/* line 87, ../sass/components/_recipe-slide.scss */
 #recipe-slide-title {
   margin-top: 3em;
   box-sizing: border-box;
@@ -1653,8 +1663,14 @@ body.menu-in #main-container {
   text-align: center;
   text-transform: uppercase;
 }
+@media screen and (max-height: 400px) {
+  /* line 87, ../sass/components/_recipe-slide.scss */
+  #recipe-slide-title {
+    display: none;
+  }
+}
 
-/* line 92, ../sass/components/_recipe-slide.scss */
+/* line 100, ../sass/components/_recipe-slide.scss */
 #recipe-slide-state {
   position: absolute;
   box-sizing: border-box;
@@ -1664,7 +1680,7 @@ body.menu-in #main-container {
   text-align: center;
 }
 
-/* line 101, ../sass/components/_recipe-slide.scss */
+/* line 109, ../sass/components/_recipe-slide.scss */
 .recipe-slide-nav {
   top: 0;
   bottom: 0;
@@ -1685,19 +1701,19 @@ body.menu-in #main-container {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 114, ../sass/components/_recipe-slide.scss */
+/* line 122, ../sass/components/_recipe-slide.scss */
 .recipe-slide-nav:hover {
   opacity: 0.5;
 }
 
-/* line 119, ../sass/components/_recipe-slide.scss */
+/* line 127, ../sass/components/_recipe-slide.scss */
 #recipe-slide-next {
   position: absolute;
   right: 0;
   background-image: url(../assets/images/icons/arrow_right.svg);
 }
 
-/* line 125, ../sass/components/_recipe-slide.scss */
+/* line 133, ../sass/components/_recipe-slide.scss */
 #recipe-slide-prev {
   position: absolute;
   left: 0;
