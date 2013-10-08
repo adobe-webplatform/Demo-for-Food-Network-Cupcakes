@@ -244,9 +244,9 @@ define([], function (require) {
 			var page = this.pages.findWhere({id: id});
 			$('#' + page.get('name')).addClass('in');
 
-            try {
-                $('.balance-text').balanceText();
-            } catch (e) {}
+            //try {
+            //    $('.balance-text').balanceText();
+            //} catch (e) {} //this causes blank pages??
 			
 			new TweenMax.fromTo($('#' + page.get('name')), Vars.get('transitionTime'), 
             {
