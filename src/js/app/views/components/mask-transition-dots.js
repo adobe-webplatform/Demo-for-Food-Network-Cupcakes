@@ -16,7 +16,7 @@ define([], function (require) {
 		this.goal = 50;
 		
 		this.foregroundColor = "black";
-
+		
 		this.init = function () {
 			var i,
 				j = 0,
@@ -94,9 +94,14 @@ define([], function (require) {
 		};
 		
 		this.resize = function () {
-            this.init();
+            clearTimeout(this.resizeTimeout);
+            this.resizeTimeout = setTimeout(function () { //throttle resize
+                this.init();
+                this.draw();
+            }.bind(this), 200);
 		};
 		
+        UserEvent.on('resize', this.resize.bind(this));
 		this.init();
 	};
 		

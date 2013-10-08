@@ -102,8 +102,8 @@ define([], function (require) {
 
                 this.setSize();
                 this.ctx = document.getCSSCanvasContext('2d', 'mask', this.canvas.width, this.canvas.height);
-                this.transitions[this.currentTransition].resize();
-                this.transitions[this.currentTransition].draw();
+                //this.transitions[this.currentTransition].resize();
+                //this.transitions[this.currentTransition].draw();
             }.bind(this), 200);
 		}
 	});

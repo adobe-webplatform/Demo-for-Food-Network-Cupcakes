@@ -83,17 +83,16 @@ body{
     left: 0;
     right: 0;
     background: white;
-    background: orange;
     z-index: 10000;
-    @include transition(opacity .2s linear .2s);
+    opacity: 1;
+    -webkit-transition: opacity .2s linear .2s;
 }
 
 #preloader.out{
     opacity: 0;
 }
 
-#prealoader .spinner{
-    background: blue;
+#preloader .spinner{
     position: absolute;
     margin: auto;
     top: 0;
@@ -495,10 +494,12 @@ body{
                             Try your hand at variety. Whether you prefer a glossy glaze-like chocolate ganache or a traditional royal icing, you’ll find the deliciousness in the details: Follow Alton’s simple step-by-step tips for results that can’t be topped.
                         </p>
                     </div>
-                    <img id="alton-cupcakes" src="assets/images/section-3/alton/AltonBrownCupcakes.png">
-                    <a href="#" id="alton-item-ganache" class="alton-item" data-url="recipe/ganache-frosting">ganache frosting</a>
-                    <a href="#" id="alton-item-royal" class="alton-item" data-url="recipe/royal-icing">royal icing</a>
-                    <a href="#" id="alton-item-chiffon" class="alton-item" data-url="recipe/chocolate-chiffon">chocolate chiffon cupcakes</a>
+                    <div id="alton-cupacakes-bottom">
+                        <img id="alton-cupcakes" src="assets/images/section-3/alton/AltonBrownCupcakes.png">
+                        <a href="#" id="alton-item-ganache" class="alton-item" data-url="recipe/ganache-frosting">ganache frosting</a>
+                        <a href="#" id="alton-item-royal" class="alton-item" data-url="recipe/royal-icing">royal icing</a>
+                        <a href="#" id="alton-item-chiffon" class="alton-item" data-url="recipe/chocolate-chiffon">chocolate chiffon cupcakes</a>
+                    </div>
                 </section>
                 
                 <section id="view-frosting_mix-ins" class="view" data-url="view-frosting/mix-ins" data-title="" data-transition="3" data-mask="0" data-color="#ff8a00">

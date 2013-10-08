@@ -40,10 +40,10 @@ require(['app', 'jquery'], function (app) {
     }
 
     var $preloader = $('#preloader');
-    $preloader.addClass('out');
     $preloader.bind('webkitTransitionEnd', function () {
         $preloader.hide();
     });
+    $preloader.addClass('out');
 
     Modernizr.addTest('backgroundclip', function () {
         var div = document.createElement('div');
