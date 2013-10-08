@@ -123,6 +123,9 @@ define([], function (require) {
             case 37:
                 this.previous();
                 break;
+            case 32:
+                e.preventDefault();
+                break;
             }
         },
 

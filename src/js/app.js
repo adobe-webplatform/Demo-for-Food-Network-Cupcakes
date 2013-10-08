@@ -145,13 +145,11 @@ define([], function (require) {
          */
 		navigate: function (name) {
             
-            //prevent if same page
             if (this.transitioning === true) {
                 return;
             }
 
 			this.router.navigate('page/' + name, {trigger: true});
-
 		},
 
         /**
@@ -198,8 +196,8 @@ define([], function (require) {
             this.$closeBtn.removeClass('in');
 
 			if (this.first === true || this.recipeView.visible === true) {
-				this.first = false;
 				AppEvent.trigger('seek', this.currentPage);
+				this.first = false;
 			} else {
 				AppEvent.trigger('transition', this.currentPage);
 			}
