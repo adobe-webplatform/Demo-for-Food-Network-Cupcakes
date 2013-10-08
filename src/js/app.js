@@ -144,6 +144,13 @@ define([], function (require) {
          * navigate to page
          */
 		navigate: function (name) {
+            
+            if (this.transitioning === true) {
+                return;
+            }
+
+            this.transitioning = true;
+
 			this.router.navigate('page/' + name, {trigger: true});
 		},
 
@@ -221,7 +228,7 @@ define([], function (require) {
          * animated transition to page
          */
 		handle_TRANSITION: function (id) {
-			
+            
             if (typeof(this.prevPage) !== 'undefined') {
                 var prevPage = this.pages.findWhere({id: this.prevPage});
                 prevPage.get('view').stop();
@@ -256,9 +263,10 @@ define([], function (require) {
                 opacity: 1, 
                 ease: Quad.easeOut,
                 onComplete: function () {
+                    this.transitioning = false;
                     TweenMax.killAll();
 			        page.get('view').start();
-                }
+                }.bind(this)
             });
 		},
 		
