@@ -426,19 +426,26 @@ body.menu-in #main-container {
     font-size: 1rem;
   }
 }
-/* line 11, ../sass/components/_section-goto.scss */
+@media screen and (max-width: 430px) {
+  /* line 4, ../sass/components/_section-goto.scss */
+  #view-go-to {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+/* line 16, ../sass/components/_section-goto.scss */
 #view-go-to h2 {
   position: relative;
   margin-top: 5rem;
   z-index: 1;
 }
-/* line 17, ../sass/components/_section-goto.scss */
+/* line 22, ../sass/components/_section-goto.scss */
 #view-go-to .subhead {
   position: relative;
   color: #004f72;
   z-index: 1;
 }
-/* line 23, ../sass/components/_section-goto.scss */
+/* line 28, ../sass/components/_section-goto.scss */
 #view-go-to ul {
   width: 70vw;
   height: 400px;
@@ -446,7 +453,7 @@ body.menu-in #main-container {
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
-  /* line 30, ../sass/components/_section-goto.scss */
+  /* line 35, ../sass/components/_section-goto.scss */
   #view-go-to img {
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
@@ -456,7 +463,7 @@ body.menu-in #main-container {
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 30, ../sass/components/_section-goto.scss */
+  /* line 35, ../sass/components/_section-goto.scss */
   #view-go-to img {
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
@@ -465,15 +472,8 @@ body.menu-in #main-container {
     transform: scale(0.5);
   }
 }
-@media screen and (max-width: 430px) {
-  /* line 4, ../sass/components/_section-goto.scss */
-  #view-go-to {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-}
 
-/* line 47, ../sass/components/_section-goto.scss */
+/* line 46, ../sass/components/_section-goto.scss */
 .go-to-item {
   display: inline-block;
   position: relative;
@@ -489,7 +489,7 @@ body.menu-in #main-container {
   color: white;
   cursor: pointer;
 }
-/* line 62, ../sass/components/_section-goto.scss */
+/* line 61, ../sass/components/_section-goto.scss */
 .go-to-item:before {
   content: '';
   position: absolute;
@@ -505,7 +505,7 @@ body.menu-in #main-container {
   transition: -webkit-transform 1s, opacity 0.2s;
 }
 
-/* line 76, ../sass/components/_section-goto.scss */
+/* line 75, ../sass/components/_section-goto.scss */
 #section-1-img-left {
   position: absolute;
   top: -10vh;
@@ -514,7 +514,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 84, ../sass/components/_section-goto.scss */
+/* line 83, ../sass/components/_section-goto.scss */
 #section-1-img-right {
   position: absolute;
   top: -10vh;
@@ -523,37 +523,37 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 93, ../sass/components/_section-goto.scss */
+/* line 92, ../sass/components/_section-goto.scss */
 .marble_bg {
   background-image: url(../assets/images/section-1/marble_surface.jpg);
   background-size: cover;
   background-position: bottom;
 }
 
-/* line 99, ../sass/components/_section-goto.scss */
+/* line 98, ../sass/components/_section-goto.scss */
 .recipe_toggle {
   position: relative;
   margin: 5rem 5rem;
   font-family: arvo;
 }
-/* line 104, ../sass/components/_section-goto.scss */
+/* line 103, ../sass/components/_section-goto.scss */
 .recipe_toggle h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 109, ../sass/components/_section-goto.scss */
+/* line 108, ../sass/components/_section-goto.scss */
 .recipe_toggle .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 115, ../sass/components/_section-goto.scss */
+/* line 114, ../sass/components/_section-goto.scss */
 .recipe_toggle p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 121, ../sass/components/_section-goto.scss */
+/* line 120, ../sass/components/_section-goto.scss */
 .recipe_description {
   position: relative;
   margin: 5rem 5rem;
@@ -562,24 +562,24 @@ body.menu-in #main-container {
   color: #404040;
   z-index: 2;
 }
-/* line 129, ../sass/components/_section-goto.scss */
+/* line 128, ../sass/components/_section-goto.scss */
 .recipe_description h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 134, ../sass/components/_section-goto.scss */
+/* line 133, ../sass/components/_section-goto.scss */
 .recipe_description .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 140, ../sass/components/_section-goto.scss */
+/* line 139, ../sass/components/_section-goto.scss */
 .recipe_description p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 147, ../sass/components/_section-goto.scss */
+/* line 146, ../sass/components/_section-goto.scss */
 #view-go-to_chocolate img, #view-go-to_vanilla img {
   position: absolute;
   right: 0px;
@@ -589,7 +589,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 158, ../sass/components/_section-goto.scss */
+/* line 157, ../sass/components/_section-goto.scss */
 #view-go-to_c-buttercream img, #view-go-to_v-buttercream img {
   position: absolute;
   right: 0px;
@@ -599,7 +599,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 169, ../sass/components/_section-goto.scss */
+/* line 168, ../sass/components/_section-goto.scss */
 #view-go-to_marbling img {
   position: absolute;
   right: 0px;
@@ -609,7 +609,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 180, ../sass/components/_section-goto.scss */
+/* line 179, ../sass/components/_section-goto.scss */
 #view-go-to_vanilla .video-btn {
   position: absolute;
   right: 100px;
@@ -622,17 +622,24 @@ body.menu-in #main-container {
   background-color: #e9e8e6;
 }
 
-/* line 8, ../sass/components/_section-american.scss */
+@media screen and (max-width: 490px) {
+  /* line 6, ../sass/components/_section-american.scss */
+  #view-american {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+/* line 13, ../sass/components/_section-american.scss */
 #view-american h3 {
   margin-top: 5rem;
 }
-/* line 12, ../sass/components/_section-american.scss */
+/* line 17, ../sass/components/_section-american.scss */
 #view-american h3, #view-american h2 {
   position: relative;
   margin-left: 2rem;
   z-index: 1;
 }
-/* line 18, ../sass/components/_section-american.scss */
+/* line 23, ../sass/components/_section-american.scss */
 #view-american .subhead {
   position: relative;
   box-sizing: border-box;
@@ -644,12 +651,20 @@ body.menu-in #main-container {
   line-height: 1.5em;
   z-index: 1;
 }
-/* line 30, ../sass/components/_section-american.scss */
+@media screen and (max-width: 490px) {
+  /* line 23, ../sass/components/_section-american.scss */
+  #view-american .subhead {
+    text-align: left;
+    margin: 2em;
+  }
+}
+/* line 40, ../sass/components/_section-american.scss */
 #view-american .american-list {
   position: relative;
   box-sizing: border-box;
   margin-top: 2rem;
   margin-right: 2rem;
+  padding-left: 20vw;
   padding-right: 1em;
   text-align: right;
   font-size: 1.3rem;
@@ -657,8 +672,16 @@ body.menu-in #main-container {
   width: 100vw;
   z-index: 2;
 }
+@media screen and (max-width: 490px) {
+  /* line 40, ../sass/components/_section-american.scss */
+  #view-american .american-list {
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 0;
+  }
+}
 
-/* line 45, ../sass/components/_section-american.scss */
+/* line 61, ../sass/components/_section-american.scss */
 .american-item {
   display: inline-block;
   padding: .5em 1em;
@@ -675,14 +698,14 @@ body.menu-in #main-container {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 58, ../sass/components/_section-american.scss */
+/* line 74, ../sass/components/_section-american.scss */
 .american-item:before {
   content: '•';
   margin-top: .7rem;
   margin-right: .5rem;
 }
 
-/* line 65, ../sass/components/_section-american.scss */
+/* line 81, ../sass/components/_section-american.scss */
 #section-2-img-bottom {
   position: absolute;
   left: -5em;
@@ -691,8 +714,24 @@ body.menu-in #main-container {
   max-width: 600px;
   z-index: 0;
 }
+@media screen and (max-width: 800px) {
+  /* line 81, ../sass/components/_section-american.scss */
+  #section-2-img-bottom {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@media screen and (max-width: 630px) {
+  /* line 81, ../sass/components/_section-american.scss */
+  #section-2-img-bottom {
+    display: none;
+  }
+}
 
-/* line 75, ../sass/components/_section-american.scss */
+/* line 99, ../sass/components/_section-american.scss */
 #view-american_brownie img {
   position: absolute;
   right: 0px;
@@ -702,7 +741,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 86, ../sass/components/_section-american.scss */
+/* line 110, ../sass/components/_section-american.scss */
 #view-american_chocolate-chip img, #view-american_tiramisu img {
   position: absolute;
   right: 0px;
@@ -712,7 +751,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 97, ../sass/components/_section-american.scss */
+/* line 121, ../sass/components/_section-american.scss */
 #view-american_red-velvet img, #view-american_brownie img, #view-american_key-lime img, #view-american_cheesecake img, #view-american_boston-cream img, #view-american_smores img, #view-american_peach-cobbler img {
   position: absolute;
   right: 0px;
@@ -2000,7 +2039,7 @@ body.menu-in #main-container {
   position: absolute;
   display: inline-block;
   color: white;
-  font-size: 2rem;
+  font-size: 1.7rem;
   background: #21b0b2;
   padding: .3em .5em;
   border-radius: .3em;

@@ -2,3 +2,70 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 6, ../sass/print.scss */
+body {
+  font: 12pt Georgia, "Times New Roman", Times, serif;
+  line-height: 1.3;
+}
+
+/* line 11, ../sass/print.scss */
+.view {
+  display: none;
+}
+
+/* line 15, ../sass/print.scss */
+img {
+  max-width: 200px;
+}
+
+/* line 19, ../sass/print.scss */
+canvas, #menu, #nav-button-container, #navigation, #view-cover, #view-go-to, #view-american, #view-frosting, #close-btn, #timer, #speech-ui, #notification, #preloader {
+  display: none;
+}
+
+/* line 23, ../sass/print.scss */
+h5 {
+  font-size: 24pt;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* line 29, ../sass/print.scss */
+h6 {
+  font-size: 14pt;
+  text-transform: capitalize;
+  margin-top: 1em;
+  margin-bottom: .2em;
+}
+
+/* line 36, ../sass/print.scss */
+.red {
+  font-weight: bold;
+}
+
+/* line 40, ../sass/print.scss */
+.recipe-table {
+  margin: 1em 0;
+}
+
+/* line 44, ../sass/print.scss */
+.recipe-table, .recipe-table th, .recipe-table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+/* line 50, ../sass/print.scss */
+td {
+  padding: .5em 1em;
+}
+
+/* line 54, ../sass/print.scss */
+p {
+  max-width: 40em;
+  line-height: 1.5;
+}
+
+@page {
+  margin: 0.5cm;
+}

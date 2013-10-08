@@ -8,6 +8,11 @@
         font-size: 1rem;
     }
 
+    @media screen and (max-width: 430px) {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
     h2{
         position: relative;
         margin-top: 5rem;
@@ -35,12 +40,6 @@
         @media screen and (max-width: 700px) {
             @include transform(scale(.5));
         }
-    }
-
-
-    @media screen and (max-width: 430px) {
-        overflow-y: auto;
-        overflow-x: hidden;
     }
 }
 

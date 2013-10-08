@@ -3,3 +3,60 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+body {
+    font: 12pt Georgia, "Times New Roman", Times, serif;
+    line-height: 1.3;
+}
+
+.view{
+    display: none;
+}
+
+img{
+    max-width: 200px;
+}
+
+canvas, #menu, #nav-button-container, #navigation, #view-cover, #view-go-to, #view-american, #view-frosting, #close-btn, #timer, #speech-ui, #notification, #preloader{
+    display: none;
+}
+
+h5{
+    font-size: 24pt;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h6{
+    font-size: 14pt;
+    text-transform: capitalize;
+    margin-top: 1em;
+    margin-bottom: .2em;
+}
+
+.red{
+    font-weight: bold;
+}
+
+.recipe-table{
+    margin: 1em 0;
+}
+
+.recipe-table, .recipe-table th, .recipe-table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+td{
+    padding: .5em 1em;
+}
+
+p{
+    max-width: 40em;
+    line-height: 1.5;
+}
+
+@page {
+    margin: 0.5cm;
+}
+

@@ -145,6 +145,7 @@ define([], function (require) {
          */
 		navigate: function (name) {
             
+            console.log('transitioning??', this.transitioning);
             if (this.transitioning === true) {
                 return;
             }
@@ -217,11 +218,12 @@ define([], function (require) {
 			$('#' + page.get('name')).addClass('in');
             new TweenMax.set($('.view.in'), {opacity: 1});
             TweenMax.killAll();
+            this.transitioning = false;
 			page.get('view').start();
 			
-            try {
-                $('.balance-text').balanceText();
-            } catch (e) {}
+            //try {
+            //    $('.balance-text').balanceText();
+            //} catch (e) {}
 		},
 		
         /**
