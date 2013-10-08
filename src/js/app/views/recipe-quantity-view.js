@@ -94,8 +94,8 @@ define([], function (require) {
         updateValues: function (value, amount) {
             var difference = value / amount,
                 fullstring = this.$quantityEl.text(),
-                suffix = fullstring.replace(/[^a-zA-Z]/g, '');
-            
+                suffix = fullstring.replace(/([^a-zA-Z]+)/, '');
+
             function replaceValue(i, el) {
                 var $el = $(el),
                     decimal,
