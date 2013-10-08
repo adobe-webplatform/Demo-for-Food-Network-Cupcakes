@@ -1421,14 +1421,15 @@ body.menu-in #main-container {
 .recipe-directions {
   max-width: 40em;
   min-width: 200px;
+  margin-bottom: 6rem;
 }
-/* line 156, ../sass/components/_recipe-view.scss */
+/* line 157, ../sass/components/_recipe-view.scss */
 .recipe-directions.flow {
   width: auto;
   font-size: 2.5rem;
   -webkit-flow-into: recipeFlow;
 }
-/* line 161, ../sass/components/_recipe-view.scss */
+/* line 162, ../sass/components/_recipe-view.scss */
 .recipe-directions.flow h6 {
   display: none;
 }
@@ -1440,7 +1441,7 @@ body.menu-in #main-container {
   }
 }
 
-/* line 173, ../sass/components/_recipe-view.scss */
+/* line 174, ../sass/components/_recipe-view.scss */
 #slide-btn-view {
   display: inline-block;
   vertical-align: top;
@@ -1458,7 +1459,7 @@ body.menu-in #main-container {
   box-shadow: 0px 1px 0px #c8c8c8;
 }
 
-/* line 190, ../sass/components/_recipe-view.scss */
+/* line 191, ../sass/components/_recipe-view.scss */
 #recipe-content {
   position: absolute;
   box-sizing: border-box;
@@ -1468,7 +1469,7 @@ body.menu-in #main-container {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 199, ../sass/components/_recipe-view.scss */
+/* line 200, ../sass/components/_recipe-view.scss */
 #recipe-content p {
   break-after: region;
   -webkit-region-break-after: always;
@@ -1476,13 +1477,13 @@ body.menu-in #main-container {
   orphans: 3;
 }
 
-/* line 207, ../sass/components/_recipe-view.scss */
+/* line 208, ../sass/components/_recipe-view.scss */
 .recipe-inside {
   max-width: 1000px;
   margin: auto;
 }
 
-/* line 212, ../sass/components/_recipe-view.scss */
+/* line 213, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui {
   position: absolute;
   margin-top: -16px;
@@ -1500,19 +1501,19 @@ body.menu-in #main-container {
   -o-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
-/* line 226, ../sass/components/_recipe-view.scss */
+/* line 227, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui.in {
   opacity: 1;
 }
-/* line 230, ../sass/components/_recipe-view.scss */
+/* line 231, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input {
   background: white;
 }
-/* line 233, ../sass/components/_recipe-view.scss */
+/* line 234, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input:focus {
   outline: none;
 }
-/* line 238, ../sass/components/_recipe-view.scss */
+/* line 239, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui button {
   font-size: 1.2rem;
   color: white;
@@ -1523,7 +1524,7 @@ body.menu-in #main-container {
   cursor: pointer;
 }
 
-/* line 249, ../sass/components/_recipe-view.scss */
+/* line 250, ../sass/components/_recipe-view.scss */
 #selectBlocker {
   position: fixed;
   top: 0;
@@ -1764,7 +1765,7 @@ body.menu-in #main-container {
 /* line 13, ../sass/components/_timer-view.scss */
 #timer-btn {
   position: relative;
-  height: 4em;
+  height: 6rem;
   width: 4em;
   background-image: url(../assets/images/icons/timer.svg);
   background-repeat: no-repeat;
