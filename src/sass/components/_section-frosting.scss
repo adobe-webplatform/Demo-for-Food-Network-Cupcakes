@@ -188,6 +188,14 @@
     @media screen and (max-height: 700px) {
         @include transform(scale(0.75));
     }
+
+    @media screen and (max-height: 600px) {
+        @include transform(scale(0.5));
+    }
+
+    @media screen and (max-height: 550px) {
+        display: none;
+    }
 }
 
 #alton-item-ganache{
