@@ -643,22 +643,23 @@ body.menu-in #main-container {
 #view-american .subhead {
   position: relative;
   box-sizing: border-box;
-  width: 100vw;
+  width: 70vw;
   padding-right: 1em;
   font-size: 2.2rem;
   color: #f4edaa;
-  text-align: right;
+  text-align: center;
   line-height: 1.5em;
   z-index: 1;
 }
 @media screen and (max-width: 490px) {
   /* line 23, ../sass/components/_section-american.scss */
   #view-american .subhead {
+    width: auto;
     text-align: left;
     margin: 2em;
   }
 }
-/* line 40, ../sass/components/_section-american.scss */
+/* line 41, ../sass/components/_section-american.scss */
 #view-american .american-list {
   position: relative;
   box-sizing: border-box;
@@ -673,20 +674,22 @@ body.menu-in #main-container {
   z-index: 2;
 }
 @media screen and (max-width: 490px) {
-  /* line 40, ../sass/components/_section-american.scss */
+  /* line 41, ../sass/components/_section-american.scss */
   #view-american .american-list {
     text-align: left;
     line-height: 1.5;
+    margin-left: 1rem;
     padding-left: 0;
   }
 }
 
-/* line 61, ../sass/components/_section-american.scss */
+/* line 63, ../sass/components/_section-american.scss */
 .american-item {
-  display: inline-block;
+  display: block;
   padding: .5em 1em;
   margin: .3em .1em;
   color: white;
+  font-size: .8em;
   font-family: arvo;
   font-weight: normal;
   letter-spacing: .2em;
@@ -698,24 +701,35 @@ body.menu-in #main-container {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 74, ../sass/components/_section-american.scss */
+@media screen and (max-width: 900px) {
+  /* line 63, ../sass/components/_section-american.scss */
+  .american-item {
+    font-size: 1em;
+  }
+}
+/* line 82, ../sass/components/_section-american.scss */
 .american-item:before {
   content: '•';
   margin-top: .7rem;
   margin-right: .5rem;
 }
 
-/* line 81, ../sass/components/_section-american.scss */
+/* line 89, ../sass/components/_section-american.scss */
 #section-2-img-bottom {
   position: absolute;
   left: -5em;
   bottom: -10em;
   width: 35em;
-  max-width: 600px;
+  max-width: 500px;
   z-index: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
 }
 @media screen and (max-width: 800px) {
-  /* line 81, ../sass/components/_section-american.scss */
+  /* line 89, ../sass/components/_section-american.scss */
   #section-2-img-bottom {
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
@@ -725,13 +739,13 @@ body.menu-in #main-container {
   }
 }
 @media screen and (max-width: 630px) {
-  /* line 81, ../sass/components/_section-american.scss */
+  /* line 89, ../sass/components/_section-american.scss */
   #section-2-img-bottom {
     display: none;
   }
 }
 
-/* line 99, ../sass/components/_section-american.scss */
+/* line 108, ../sass/components/_section-american.scss */
 #view-american_brownie img {
   position: absolute;
   right: 0px;
@@ -741,7 +755,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 110, ../sass/components/_section-american.scss */
+/* line 119, ../sass/components/_section-american.scss */
 #view-american_chocolate-chip img, #view-american_tiramisu img {
   position: absolute;
   right: 0px;
@@ -751,7 +765,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 121, ../sass/components/_section-american.scss */
+/* line 130, ../sass/components/_section-american.scss */
 #view-american_red-velvet img, #view-american_brownie img, #view-american_key-lime img, #view-american_cheesecake img, #view-american_boston-cream img, #view-american_smores img, #view-american_peach-cobbler img {
   position: absolute;
   right: 0px;
@@ -1505,9 +1519,10 @@ body.menu-in #main-container {
 .recipe-directions.flow {
   width: auto;
   font-size: 2.5rem;
+  margin: 0;
   -webkit-flow-into: recipeFlow;
 }
-/* line 162, ../sass/components/_recipe-view.scss */
+/* line 163, ../sass/components/_recipe-view.scss */
 .recipe-directions.flow h6 {
   display: none;
 }
@@ -1519,7 +1534,7 @@ body.menu-in #main-container {
   }
 }
 
-/* line 173, ../sass/components/_recipe-view.scss */
+/* line 174, ../sass/components/_recipe-view.scss */
 #slide-btn-view {
   display: inline-block;
   vertical-align: top;
@@ -1537,7 +1552,7 @@ body.menu-in #main-container {
   box-shadow: 0px 1px 0px #c8c8c8;
 }
 
-/* line 190, ../sass/components/_recipe-view.scss */
+/* line 191, ../sass/components/_recipe-view.scss */
 #recipe-content {
   position: absolute;
   box-sizing: border-box;
@@ -1547,7 +1562,7 @@ body.menu-in #main-container {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 199, ../sass/components/_recipe-view.scss */
+/* line 200, ../sass/components/_recipe-view.scss */
 #recipe-content p {
   break-after: region;
   -webkit-region-break-after: always;
@@ -1555,13 +1570,13 @@ body.menu-in #main-container {
   orphans: 3;
 }
 
-/* line 207, ../sass/components/_recipe-view.scss */
+/* line 208, ../sass/components/_recipe-view.scss */
 .recipe-inside {
   max-width: 1000px;
   margin: auto;
 }
 
-/* line 212, ../sass/components/_recipe-view.scss */
+/* line 213, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui {
   position: absolute;
   margin-top: -16px;
@@ -1579,19 +1594,19 @@ body.menu-in #main-container {
   -o-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
-/* line 226, ../sass/components/_recipe-view.scss */
+/* line 227, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui.in {
   opacity: 1;
 }
-/* line 230, ../sass/components/_recipe-view.scss */
+/* line 231, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input {
   background: white;
 }
-/* line 233, ../sass/components/_recipe-view.scss */
+/* line 234, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui input:focus {
   outline: none;
 }
-/* line 238, ../sass/components/_recipe-view.scss */
+/* line 239, ../sass/components/_recipe-view.scss */
 #recipe-quantity-ui button {
   font-size: 1.2rem;
   color: white;
@@ -1602,7 +1617,7 @@ body.menu-in #main-container {
   cursor: pointer;
 }
 
-/* line 249, ../sass/components/_recipe-view.scss */
+/* line 250, ../sass/components/_recipe-view.scss */
 #selectBlocker {
   position: fixed;
   top: 0;

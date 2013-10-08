@@ -25,6 +25,7 @@ define([], function (require) {
             this.slides = [];
 
 			UserEvent.on('keydown', this.keydown.bind(this));
+			UserEvent.on('resize', this.resize.bind(this));
 			AppEvent.on('next', this.next.bind(this));
 			AppEvent.on('previous', this.previous.bind(this));
 			AppEvent.on('minimize', this.close.bind(this));
@@ -37,7 +38,6 @@ define([], function (require) {
             if (this.namedFlow.overset === true) {
                 this.addSlide();
             }
-            
 		},
 
         addUI: function () {
@@ -102,8 +102,17 @@ define([], function (require) {
         },
 
         slidesAdded: function () {
+
+            //safety check against extra region
+            if (this.namedFlow.firstEmptyRegionIndex > -1) {
+                this.el.removeChild(this.slides[this.slides.length - 1]);
+                this.slides.splice(this.slides.length - 1, 1);
+            }
+
             $(this.slides[this.currentSlide]).addClass('in');
-            this.addUI();
+            if (!document.getElementById('recipe-slide-ui')) {
+                this.addUI();
+            }
         },
 
         keydown: function (e) {
@@ -169,6 +178,7 @@ define([], function (require) {
         },
 
         update: function () {
+            console.log(this.currentSlide);
             this.updateBtns();
             this.state.innerHTML = (this.currentSlide + 1) + '/' + this.slides.length;
             
@@ -184,7 +194,17 @@ define([], function (require) {
         },
 
 		resize: function () {
-			
+            this.el.innerHTML = '';
+            this.currentSlide = 0;
+            this.slides = [];
+
+            clearTimeout(this.resizeTimeout);
+            this.resizeTimeout = setTimeout(function () {
+                
+                if (this.namedFlow.overset === true) {
+                    this.addSlide();
+                }
+            }.bind(this), 200);
 		},
 
         destroy: function () {
@@ -192,6 +212,7 @@ define([], function (require) {
             AppEvent.off('next', this.next);
 			AppEvent.off('previous', this.previous);
 			UserEvent.off('keydown', this.keydown);
+			UserEvent.off('resize', this.resize);
             $('.recipe-directions').removeClass('flow');
         }
 	});

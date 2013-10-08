@@ -23,15 +23,16 @@
     .subhead{
         position: relative;
         box-sizing: border-box;
-        width: 100vw;
+        width: 70vw;
         padding-right: 1em;
         font-size: 2.2rem;
 	    color: #f4edaa;
-        text-align: right;
+        text-align: center;
         line-height: 1.5em;
     	z-index: 1;
         
         @media screen and (max-width: 490px) {
+            width: auto;
             text-align: left;
             margin: 2em;
         }
@@ -53,16 +54,19 @@
         @media screen and (max-width: 490px) {
             text-align: left;
             line-height: 1.5;
+            margin-left: 1rem;
             padding-left: 0;
         }
     }
 }
 
 .american-item{
-    display: inline-block;
+    display: block;
+    // display: inline-block;
     padding: .5em 1em;
     margin: .3em .1em;
     color: white;
+    font-size: .8em;
     font-family: arvo;
     font-weight: normal;
     letter-spacing: .2em;
@@ -70,6 +74,10 @@
     border-radius: .2em;
     text-shadow: 2px 2px 0px rgb(100, 0, 0);
     @include transition(color .2s);
+    
+    @media screen and (max-width: 900px) {
+        font-size: 1em;
+    }
 
     &:before{
         content: '•';
@@ -83,8 +91,9 @@
     left: -5em;
     bottom: -10em;
     width: 35em;
-    max-width: 600px;
+    max-width: 500px;
     z-index: 0;
+    @include transform(scale(0.9));
 
     @media screen and (max-width: 800px) {
         @include transform(scale(0.75));
