@@ -84,10 +84,11 @@ define([], function (require) {
             
             newValue = Math.round(this.value + difference);
 
-            if (newValue > 0) {
+            if (newValue > this.value) {
                 this.updateValues(newValue, this.value);
             } else {
-                this.updateValues(1, this.value);
+                //this.updateValues(1, this.value);
+                this.updateValues(this.value, this.value);
             }
         },
 
