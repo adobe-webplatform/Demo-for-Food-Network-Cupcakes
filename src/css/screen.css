@@ -1646,6 +1646,7 @@ body.menu-in #main-container {
 
 /* line 83, ../sass/components/_recipe-slide.scss */
 #recipe-slide-title {
+  margin-top: 3em;
   box-sizing: border-box;
   width: 100%;
   padding: 1em;
@@ -1653,7 +1654,7 @@ body.menu-in #main-container {
   text-transform: uppercase;
 }
 
-/* line 91, ../sass/components/_recipe-slide.scss */
+/* line 92, ../sass/components/_recipe-slide.scss */
 #recipe-slide-state {
   position: absolute;
   box-sizing: border-box;
@@ -1663,7 +1664,7 @@ body.menu-in #main-container {
   text-align: center;
 }
 
-/* line 100, ../sass/components/_recipe-slide.scss */
+/* line 101, ../sass/components/_recipe-slide.scss */
 .recipe-slide-nav {
   top: 0;
   bottom: 0;
@@ -1684,19 +1685,19 @@ body.menu-in #main-container {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 113, ../sass/components/_recipe-slide.scss */
+/* line 114, ../sass/components/_recipe-slide.scss */
 .recipe-slide-nav:hover {
   opacity: 0.5;
 }
 
-/* line 118, ../sass/components/_recipe-slide.scss */
+/* line 119, ../sass/components/_recipe-slide.scss */
 #recipe-slide-next {
   position: absolute;
   right: 0;
   background-image: url(../assets/images/icons/arrow_right.svg);
 }
 
-/* line 124, ../sass/components/_recipe-slide.scss */
+/* line 125, ../sass/components/_recipe-slide.scss */
 #recipe-slide-prev {
   position: absolute;
   left: 0;
