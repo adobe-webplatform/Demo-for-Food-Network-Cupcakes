@@ -406,8 +406,25 @@ body.menu-in #main-container {
     transform: scale(0.8);
   }
 }
+@media screen and (max-width: 700px) {
+  /* line 24, ../sass/components/_section-goto.scss */
+  #view-go-to img {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 430px) {
+  /* line 4, ../sass/components/_section-goto.scss */
+  #view-go-to {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
 
-/* line 31, ../sass/components/_section-goto.scss */
+/* line 41, ../sass/components/_section-goto.scss */
 .go-to-item {
   display: inline-block;
   position: relative;
@@ -423,7 +440,7 @@ body.menu-in #main-container {
   color: white;
   cursor: pointer;
 }
-/* line 46, ../sass/components/_section-goto.scss */
+/* line 56, ../sass/components/_section-goto.scss */
 .go-to-item:before {
   content: '';
   position: absolute;
@@ -439,7 +456,7 @@ body.menu-in #main-container {
   transition: -webkit-transform 1s, opacity 0.2s;
 }
 
-/* line 60, ../sass/components/_section-goto.scss */
+/* line 70, ../sass/components/_section-goto.scss */
 #section-1-img-left {
   position: absolute;
   top: -10vh;
@@ -448,7 +465,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 68, ../sass/components/_section-goto.scss */
+/* line 78, ../sass/components/_section-goto.scss */
 #section-1-img-right {
   position: absolute;
   top: -10vh;
@@ -457,37 +474,37 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 77, ../sass/components/_section-goto.scss */
+/* line 87, ../sass/components/_section-goto.scss */
 .marble_bg {
   background-image: url(../assets/images/section-1/marble_surface.jpg);
   background-size: cover;
   background-position: bottom;
 }
 
-/* line 83, ../sass/components/_section-goto.scss */
+/* line 93, ../sass/components/_section-goto.scss */
 .recipe_toggle {
   position: relative;
   margin: 5rem 5rem;
   font-family: arvo;
 }
-/* line 88, ../sass/components/_section-goto.scss */
+/* line 98, ../sass/components/_section-goto.scss */
 .recipe_toggle h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 93, ../sass/components/_section-goto.scss */
+/* line 103, ../sass/components/_section-goto.scss */
 .recipe_toggle .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 99, ../sass/components/_section-goto.scss */
+/* line 109, ../sass/components/_section-goto.scss */
 .recipe_toggle p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 105, ../sass/components/_section-goto.scss */
+/* line 115, ../sass/components/_section-goto.scss */
 .recipe_description {
   position: relative;
   margin: 5rem 5rem;
@@ -496,24 +513,24 @@ body.menu-in #main-container {
   color: #404040;
   z-index: 2;
 }
-/* line 113, ../sass/components/_section-goto.scss */
+/* line 123, ../sass/components/_section-goto.scss */
 .recipe_description h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 118, ../sass/components/_section-goto.scss */
+/* line 128, ../sass/components/_section-goto.scss */
 .recipe_description .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 124, ../sass/components/_section-goto.scss */
+/* line 134, ../sass/components/_section-goto.scss */
 .recipe_description p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 131, ../sass/components/_section-goto.scss */
+/* line 141, ../sass/components/_section-goto.scss */
 #view-go-to_chocolate img, #view-go-to_vanilla img {
   position: absolute;
   right: 0px;
@@ -523,7 +540,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 142, ../sass/components/_section-goto.scss */
+/* line 152, ../sass/components/_section-goto.scss */
 #view-go-to_c-buttercream img, #view-go-to_v-buttercream img {
   position: absolute;
   right: 0px;
@@ -533,7 +550,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 153, ../sass/components/_section-goto.scss */
+/* line 163, ../sass/components/_section-goto.scss */
 #view-go-to_marbling img {
   position: absolute;
   right: 0px;
@@ -543,7 +560,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 164, ../sass/components/_section-goto.scss */
+/* line 174, ../sass/components/_section-goto.scss */
 #view-go-to_vanilla .video-btn {
   position: absolute;
   right: 100px;
@@ -603,19 +620,20 @@ body.menu-in #main-container {
   letter-spacing: .2em;
   text-decoration: none;
   border-radius: .2em;
+  text-shadow: 2px 2px 0px #640000;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 57, ../sass/components/_section-american.scss */
+/* line 58, ../sass/components/_section-american.scss */
 .american-item:before {
   content: '•';
   margin-top: .7rem;
   margin-right: .5rem;
 }
 
-/* line 64, ../sass/components/_section-american.scss */
+/* line 65, ../sass/components/_section-american.scss */
 #section-2-img-bottom {
   position: absolute;
   left: -5em;
@@ -625,7 +643,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 74, ../sass/components/_section-american.scss */
+/* line 75, ../sass/components/_section-american.scss */
 #view-american_brownie img {
   position: absolute;
   right: 0px;
@@ -635,7 +653,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 85, ../sass/components/_section-american.scss */
+/* line 86, ../sass/components/_section-american.scss */
 #view-american_chocolate-chip img, #view-american_tiramisu img {
   position: absolute;
   right: 0px;
@@ -645,7 +663,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 96, ../sass/components/_section-american.scss */
+/* line 97, ../sass/components/_section-american.scss */
 #view-american_red-velvet img, #view-american_brownie img, #view-american_key-lime img, #view-american_cheesecake img, #view-american_boston-cream img, #view-american_smores img, #view-american_peach-cobbler img {
   position: absolute;
   right: 0px;
@@ -665,9 +683,11 @@ body.menu-in #main-container {
 }
 /* line 9, ../sass/components/_section-frosting.scss */
 #view-frosting h2 {
+  position: relative;
   font-size: 8em;
+  z-index: 2;
 }
-/* line 13, ../sass/components/_section-frosting.scss */
+/* line 15, ../sass/components/_section-frosting.scss */
 #view-frosting h3 {
   margin-top: 1em;
   color: darkorange;
@@ -676,7 +696,7 @@ body.menu-in #main-container {
   width: 50vw;
   z-index: 3;
 }
-/* line 22, ../sass/components/_section-frosting.scss */
+/* line 24, ../sass/components/_section-frosting.scss */
 #view-frosting .frosting-title-rotated {
   position: absolute;
   top: 0;
@@ -691,7 +711,7 @@ body.menu-in #main-container {
   -o-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
-/* line 33, ../sass/components/_section-frosting.scss */
+/* line 35, ../sass/components/_section-frosting.scss */
 #view-frosting .frosting-item {
   position: absolute;
   font-size: 1.4em;
@@ -703,7 +723,7 @@ body.menu-in #main-container {
   z-index: 2;
 }
 
-/* line 45, ../sass/components/_section-frosting.scss */
+/* line 47, ../sass/components/_section-frosting.scss */
 #view-frosting-img-alton {
   position: absolute;
   bottom: 0;
@@ -717,7 +737,7 @@ body.menu-in #main-container {
   transform-origin: center bottom;
 }
 
-/* line 54, ../sass/components/_section-frosting.scss */
+/* line 56, ../sass/components/_section-frosting.scss */
 #view-frosting-img-mix-ins {
   position: absolute;
   bottom: 0;
@@ -731,7 +751,7 @@ body.menu-in #main-container {
   transform-origin: center bottom;
 }
 
-/* line 63, ../sass/components/_section-frosting.scss */
+/* line 65, ../sass/components/_section-frosting.scss */
 #view-frosting-img-whipped {
   position: absolute;
   bottom: 20vh;
@@ -745,7 +765,7 @@ body.menu-in #main-container {
   transform-origin: left center;
 }
 
-/* line 72, ../sass/components/_section-frosting.scss */
+/* line 74, ../sass/components/_section-frosting.scss */
 #view-frosting-img-spoon {
   position: absolute;
   bottom: 0;
@@ -759,7 +779,7 @@ body.menu-in #main-container {
   transform-origin: right bottom;
 }
 
-/* line 81, ../sass/components/_section-frosting.scss */
+/* line 83, ../sass/components/_section-frosting.scss */
 #view-frosting-img-knife {
   position: absolute;
   top: 0;
@@ -773,38 +793,38 @@ body.menu-in #main-container {
   transform-origin: right top;
 }
 
-/* line 90, ../sass/components/_section-frosting.scss */
+/* line 92, ../sass/components/_section-frosting.scss */
 .frosting-item--seven {
   left: 8em;
   top: 30%;
 }
 
-/* line 95, ../sass/components/_section-frosting.scss */
+/* line 97, ../sass/components/_section-frosting.scss */
 .frosting-item--alton {
   margin-right: -5em;
   right: 70vw;
   bottom: 5em;
 }
 
-/* line 101, ../sass/components/_section-frosting.scss */
+/* line 103, ../sass/components/_section-frosting.scss */
 .frosting-item--cream {
   right: 13em;
   top: 7em;
 }
 
-/* line 106, ../sass/components/_section-frosting.scss */
+/* line 108, ../sass/components/_section-frosting.scss */
 .frosting-item--swiss {
   right: 5em;
   bottom: 20vh;
 }
 
-/* line 111, ../sass/components/_section-frosting.scss */
+/* line 113, ../sass/components/_section-frosting.scss */
 .frosting-item--mix {
   right: 40vw;
   bottom: 5em;
 }
 
-/* line 119, ../sass/components/_section-frosting.scss */
+/* line 121, ../sass/components/_section-frosting.scss */
 #view-frosting_alton {
   box-sizing: border-box;
   padding: 5rem 2rem;
@@ -814,27 +834,27 @@ body.menu-in #main-container {
   background-size: cover;
   background-position: bottom center;
 }
-/* line 128, ../sass/components/_section-frosting.scss */
+/* line 130, ../sass/components/_section-frosting.scss */
 #view-frosting_alton h2, #view-frosting_alton h3 {
   font-family: quicksand, sans-serif;
 }
-/* line 132, ../sass/components/_section-frosting.scss */
+/* line 134, ../sass/components/_section-frosting.scss */
 #view-frosting_alton h2 {
   font-size: 7rem;
   margin-bottom: 1rem;
 }
-/* line 137, ../sass/components/_section-frosting.scss */
+/* line 139, ../sass/components/_section-frosting.scss */
 #view-frosting_alton p {
   line-height: 1.5;
 }
-/* line 141, ../sass/components/_section-frosting.scss */
+/* line 143, ../sass/components/_section-frosting.scss */
 #view-frosting_alton .alton-paragraph {
   position: relative;
   margin: auto;
   width: 70vw;
   z-index: 2;
 }
-/* line 147, ../sass/components/_section-frosting.scss */
+/* line 149, ../sass/components/_section-frosting.scss */
 #view-frosting_alton .alton-paragraph img {
   float: left;
   margin-right: 1em;
@@ -842,7 +862,7 @@ body.menu-in #main-container {
   border-radius: 80px;
   -webkit-shape-outside: circle(90px, 90px, 90px);
 }
-/* line 156, ../sass/components/_section-frosting.scss */
+/* line 158, ../sass/components/_section-frosting.scss */
 #view-frosting_alton .alton-item {
   position: absolute;
   font-size: 2rem;
@@ -850,7 +870,7 @@ body.menu-in #main-container {
   font-family: sofia;
   text-decoration: none;
 }
-/* line 163, ../sass/components/_section-frosting.scss */
+/* line 165, ../sass/components/_section-frosting.scss */
 #view-frosting_alton .alton-item:before {
   content: '';
   display: block;
@@ -866,7 +886,7 @@ body.menu-in #main-container {
   transition: -webkit-transform 1s, opacity 0.2s;
 }
 
-/* line 177, ../sass/components/_section-frosting.scss */
+/* line 179, ../sass/components/_section-frosting.scss */
 #alton-cupacakes-bottom {
   position: absolute;
   left: 0;
@@ -879,7 +899,7 @@ body.menu-in #main-container {
   z-index: 1;
 }
 @media screen and (max-height: 700px) {
-  /* line 177, ../sass/components/_section-frosting.scss */
+  /* line 179, ../sass/components/_section-frosting.scss */
   #alton-cupacakes-bottom {
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
@@ -889,7 +909,7 @@ body.menu-in #main-container {
   }
 }
 @media screen and (max-height: 600px) {
-  /* line 177, ../sass/components/_section-frosting.scss */
+  /* line 179, ../sass/components/_section-frosting.scss */
   #alton-cupacakes-bottom {
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
@@ -899,38 +919,38 @@ body.menu-in #main-container {
   }
 }
 @media screen and (max-height: 550px) {
-  /* line 177, ../sass/components/_section-frosting.scss */
+  /* line 179, ../sass/components/_section-frosting.scss */
   #alton-cupacakes-bottom {
     display: none;
   }
 }
 
-/* line 201, ../sass/components/_section-frosting.scss */
+/* line 203, ../sass/components/_section-frosting.scss */
 #alton-item-ganache {
   margin-top: -10%;
   left: 30%;
 }
 
-/* line 206, ../sass/components/_section-frosting.scss */
+/* line 208, ../sass/components/_section-frosting.scss */
 #alton-item-royal {
   right: 0;
   top: 0;
   margin-top: -18%;
   margin-right: 1em;
 }
-/* line 212, ../sass/components/_section-frosting.scss */
+/* line 214, ../sass/components/_section-frosting.scss */
 #alton-item-royal:before {
   left: -2em;
   top: 80px;
 }
 
-/* line 218, ../sass/components/_section-frosting.scss */
+/* line 220, ../sass/components/_section-frosting.scss */
 #alton-item-chiffon {
   bottom: 30%;
   left: 47%;
 }
 
-/* line 223, ../sass/components/_section-frosting.scss */
+/* line 225, ../sass/components/_section-frosting.scss */
 #alton-cupcakes {
   position: absolute;
   left: 50%;
@@ -939,7 +959,7 @@ body.menu-in #main-container {
   margin-left: -40%;
 }
 
-/* line 233, ../sass/components/_section-frosting.scss */
+/* line 235, ../sass/components/_section-frosting.scss */
 #view-frosting_mix-ins {
   position: relative;
   background-image: url(../assets/images/textures/Mix-ins_bg.jpg);
@@ -949,7 +969,7 @@ body.menu-in #main-container {
   overflow: auto;
 }
 
-/* line 242, ../sass/components/_section-frosting.scss */
+/* line 244, ../sass/components/_section-frosting.scss */
 #view-frostin-mix-in-palette {
   position: absolute;
   padding-bottom: 10%;
@@ -963,7 +983,7 @@ body.menu-in #main-container {
   background-repeat: no-repeat;
 }
 
-/* line 256, ../sass/components/_section-frosting.scss */
+/* line 258, ../sass/components/_section-frosting.scss */
 .frosting-mix-item {
   display: block;
   position: absolute;
@@ -975,11 +995,11 @@ body.menu-in #main-container {
   width: 16%;
   padding-top: 16%;
 }
-/* line 267, ../sass/components/_section-frosting.scss */
+/* line 269, ../sass/components/_section-frosting.scss */
 .frosting-mix-item:hover {
   color: #7d2b0f;
 }
-/* line 271, ../sass/components/_section-frosting.scss */
+/* line 273, ../sass/components/_section-frosting.scss */
 .frosting-mix-item span {
   display: block;
   position: absolute;
@@ -989,83 +1009,83 @@ body.menu-in #main-container {
   left: -100%;
 }
 
-/* line 280, ../sass/components/_section-frosting.scss */
+/* line 282, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-honey {
   right: 1%;
   margin-top: 15%;
 }
-/* line 284, ../sass/components/_section-frosting.scss */
+/* line 286, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-honey span {
   width: auto;
   left: 0px;
   bottom: 100%;
 }
 
-/* line 291, ../sass/components/_section-frosting.scss */
+/* line 293, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-blueberry {
   right: 20%;
   margin-top: 5%;
 }
-/* line 295, ../sass/components/_section-frosting.scss */
+/* line 297, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-blueberry span {
   left: -50%;
   bottom: 60%;
 }
 
-/* line 301, ../sass/components/_section-frosting.scss */
+/* line 303, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-stout {
   right: 42%;
   margin-top: 7%;
 }
-/* line 304, ../sass/components/_section-frosting.scss */
+/* line 306, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-stout span {
   left: -50%;
   bottom: 70%;
 }
 
-/* line 310, ../sass/components/_section-frosting.scss */
+/* line 312, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-almond {
   right: 56%;
   margin-top: 20%;
 }
-/* line 313, ../sass/components/_section-frosting.scss */
+/* line 315, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-almond span {
   bottom: 70%;
 }
 
-/* line 318, ../sass/components/_section-frosting.scss */
+/* line 320, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-cherry {
   right: 55%;
   margin-top: 40%;
 }
-/* line 321, ../sass/components/_section-frosting.scss */
+/* line 323, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-cherry span {
   bottom: 70%;
 }
 
-/* line 326, ../sass/components/_section-frosting.scss */
+/* line 328, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-peanut {
   right: 35%;
   margin-top: 50%;
 }
-/* line 330, ../sass/components/_section-frosting.scss */
+/* line 332, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-peanut span {
   bottom: -30%;
 }
 
-/* line 335, ../sass/components/_section-frosting.scss */
+/* line 337, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-jam {
   right: 14%;
   margin-top: 47%;
 }
-/* line 339, ../sass/components/_section-frosting.scss */
+/* line 341, ../sass/components/_section-frosting.scss */
 #frosting-mix-item-jam span {
   width: auto;
   bottom: -20%;
   left: 0;
 }
 
-/* line 346, ../sass/components/_section-frosting.scss */
+/* line 348, ../sass/components/_section-frosting.scss */
 #frosting-mix-in-slides {
   position: absolute;
   box-sizing: border-box;
@@ -1080,12 +1100,12 @@ body.menu-in #main-container {
   -o-transition: -webkit-clip-path 1s;
   transition: -webkit-clip-path 1s;
 }
-/* line 357, ../sass/components/_section-frosting.scss */
+/* line 359, ../sass/components/_section-frosting.scss */
 #frosting-mix-in-slides.hide {
   -webkit-clip-path: ellipse(50%, 50%, 0, 0%);
 }
 
-/* line 362, ../sass/components/_section-frosting.scss */
+/* line 364, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide {
   display: none;
   box-sizing: border-box;
@@ -1096,25 +1116,25 @@ body.menu-in #main-container {
   width: 100%;
   overflow: hidden;
 }
-/* line 372, ../sass/components/_section-frosting.scss */
+/* line 374, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide h3 {
   margin: 1em 0;
   font-size: 2em;
   color: #d84a1a;
 }
-/* line 379, ../sass/components/_section-frosting.scss */
+/* line 381, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide h4 {
   font-weight: bold;
   text-transform: uppercase;
   color: #d84a1a;
 }
-/* line 385, ../sass/components/_section-frosting.scss */
+/* line 387, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide small {
   display: block;
   font-size: 1em;
   margin: 1em 0;
 }
-/* line 391, ../sass/components/_section-frosting.scss */
+/* line 393, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide p {
   width: 100%;
   height: 100%;
@@ -1918,7 +1938,15 @@ body.menu-in #main-container {
   border-radius: .3em;
   -webkit-mask: url(../assets/images/textures/red_texture.png);
 }
-/* line 13, ../sass/components/_toggle-gallery.scss */
+@media screen and (max-width: 650px) {
+  /* line 3, ../sass/components/_toggle-gallery.scss */
+  .list-toggle {
+    position: static;
+    display: block;
+    text-align: center;
+  }
+}
+/* line 19, ../sass/components/_toggle-gallery.scss */
 .list-toggle li {
   padding: .5em .3em;
   border-bottom: 5px double white;
@@ -1929,33 +1957,57 @@ body.menu-in #main-container {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 20, ../sass/components/_toggle-gallery.scss */
+@media screen and (max-width: 650px) {
+  /* line 19, ../sass/components/_toggle-gallery.scss */
+  .list-toggle li {
+    display: inline-block;
+    padding: .5em 1em;
+    border-bottom: none;
+    border-right: 5px double white;
+  }
+}
+@media screen and (max-width: 509px) {
+  /* line 19, ../sass/components/_toggle-gallery.scss */
+  .list-toggle li {
+    padding: .5em .3em;
+  }
+}
+@media screen and (max-width: 423px) {
+  /* line 19, ../sass/components/_toggle-gallery.scss */
+  .list-toggle li {
+    display: block;
+    border-right: none;
+    border-bottom: 5px double white;
+  }
+}
+/* line 43, ../sass/components/_toggle-gallery.scss */
 .list-toggle li:last-child {
   border-bottom: none;
+  border-right: none;
 }
-/* line 25, ../sass/components/_toggle-gallery.scss */
+/* line 49, ../sass/components/_toggle-gallery.scss */
 .list-toggle .lavanderia {
   font-size: 1em;
   font-weight: normal;
 }
-/* line 31, ../sass/components/_toggle-gallery.scss */
+/* line 55, ../sass/components/_toggle-gallery.scss */
 .list-toggle .mini-chocolate-chips div {
   pointer-events: none;
 }
-/* line 35, ../sass/components/_toggle-gallery.scss */
+/* line 59, ../sass/components/_toggle-gallery.scss */
 .list-toggle .mini-chocolate-chips div:nth-child(1) {
   font-size: .2em;
 }
-/* line 39, ../sass/components/_toggle-gallery.scss */
+/* line 63, ../sass/components/_toggle-gallery.scss */
 .list-toggle .mini-chocolate-chips div:nth-child(2) {
   font-size: .5em;
 }
-/* line 43, ../sass/components/_toggle-gallery.scss */
+/* line 67, ../sass/components/_toggle-gallery.scss */
 .list-toggle .mini-chocolate-chips div:nth-child(3) {
   font-size: 1em;
 }
 
-/* line 49, ../sass/components/_toggle-gallery.scss */
+/* line 73, ../sass/components/_toggle-gallery.scss */
 .container-toggle {
   position: absolute;
   margin-left: 13em;
@@ -1965,21 +2017,38 @@ body.menu-in #main-container {
   border-radius: 1.2em;
   background: white;
 }
-/* line 58, ../sass/components/_toggle-gallery.scss */
+@media screen and (max-width: 980px) {
+  /* line 73, ../sass/components/_toggle-gallery.scss */
+  .container-toggle {
+    width: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  /* line 73, ../sass/components/_toggle-gallery.scss */
+  .container-toggle {
+    position: static;
+    margin: 1em auto;
+  }
+}
+/* line 91, ../sass/components/_toggle-gallery.scss */
+.container-toggle .container-toggle-section {
+  overflow: hidden;
+}
+/* line 95, ../sass/components/_toggle-gallery.scss */
 .container-toggle figure {
   position: relative;
   display: inline-block;
 }
-/* line 63, ../sass/components/_toggle-gallery.scss */
+/* line 100, ../sass/components/_toggle-gallery.scss */
 .container-toggle figcaption {
   font-size: 1.2em;
 }
-/* line 67, ../sass/components/_toggle-gallery.scss */
+/* line 104, ../sass/components/_toggle-gallery.scss */
 .container-toggle img {
   height: 35em;
   max-height: 381px;
 }
-/* line 72, ../sass/components/_toggle-gallery.scss */
+/* line 109, ../sass/components/_toggle-gallery.scss */
 .container-toggle aside {
   display: inline-block;
   box-sizing: border-box;
@@ -1990,14 +2059,20 @@ body.menu-in #main-container {
   border-top: double 5px #21b0b2;
   width: 140px;
 }
-/* line 82, ../sass/components/_toggle-gallery.scss */
+@media screen and (max-width: 980px) {
+  /* line 109, ../sass/components/_toggle-gallery.scss */
+  .container-toggle aside {
+    display: none;
+  }
+}
+/* line 123, ../sass/components/_toggle-gallery.scss */
 .container-toggle aside h6 {
   font-size: 1em;
   font-weight: bold;
   line-height: 1.2em;
   margin-bottom: .2em;
 }
-/* line 90, ../sass/components/_toggle-gallery.scss */
+/* line 131, ../sass/components/_toggle-gallery.scss */
 .container-toggle a {
   color: #004f73;
   text-decoration: none;
@@ -2007,12 +2082,12 @@ body.menu-in #main-container {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 96, ../sass/components/_toggle-gallery.scss */
+/* line 137, ../sass/components/_toggle-gallery.scss */
 .container-toggle a:hover {
   color: #21b0b2;
 }
 
-/* line 102, ../sass/components/_toggle-gallery.scss */
+/* line 143, ../sass/components/_toggle-gallery.scss */
 .mix-figcaption {
   position: absolute;
   box-sizing: border-box;
@@ -2024,36 +2099,36 @@ body.menu-in #main-container {
   line-height: 1.2;
 }
 
-/* line 113, ../sass/components/_toggle-gallery.scss */
+/* line 154, ../sass/components/_toggle-gallery.scss */
 .mix-rum-raisin {
   font-size: 1.3rem;
   -webkit-shape-inside: polygon(nonzero, -4px 143px, 139px 143px, 149px 211px, 334px 402px, -7px 397px);
 }
 
-/* line 118, ../sass/components/_toggle-gallery.scss */
+/* line 159, ../sass/components/_toggle-gallery.scss */
 .mix-mocha {
   height: 70%;
   -webkit-shape-inside: polygon(nonzero, 2px 28px, 178px 28px, 181px 194px, 122px 387px, 0px 389px);
 }
 
-/* line 123, ../sass/components/_toggle-gallery.scss */
+/* line 164, ../sass/components/_toggle-gallery.scss */
 .mix-orange {
   -webkit-shape-inside: polygon(nonzero, 0px 0px, 151px 1px, 216px 64px, 402px 96px, 420px 170px, -1px 170px);
 }
 
-/* line 127, ../sass/components/_toggle-gallery.scss */
+/* line 168, ../sass/components/_toggle-gallery.scss */
 .mix-chips {
   -webkit-shape-inside: polygon(nonzero, -3px 30px, 150px 30px, 292px 386px, 0px 385px);
 }
 
-/* line 131, ../sass/components/_toggle-gallery.scss */
+/* line 172, ../sass/components/_toggle-gallery.scss */
 .mix-poppy {
   height: 100%;
   text-align: right;
   -webkit-shape-inside: polygon(nonzero, 0px 24px, 428px 24px, 429px 356px, 276px 202px, 0px 102px);
 }
 
-/* line 137, ../sass/components/_toggle-gallery.scss */
+/* line 178, ../sass/components/_toggle-gallery.scss */
 .mix-sprinkles {
   height: 100%;
   -webkit-shape-inside: polygon(nonzero, -2px 24px, 153px 24px, 135px 177px, 169px 388px, 0px 389px);

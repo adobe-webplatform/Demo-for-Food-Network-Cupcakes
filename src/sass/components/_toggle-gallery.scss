@@ -10,15 +10,39 @@ $teal: rgb(33, 176, 178);
     border-radius: .3em;
     -webkit-mask: url(../assets/images/textures/red_texture.png);
 
+    @media screen and (max-width: 650px) {
+        position: static;
+        display: block;
+        text-align: center;
+    }
+
     li{
         padding: .5em .3em;
         border-bottom: 5px double white;
         text-align: center;
         cursor: pointer;
         @include transition(color .2s);
+    
+        @media screen and (max-width: 650px) {
+            display: inline-block;
+            padding: .5em 1em;
+            border-bottom: none;
+            border-right: 5px double white;
+        }
+        
+        @media screen and (max-width: 509px) {
+            padding: .5em .3em;
+        }
+        
+        @media screen and (max-width: 423px) {
+            display: block;
+            border-right: none;
+            border-bottom: 5px double white;
+        }
         
         &:last-child {
             border-bottom: none;
+            border-right: none;
         }
     }
 
@@ -55,6 +79,19 @@ $teal: rgb(33, 176, 178);
     border-radius: 1.2em;
     background: white;
 
+    @media screen and (max-width: 980px) {
+        width: auto;
+    }
+    
+    @media screen and (max-width: 650px) {
+        position: static;
+        margin: 1em auto;
+    }
+
+    .container-toggle-section{
+        overflow: hidden;
+    }
+
     figure{
         position: relative;
         display: inline-block;
@@ -78,6 +115,10 @@ $teal: rgb(33, 176, 178);
         line-height: 1.5;
         border-top: double 5px $teal;
         width: 140px;
+
+        @media screen and (max-width: 980px) {
+            display: none;
+        }
 
         h6{
             font-size: 1em;

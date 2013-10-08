@@ -52,6 +52,7 @@
     letter-spacing: .2em;
     text-decoration: none;
     border-radius: .2em;
+    text-shadow: 2px 2px 0px rgb(100, 0, 0);
     @include transition(color .2s);
 
     &:before{

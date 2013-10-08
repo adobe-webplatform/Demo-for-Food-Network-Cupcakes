@@ -56,7 +56,7 @@ define([], function (require) {
             this.delta = 0;
             this.animating = false;
 
-            this.setup();
+            //this.setup();
 		},
 		
 		start: function () {
@@ -66,7 +66,7 @@ define([], function (require) {
 		},
 
         setup: function () {
-            this.applyRandomColor();
+            //this.applyRandomColor();
         },
 
         handle_CLICK: function (e) {

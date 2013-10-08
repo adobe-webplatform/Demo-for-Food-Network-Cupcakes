@@ -59,14 +59,15 @@ define([], function (require) {
                 this.$el.removeClass('in');
                 this.$el.hide();
                 this.visible = false;
+                this.$content.scrollTop(0);
             }
         },
 
         animOut: function () {
             if (this.visible === true) {
                 this.$el.removeClass('in');
-                
                 this.visible = false;
+                this.$content.scrollTop(0);
             }
         },
 
