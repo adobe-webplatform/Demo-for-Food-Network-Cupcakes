@@ -5,7 +5,7 @@
 module( "Quaternion" );
 
 var orders = [ 'XYZ', 'YXZ', 'ZXY', 'ZYX', 'YZX', 'XZY' ];
-var eulerAngles = new THREE.Vector3( 0.1, -0.3, 0.25 );
+var eulerAngles = new THREE.Euler( 0.1, -0.3, 0.25 );
 
 
 
@@ -91,16 +91,16 @@ test( "setFromAxisAngle", function() {
 });
 
 
-test( "setFromEuler/setEulerFromQuaternion", function() {
+test( "setFromEuler/setFromQuaternion", function() {
 
 	var angles = [ new THREE.Vector3( 1, 0, 0 ), new THREE.Vector3( 0, 1, 0 ), new THREE.Vector3( 0, 0, 1 ) ];
 
 	// ensure euler conversion to/from Quaternion matches.
 	for( var i = 0; i < orders.length; i ++ ) {
 		for( var j = 0; j < angles.length; j ++ ) {
-			var eulers2 = new THREE.Vector3().setEulerFromQuaternion( new THREE.Quaternion().setFromEuler( angles[j], orders[i] ), orders[i] );
-
-			ok( eulers2.distanceTo( angles[j] ) < 0.001, "Passed!" );
+			var eulers2 = new THREE.Euler().setFromQuaternion( new THREE.Quaternion().setFromEuler( new THREE.Euler( angles[j].x, angles[j].y, angles[j].z, orders[i] ) ), orders[i] );
+			var newAngle = new THREE.Vector3( eulers2.x, eulers2.y, eulers2.z );
+			ok( newAngle.distanceTo( angles[j] ) < 0.001, "Passed!" );
 		}
 	}
 
@@ -153,7 +153,7 @@ test( "inverse/conjugate", function() {
 
 test( "multiplyQuaternions/multiply", function() {
 
-	var angles = [ new THREE.Vector3( 1, 0, 0 ), new THREE.Vector3( 0, 1, 0 ), new THREE.Vector3( 0, 0, 1 ) ];
+	var angles = [ new THREE.Euler( 1, 0, 0 ), new THREE.Euler( 0, 1, 0 ), new THREE.Euler( 0, 0, 1 ) ];
 
 	var q1 = new THREE.Quaternion().setFromEuler( angles[0], "XYZ" );
 	var q2 = new THREE.Quaternion().setFromEuler( angles[1], "XYZ" );
@@ -174,7 +174,7 @@ test( "multiplyQuaternions/multiply", function() {
 
 test( "multiplyVector3", function() {
 	
-	var angles = [ new THREE.Vector3( 1, 0, 0 ), new THREE.Vector3( 0, 1, 0 ), new THREE.Vector3( 0, 0, 1 ) ];
+	var angles = [ new THREE.Euler( 1, 0, 0 ), new THREE.Euler( 0, 1, 0 ), new THREE.Euler( 0, 0, 1 ) ];
 
 	// ensure euler conversion for Quaternion matches that of Matrix4
 	for( var i = 0; i < orders.length; i ++ ) {

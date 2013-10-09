@@ -96,9 +96,9 @@ THREE.Color.prototype = {
 
 		// rgb(255,0,0)
 
-		if ( /^rgb\((\d+),(\d+),(\d+)\)$/i.test( style ) ) {
+		if ( /^rgb\((\d+), ?(\d+), ?(\d+)\)$/i.test( style ) ) {
 
-			var color = /^rgb\((\d+),(\d+),(\d+)\)$/i.exec( style );
+			var color = /^rgb\((\d+), ?(\d+), ?(\d+)\)$/i.exec( style );
 
 			this.r = Math.min( 255, parseInt( color[ 1 ], 10 ) ) / 255;
 			this.g = Math.min( 255, parseInt( color[ 2 ], 10 ) ) / 255;
@@ -110,9 +110,9 @@ THREE.Color.prototype = {
 
 		// rgb(100%,0%,0%)
 
-		if ( /^rgb\((\d+)\%,(\d+)\%,(\d+)\%\)$/i.test( style ) ) {
+		if ( /^rgb\((\d+)\%, ?(\d+)\%, ?(\d+)\%\)$/i.test( style ) ) {
 
-			var color = /^rgb\((\d+)\%,(\d+)\%,(\d+)\%\)$/i.exec( style );
+			var color = /^rgb\((\d+)\%, ?(\d+)\%, ?(\d+)\%\)$/i.exec( style );
 
 			this.r = Math.min( 100, parseInt( color[ 1 ], 10 ) ) / 100;
 			this.g = Math.min( 100, parseInt( color[ 2 ], 10 ) ) / 100;
@@ -353,6 +353,22 @@ THREE.Color.prototype = {
 	equals: function ( c ) {
 
 		return ( c.r === this.r ) && ( c.g === this.g ) && ( c.b === this.b );
+
+	},
+
+	fromArray: function ( array ) {
+
+		this.r = array[ 0 ];
+		this.g = array[ 1 ];
+		this.b = array[ 2 ];
+
+		return this;
+
+	},
+
+	toArray: function () {
+
+		return [ this.r, this.g, this.b ];
 
 	},
 

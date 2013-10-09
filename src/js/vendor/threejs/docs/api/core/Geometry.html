@@ -17,7 +17,7 @@
 
 		<h2>Example</h2>
 
-		<code>var geometry = new THREE.Geometry()
+		<code>var geometry = new THREE.Geometry();
 
 		geometry.vertices.push( new THREE.Vector3( -10,  10, 0 ) );
 		geometry.vertices.push( new THREE.Vector3( -10, -10, 0 ) );
@@ -30,7 +30,11 @@
 
 		<h2>Constructor</h2>
 
+
 		<h3>[name]()</h3>
+		<div>
+		todo
+		</div>
 
 
 		<h2>Properties</h2>
@@ -55,30 +59,16 @@
 		<h3>.[page:Array colors]</h3>
 		<div>
 		Array of vertex [page:Color colors], matching number and order of vertices.<br />
-		Used in [page:ParticleSystem], [page:Line] and [page:Ribbon].<br />
+		Used in [page:ParticleSystem] and [page:Line].<br />
 		[page:Mesh Meshes] use per-face-use-of-vertex colors embedded directly in faces.<br />
 		To signal an update in this array, [page:Geometry Geometry.colorsNeedUpdate] needs to be set to true.
 		</div>
 
-		<h3>.[page:Array normals]</h3>
-		<div>
-		Array of vertex [page:Vector3 normals], matching number and order of vertices.<br />
-		[link:http://en.wikipedia.org/wiki/Normal_(geometry) Normal vectors] are  nessecary for lighting <br />
-		To signal an update in this array, [page:Geometry Geometry.normalsNeedUpdate] needs to be set to true.
-		</div>
-
 		<h3>.[page:Array faces]</h3>
 		<div>
-		Array of [page:Face3 triangles] or/and [page:Face4 quads].<br />
+		Array of [page:Face3 triangles].<br />
 		The array of faces describe how each vertex in the model is connected with each other.<br />
 		To signal an update in this array, [page:Geometry Geometry.elementsNeedUpdate] needs to be set to true.
-		</div>
-
-		<h3>.[page:Array faceUvs]</h3>
-		<div>
-		Array of face [page:UV] layers.<br />
-		Each UV layer is an array of [page:UV] matching order and number of faces.<br />
-		To signal an update in this array, [page:Geometry Geometry.uvsNeedUpdate] needs to be set to true.
 		</div>
 
 		<h3>.[page:Array faceVertexUvs]</h3>

@@ -5,6 +5,9 @@
 THREE.BufferGeometry = function () {
 
 	this.id = THREE.GeometryIdCount ++;
+	this.uuid = THREE.Math.generateUUID();
+
+	this.name = '';
 
 	// attributes
 
@@ -12,7 +15,7 @@ THREE.BufferGeometry = function () {
 
 	// attributes typed arrays are kept only if dynamic flag is set
 
-	this.dynamic = false;
+	this.dynamic = true;
 
 	// offsets for chunks when using indexed elements
 
@@ -34,11 +37,6 @@ THREE.BufferGeometry = function () {
 THREE.BufferGeometry.prototype = {
 
 	constructor: THREE.BufferGeometry,
-
-	addEventListener: THREE.EventDispatcher.prototype.addEventListener,
-	hasEventListener: THREE.EventDispatcher.prototype.hasEventListener,
-	removeEventListener: THREE.EventDispatcher.prototype.removeEventListener,
-	dispatchEvent: THREE.EventDispatcher.prototype.dispatchEvent,
 
 	applyMatrix: function ( matrix ) {
 
@@ -143,35 +141,48 @@ THREE.BufferGeometry.prototype = {
 
 	computeBoundingSphere: function () {
 
-		if ( this.boundingSphere === null ) {
+		var box = new THREE.Box3();
+		var vector = new THREE.Vector3();
 
-			this.boundingSphere = new THREE.Sphere();
+		return function () {
 
-		}
+			if ( this.boundingSphere === null ) {
 
-		var positions = this.attributes[ "position" ].array;
-
-		if ( positions ) {
-
-			var radiusSq, maxRadiusSq = 0;
-			var x, y, z;
-
-			for ( var i = 0, il = positions.length; i < il; i += 3 ) {
-
-				x = positions[ i ];
-				y = positions[ i + 1 ];
-				z = positions[ i + 2 ];
-
-				radiusSq =  x * x + y * y + z * z;
-				if ( radiusSq > maxRadiusSq ) maxRadiusSq = radiusSq;
+				this.boundingSphere = new THREE.Sphere();
 
 			}
 
-			this.boundingSphere.radius = Math.sqrt( maxRadiusSq );
+			var positions = this.attributes[ "position" ].array;
+
+			if ( positions ) {
+
+				var center = this.boundingSphere.center;
+
+				for ( var i = 0, il = positions.length; i < il; i += 3 ) {
+
+					vector.set( positions[ i ], positions[ i + 1 ], positions[ i + 2 ] );
+					box.addPoint( vector );
+
+				}
+
+				box.center( center );
+
+				var maxRadiusSq = 0;
+
+				for ( var i = 0, il = positions.length; i < il; i += 3 ) {
+
+					vector.set( positions[ i ], positions[ i + 1 ], positions[ i + 2 ] );
+					maxRadiusSq = Math.max( maxRadiusSq, center.distanceToSquared( vector ) );
+
+				}
+
+				this.boundingSphere.radius = Math.sqrt( maxRadiusSq );
+
+			}
 
 		}
 
-	},
+	}(),
 
 	computeVertexNormals: function () {
 
@@ -187,8 +198,7 @@ THREE.BufferGeometry.prototype = {
 				this.attributes[ "normal" ] = {
 
 					itemSize: 3,
-					array: new Float32Array( nVertexElements ),
-					numItems: nVertexElements
+					array: new Float32Array( nVertexElements )
 
 				};
 
@@ -371,8 +381,7 @@ THREE.BufferGeometry.prototype = {
 			this.attributes[ "tangent" ] = {
 
 				itemSize: 4,
-				array: new Float32Array( nTangentElements ),
-				numItems: nTangentElements
+				array: new Float32Array( nTangentElements )
 
 			};
 
@@ -545,6 +554,60 @@ THREE.BufferGeometry.prototype = {
 
 	},
 
+	clone: function () {
+
+		var geometry = new THREE.BufferGeometry();
+
+		var types = [ Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array ];
+
+		for ( var attr in this.attributes ) {
+
+			var sourceAttr = this.attributes[ attr ];
+			var sourceArray = sourceAttr.array;
+
+			var attribute = {
+
+				itemSize: sourceAttr.itemSize,
+				numItems: sourceAttr.numItems,
+				array: null
+
+			};
+
+			for ( var i = 0, il = types.length; i < il; i ++ ) {
+
+				var type = types[ i ];
+
+				if ( sourceArray instanceof type ) {
+
+					attribute.array = new type( sourceArray );
+					break;
+
+				}
+
+			}
+
+			geometry.attributes[ attr ] = attribute;
+
+		}
+
+		for ( var i = 0, il = this.offsets.length; i < il; i ++ ) {
+
+			var offset = this.offsets[ i ];
+
+			geometry.offsets.push( {
+
+				start: offset.start,
+				index: offset.index,
+				count: offset.count
+
+			} );
+
+		}
+
+		return geometry;
+
+	},
+
 	dispose: function () {
 
 		this.dispatchEvent( { type: 'dispose' } );
@@ -552,3 +615,5 @@ THREE.BufferGeometry.prototype = {
 	}
 
 };
+
+THREE.EventDispatcher.prototype.apply( THREE.BufferGeometry.prototype );

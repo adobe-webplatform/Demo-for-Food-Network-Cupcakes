@@ -8,6 +8,7 @@
 THREE.Object3D = function () {
 
 	this.id = THREE.Object3DIdCount ++;
+	this.uuid = THREE.Math.generateUUID();
 
 	this.name = '';
 
@@ -17,9 +18,14 @@ THREE.Object3D = function () {
 	this.up = new THREE.Vector3( 0, 1, 0 );
 
 	this.position = new THREE.Vector3();
-	this.rotation = new THREE.Vector3();
-	this.eulerOrder = THREE.Object3D.defaultEulerOrder;
+	this.rotation = new THREE.Euler();
+	this.quaternion = new THREE.Quaternion();
 	this.scale = new THREE.Vector3( 1, 1, 1 );
+
+	// keep rotation and quaternion in sync
+
+	this.rotation._quaternion = this.quaternion;
+	this.quaternion._euler = this.rotation;
 
 	this.renderDepth = null;
 
@@ -30,9 +36,6 @@ THREE.Object3D = function () {
 
 	this.matrixAutoUpdate = true;
 	this.matrixWorldNeedsUpdate = true;
-
-	this.quaternion = new THREE.Quaternion();
-	this.useQuaternion = false;
 
 	this.visible = true;
 
@@ -50,6 +53,34 @@ THREE.Object3D.prototype = {
 
 	constructor: THREE.Object3D,
 
+	get eulerOrder () {
+
+		console.warn( 'DEPRECATED: Object3D\'s .eulerOrder has been moved to Object3D\'s .rotation.order.' );
+
+		return this.rotation.order;
+
+	},
+
+	set eulerOrder ( value ) {
+
+		console.warn( 'DEPRECATED: Object3D\'s .eulerOrder has been moved to Object3D\'s .rotation.order.' );
+
+		this.rotation.order = value;
+
+	},
+
+	get useQuaternion () {
+
+		console.warn( 'DEPRECATED: Object3D\'s .useQuaternion has been removed. The library now uses quaternions by default.' );
+
+	},
+
+	set useQuaternion ( value ) {
+
+		console.warn( 'DEPRECATED: Object3D\'s .useQuaternion has been removed. The library now uses quaternions by default.' );
+
+	},
+
 	applyMatrix: function () {
 
 		var m1 = new THREE.Matrix4();
@@ -64,19 +95,41 @@ THREE.Object3D.prototype = {
 
 			m1.extractRotation( this.matrix );
 
-			if ( this.useQuaternion === true )  {
-
-				this.quaternion.setFromRotationMatrix( m1 );
-
-			} else {
-
-				this.rotation.setEulerFromRotationMatrix( m1, this.eulerOrder );
-
-			}
+			this.quaternion.setFromRotationMatrix( m1 );
 
 		}
 
 	}(),
+
+	setRotationFromAxisAngle: function ( axis, angle ) {
+
+		// assumes axis is normalized
+
+		this.quaternion.setFromAxisAngle( axis, angle );
+
+	},
+
+	setRotationFromEuler: function ( euler ) {
+
+		this.quaternion.setFromEuler( euler, true );
+
+	},
+
+	setRotationFromMatrix: function ( m ) {
+
+		// assumes the upper 3x3 of m is a pure rotation matrix (i.e, unscaled)
+
+		this.quaternion.setFromRotationMatrix( m );
+
+	},
+
+	setRotationFromQuaternion: function ( q ) {
+
+		// assumes q is normalized
+
+		this.quaternion.copy( q );
+
+	},
 
 	rotateOnAxis: function() {
 
@@ -84,28 +137,52 @@ THREE.Object3D.prototype = {
 		// axis is assumed to be normalized
 
 		var q1 = new THREE.Quaternion();
-		var q2 = new THREE.Quaternion();
 
 		return function ( axis, angle ) {
 
 			q1.setFromAxisAngle( axis, angle );
 
-			if ( this.useQuaternion === true ) {
-
-				this.quaternion.multiply( q1 );
-
-			} else {
-
-				q2.setFromEuler( this.rotation, this.eulerOrder );
-				q2.multiply( q1 );
-
-				this.rotation.setEulerFromQuaternion( q2, this.eulerOrder );
-
-			}
+			this.quaternion.multiply( q1 );
 
 			return this;
 
 		}
+
+	}(),
+
+	rotateX: function () {
+
+		var v1 = new THREE.Vector3( 1, 0, 0 );
+
+		return function ( angle ) {
+
+			return this.rotateOnAxis( v1, angle );
+
+		};
+
+	}(),
+
+	rotateY: function () {
+
+		var v1 = new THREE.Vector3( 0, 1, 0 );
+
+		return function ( angle ) {
+
+			return this.rotateOnAxis( v1, angle );
+
+		};
+
+	}(),
+
+	rotateZ: function () {
+
+		var v1 = new THREE.Vector3( 0, 0, 1 );
+
+		return function ( angle ) {
+
+			return this.rotateOnAxis( v1, angle );
+
+		};
 
 	}(),
 
@@ -120,15 +197,7 @@ THREE.Object3D.prototype = {
 
 			v1.copy( axis );
 
-			if ( this.useQuaternion === true ) {
-
-				v1.applyQuaternion( this.quaternion );
-
-			} else {
-
-				v1.applyEuler( this.rotation, this.eulerOrder );
-
-			}
+			v1.applyQuaternion( this.quaternion );
 
 			this.position.add( v1.multiplyScalar( distance ) );
 
@@ -209,15 +278,7 @@ THREE.Object3D.prototype = {
 
 			m1.lookAt( vector, this.position, this.up );
 
-			if ( this.useQuaternion === true )  {
-
-				this.quaternion.setFromRotationMatrix( m1 );
-
-			} else {
-
-				this.rotation.setEulerFromRotationMatrix( m1, this.eulerOrder );
-
-			}
+			this.quaternion.setFromRotationMatrix( m1 );
 
 		};
 
@@ -241,6 +302,8 @@ THREE.Object3D.prototype = {
 			}
 
 			object.parent = this;
+			object.dispatchEvent( { type: 'added' } );
+
 			this.children.push( object );
 
 			// add to scene
@@ -270,6 +333,8 @@ THREE.Object3D.prototype = {
 		if ( index !== - 1 ) {
 
 			object.parent = undefined;
+			object.dispatchEvent( { type: 'removed' } );
+
 			this.children.splice( index, 1 );
 
 			// remove from scene
@@ -389,17 +454,7 @@ THREE.Object3D.prototype = {
 
 	updateMatrix: function () {
 
-		// if we are not using a quaternion directly, convert Euler rotation to this.quaternion.
-
-		if ( this.useQuaternion === false )  {
-
-			this.matrix.makeFromPositionEulerScale( this.position, this.rotation, this.eulerOrder, this.scale );
-
-		} else {
-
-			this.matrix.makeFromPositionQuaternionScale( this.position, this.quaternion, this.scale );
-
-		}
+		this.matrix.compose( this.position, this.quaternion, this.scale );
 
 		this.matrixWorldNeedsUpdate = true;
 
@@ -437,17 +492,17 @@ THREE.Object3D.prototype = {
 
 	},
 
-	clone: function ( object ) {
+	clone: function ( object, recursive ) {
 
 		if ( object === undefined ) object = new THREE.Object3D();
+		if ( recursive === undefined ) recursive = true;
 
 		object.name = this.name;
 
 		object.up.copy( this.up );
 
 		object.position.copy( this.position );
-		if ( object.rotation instanceof THREE.Vector3 ) object.rotation.copy( this.rotation ); // because of Sprite madness
-		object.eulerOrder = this.eulerOrder;
+		object.quaternion.copy( this.quaternion );
 		object.scale.copy( this.scale );
 
 		object.renderDepth = this.renderDepth;
@@ -460,9 +515,6 @@ THREE.Object3D.prototype = {
 		object.matrixAutoUpdate = this.matrixAutoUpdate;
 		object.matrixWorldNeedsUpdate = this.matrixWorldNeedsUpdate;
 
-		object.quaternion.copy( this.quaternion );
-		object.useQuaternion = this.useQuaternion;
-
 		object.visible = this.visible;
 
 		object.castShadow = this.castShadow;
@@ -472,10 +524,14 @@ THREE.Object3D.prototype = {
 
 		object.userData = JSON.parse( JSON.stringify( this.userData ) );
 
-		for ( var i = 0; i < this.children.length; i ++ ) {
+		if ( recursive === true ) {
 
-			var child = this.children[ i ];
-			object.add( child.clone() );
+			for ( var i = 0; i < this.children.length; i ++ ) {
+
+				var child = this.children[ i ];
+				object.add( child.clone() );
+
+			}
 
 		}
 
@@ -485,6 +541,6 @@ THREE.Object3D.prototype = {
 
 };
 
-THREE.Object3D.defaultEulerOrder = 'XYZ',
+THREE.EventDispatcher.prototype.apply( THREE.Object3D.prototype );
 
 THREE.Object3DIdCount = 0;

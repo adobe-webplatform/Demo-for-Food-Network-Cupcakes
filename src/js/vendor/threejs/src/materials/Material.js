@@ -6,6 +6,7 @@
 THREE.Material = function () {
 
 	this.id = THREE.MaterialIdCount ++;
+	this.uuid = THREE.Math.generateUUID();
 
 	this.name = '';
 
@@ -29,7 +30,7 @@ THREE.Material = function () {
 
 	this.alphaTest = 0;
 
-	this.overdraw = false; // Boolean for fixing antialiasing gaps in CanvasRenderer
+	this.overdraw = 0; // Overdrawn pixels (typically between 0 and 1) for fixing antialiasing gaps in CanvasRenderer
 
 	this.visible = true;
 
@@ -40,11 +41,6 @@ THREE.Material = function () {
 THREE.Material.prototype = {
 
 	constructor: THREE.Material,
-
-	addEventListener: THREE.EventDispatcher.prototype.addEventListener,
-	hasEventListener: THREE.EventDispatcher.prototype.hasEventListener,
-	removeEventListener: THREE.EventDispatcher.prototype.removeEventListener,
-	dispatchEvent: THREE.EventDispatcher.prototype.dispatchEvent,
 
 	setValues: function ( values ) {
 
@@ -72,6 +68,11 @@ THREE.Material.prototype = {
 				} else if ( currentValue instanceof THREE.Vector3 && newValue instanceof THREE.Vector3 ) {
 
 					currentValue.copy( newValue );
+
+				} else if ( key == 'overdraw') {
+
+					// ensure overdraw is backwards-compatable with legacy boolean type
+					this[ key ] = Number(newValue);
 
 				} else {
 
@@ -126,5 +127,7 @@ THREE.Material.prototype = {
 	}
 
 };
+
+THREE.EventDispatcher.prototype.apply( THREE.Material.prototype );
 
 THREE.MaterialIdCount = 0;

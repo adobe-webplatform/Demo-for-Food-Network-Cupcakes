@@ -9,8 +9,7 @@ define([], function (require) {
 		View;
 	
 	require('tweenmax');
-	require('vendor/greensock/plugins/ColorPropsPlugin');
-	require('vendor/blur/FastBlur');
+	require('vendor/tweenmax/src/uncompressed/plugins/ColorPropsPlugin');
 	require('raf');
 
     //TweenPlugin.activate([ColorPropsPlugin]);

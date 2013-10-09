@@ -5,6 +5,7 @@
 	"src/math/Vector2.js",
 	"src/math/Vector3.js",
 	"src/math/Vector4.js",
+	"src/math/Euler.js",
 	"src/math/Matrix3.js",
 	"src/math/Matrix4.js",
 	"src/math/Ray.js",
@@ -59,7 +60,6 @@
 	"src/renderers/CanvasRenderer.js",
 	"src/renderers/renderables/RenderableVertex.js",
 	"src/renderers/renderables/RenderableFace3.js",
-	"src/renderers/renderables/RenderableFace4.js",
 	"src/renderers/renderables/RenderableObject.js",
 	"src/renderers/renderables/RenderableParticle.js",
 	"src/renderers/renderables/RenderableLine.js"

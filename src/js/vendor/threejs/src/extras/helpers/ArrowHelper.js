@@ -23,8 +23,6 @@ THREE.ArrowHelper = function ( dir, origin, length, hex ) {
 
 	this.position = origin;
 
-	this.useQuaternion = true;
-
 	var lineGeometry = new THREE.Geometry();
 	lineGeometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
 	lineGeometry.vertices.push( new THREE.Vector3( 0, 1, 0 ) );
@@ -56,11 +54,11 @@ THREE.ArrowHelper.prototype.setDirection = function () {
 
 		// dir is assumed to be normalized
 
-		if ( dir.y > 0.999 ) {
+		if ( dir.y > 0.99999 ) {
 
 			this.quaternion.set( 0, 0, 0, 1 );
 
-		} else if ( dir.y < - 0.999 ) {
+		} else if ( dir.y < - 0.99999 ) {
 
 			this.quaternion.set( 1, 0, 0, 0 );
 

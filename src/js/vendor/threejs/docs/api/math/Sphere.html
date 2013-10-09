@@ -14,12 +14,19 @@
 
 		<h2>Constructor</h2>
 
-		<h3>[name]()</h3>
+
+		<h3>[name]([page:todo center], [page:todo radius])</h3>
+		<div>
+		center -- todo <br />
+		radius -- todo
+		</div>
+		<div>
+		todo
+		</div>
 
 
 		<h2>Properties</h2>
 
-		<h3>.[page:Vector3 todo]</h3>
 
 
 		<h3>.[page:number radius]</h3>
@@ -34,10 +41,6 @@
 
 		<h2>Methods</h2>
 
-		<h3>.todo( [page:Vector3 todo] )</h3>
-		<div>
-		todo — todo<br />
-		</div>
 
 
 		<h3>.set([page:todo center], [page:todo radius]) [page:todo]</h3>
@@ -87,13 +90,13 @@
 		todo
 		</div>
 
-		<h3>.setFromCenterAndPoints([page:todo center], [page:todo points]) [page:todo]</h3>
+		<h3>.setFromPoints([page:todo points], [page:Vector3 optionalCenter]) [page:todo]</h3>
 		<div>
-		center -- todo <br />
-		points -- todo
+		points -- list of [page:Vector3 vector] positions.<br />  
+		optionalCenter -- optional position for the sphere's center.<br />
 		</div>
 		<div>
-		todo
+		Computes the minimum bounding sphere for *points*. If *optionalCenter* is given, it is used as the sphere's center. Otherwise, the center of the axis-aligned bounding box encompassing *points* is calculated.
 		</div>
 
 		<h3>.distanceToPoint([page:todo point]) [page:todo]</h3>

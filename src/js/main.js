@@ -21,13 +21,13 @@ require.config({
     },
 
     paths: {
-	    tweenmax: 'vendor/greensock/TweenMax',
+	    tweenmax: 'vendor/tweenmax/src/uncompressed/TweenMax',
 	    three: 'vendor/threejs/build/three',
         jquery: 'vendor/jquery/jquery',
         balance: 'vendor/jquery.balancetext',
         underscore: 'vendor/underscore-amd/underscore',
 	    backbone: 'vendor/backbone-amd/backbone',
-        leap: 'vendor/leap.min',
+        leap: 'vendor/leapjs/leap.min',
         raf: 'vendor/RequestAnimationFrame'
     }
 });
