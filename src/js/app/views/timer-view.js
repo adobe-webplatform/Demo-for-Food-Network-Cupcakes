@@ -165,6 +165,7 @@ define([], function (require) {
 
             if (this.currentTime === 0) {
                 //stop and alert!
+                this.reset();
             }
         },
 

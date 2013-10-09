@@ -159,11 +159,14 @@ define([], function (require) {
             var uri = Backbone.history.fragment,
                 id = uri.replace('recipe/', ''),
                 template = Recipes.getTemplate(id),
-                page;
+                recipe = Recipes.findWhere({id: id}),
+                section = recipe.get('section'),
+                sectionPage = this.pages.findWhere({name: 'view-' + section}),
+                sectionId = sectionPage.get('id');
 
 			if (this.first === true) {
                 this.recipeView.show(template);
-				AppEvent.trigger('seek', 0);
+				AppEvent.trigger('seek', sectionId);
                 AppEvent.trigger('hidenav');
                 this.first = false;
             } else {

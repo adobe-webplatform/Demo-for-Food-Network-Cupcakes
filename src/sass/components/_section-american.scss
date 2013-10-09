@@ -44,7 +44,7 @@
         margin-top: 2rem;
         margin-right: 2rem;
         padding-left: 20vw;
-        padding-right: 1em;
+        padding-right: 5em;
         text-align: right;
         font-size: 1.3rem;
         font-weight: bold;
@@ -77,6 +77,11 @@
     
     @media screen and (max-width: 900px) {
         font-size: 1em;
+    }
+
+    // @media screen and (max-height: 700px) {
+    @media screen and (max-height: 43rem) {
+        display: inline-block;
     }
 
     &:before{

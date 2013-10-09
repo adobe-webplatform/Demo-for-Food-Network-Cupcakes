@@ -666,7 +666,7 @@ body.menu-in #main-container {
   margin-top: 2rem;
   margin-right: 2rem;
   padding-left: 20vw;
-  padding-right: 1em;
+  padding-right: 5em;
   text-align: right;
   font-size: 1.3rem;
   font-weight: bold;
@@ -707,14 +707,20 @@ body.menu-in #main-container {
     font-size: 1em;
   }
 }
-/* line 82, ../sass/components/_section-american.scss */
+@media screen and (max-height: 43rem) {
+  /* line 63, ../sass/components/_section-american.scss */
+  .american-item {
+    display: inline-block;
+  }
+}
+/* line 87, ../sass/components/_section-american.scss */
 .american-item:before {
   content: '•';
   margin-top: .7rem;
   margin-right: .5rem;
 }
 
-/* line 89, ../sass/components/_section-american.scss */
+/* line 94, ../sass/components/_section-american.scss */
 #section-2-img-bottom {
   position: absolute;
   left: -5em;
@@ -724,7 +730,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 @media screen and (max-width: 800px) {
-  /* line 89, ../sass/components/_section-american.scss */
+  /* line 94, ../sass/components/_section-american.scss */
   #section-2-img-bottom {
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
@@ -734,13 +740,13 @@ body.menu-in #main-container {
   }
 }
 @media screen and (max-width: 630px) {
-  /* line 89, ../sass/components/_section-american.scss */
+  /* line 94, ../sass/components/_section-american.scss */
   #section-2-img-bottom {
     display: none;
   }
 }
 
-/* line 108, ../sass/components/_section-american.scss */
+/* line 113, ../sass/components/_section-american.scss */
 #view-american_brownie img {
   position: absolute;
   right: 0px;
@@ -750,7 +756,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 119, ../sass/components/_section-american.scss */
+/* line 124, ../sass/components/_section-american.scss */
 #view-american_chocolate-chip img, #view-american_tiramisu img {
   position: absolute;
   right: 0px;
@@ -760,7 +766,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 130, ../sass/components/_section-american.scss */
+/* line 135, ../sass/components/_section-american.scss */
 #view-american_red-velvet img, #view-american_brownie img, #view-american_key-lime img, #view-american_cheesecake img, #view-american_boston-cream img, #view-american_smores img, #view-american_peach-cobbler img {
   position: absolute;
   right: 0px;

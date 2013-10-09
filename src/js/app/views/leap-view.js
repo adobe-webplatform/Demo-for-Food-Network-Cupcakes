@@ -29,6 +29,9 @@ define([], function (require) {
 
 		initialize: function () {	
 		    if (Leap) {
+                //var controller = new Leap.Controller();
+                //controller.on('deviceConnected', function () {
+                //}.bind(this));
                 Leap.loop({enableGestures: true}, this.update.bind(this));
             }
 		},
