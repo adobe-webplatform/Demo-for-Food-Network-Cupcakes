@@ -20,12 +20,12 @@ define([], function (require) {
 		
 		this.init = function () {
 			this.pattern = this.ctx.createPattern(AssetList.findWhere({name: 'linen-texture'}).get('object'), 'repeat');
-		}
+		};
 		
 		this.draw = function () {
-			this.value.r = window.innerWidth;
+			this.value.r = Math.max(window.innerWidth, window.innerHeight);
 			this.render();
-		}
+		};
 		
 		this.animIn = function (callback) {
 			new TweenMax.to(this.value, Vars.get('transitionTime'), {
@@ -33,7 +33,7 @@ define([], function (require) {
 				onUpdate: this.render.bind(this),
 				onComplete: callback
 			});
-		}
+		};
 	
 		this.animOut = function (callback) {
 			new TweenMax.to(this.value, Vars.get('transitionTime'), {
@@ -41,7 +41,7 @@ define([], function (require) {
 				onUpdate: this.render.bind(this),
 				onComplete: callback
 			});		
-		}
+		};
 		
 		this.render = function () {
 			this.ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -64,14 +64,14 @@ define([], function (require) {
 			this.ctx.rect(0, 0, canvas.width, canvas.height);
 			this.ctx.fill();
 			
-		}
+		};
 		
 		this.resize = function () {
 
-		}
+		};
 		
 		this.init();
-	}
+	};
 		
 	return Transition;
 });

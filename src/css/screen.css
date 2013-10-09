@@ -685,7 +685,7 @@ body.menu-in #main-container {
 
 /* line 63, ../sass/components/_section-american.scss */
 .american-item {
-  display: block;
+  display: inline-block;
   padding: .5em 1em;
   margin: .3em .1em;
   color: white;
@@ -705,6 +705,7 @@ body.menu-in #main-container {
   /* line 63, ../sass/components/_section-american.scss */
   .american-item {
     font-size: 1em;
+    display: block;
   }
 }
 @media screen and (max-height: 43rem) {
