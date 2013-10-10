@@ -56,7 +56,7 @@ define([], function (require) {
             /* allow scrolling on certain elements */
             setTimeout(function () {
                 if ($('html').hasClass('ipad')) {
-                    $('#menu').addClass('scrollable');
+                    //$('#menu').addClass('scrollable');
                     $('#recipe-content').addClass('scrollable');
                 }
 

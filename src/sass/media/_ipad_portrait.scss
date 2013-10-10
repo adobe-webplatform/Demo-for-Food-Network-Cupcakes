@@ -3,11 +3,10 @@
     and (max-device-width: 1024px) 
     and (min-device-width: 768px) 
     and (orientation: portrait) {
-    
+
+/*
     html{
         font-size: 14px;
-        -webkit-tap-highlight-color: transparent;
-        -webkit-user-select: none; /* Disable selection/copy in UIWebView */
     }
 
     #cover-canvas{
@@ -61,6 +60,6 @@
     #recipe-slide-title{
         margin-top: 5rem;
     }
-
+*/
 }
 

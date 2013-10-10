@@ -2443,99 +2443,19 @@ h3 {
 /* ipad mini: landscape*/
 @media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
   /* line 7, ../sass/media/_ipad_landscape.scss */
-  html {
-    font-size: 12px;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    /* Disable selection/copy in UIWebView */
+  .go-to-item {
+    font-size: 1.2rem;
   }
 
-  /* line 13, ../sass/media/_ipad_landscape.scss */
-  #menu {
-    overflow-y: auto;
-    -webkit-overflow-scroll: touch;
+  /* line 12, ../sass/media/_ipad_landscape.scss */
+  .alton-paragraph img {
+    width: 100px;
+    -webkit-shape-outside: circle(0, 0, 0);
   }
 
   /* line 18, ../sass/media/_ipad_landscape.scss */
-  #navigation {
-    margin-top: 3rem;
-  }
-
-  /* line 23, ../sass/media/_ipad_landscape.scss */
-  #view-go-to img {
-    /* @include transform(scale(.5));*/
-  }
-  /* line 27, ../sass/media/_ipad_landscape.scss */
-  #view-go-to ul {
-    width: 80vw;
-  }
-  /* line 31, ../sass/media/_ipad_landscape.scss */
-  #view-go-to .subhead {
-    width: 70%;
-  }
-
-  /* line 36, ../sass/media/_ipad_landscape.scss */
-  .go-to-item {
-    margin-left: 1.5em;
-    margin-right: 2em;
-    font-size: 1.2rem;
-    max-width: 10em;
-    width: 10em;
-  }
-  /* line 43, ../sass/media/_ipad_landscape.scss */
-  .go-to-item:before {
-    top: -20px;
-    left: -50px;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  /* line 50, ../sass/media/_ipad_landscape.scss */
-  .go-to-item:hover:before {
-    -webkit-transform: rotate(360deg) scale(0.5);
-    -moz-transform: rotate(360deg) scale(0.5);
-    -ms-transform: rotate(360deg) scale(0.5);
-    -o-transform: rotate(360deg) scale(0.5);
-    transform: rotate(360deg) scale(0.5);
-    opacity: 1;
-  }
-
-  /* line 59, ../sass/media/_ipad_landscape.scss */
-  #view-american img {
-    left: -100px;
-    bottom: -350px;
-    -webkit-transform: scale(0.55);
-    -moz-transform: scale(0.55);
-    -ms-transform: scale(0.55);
-    -o-transform: scale(0.55);
-    transform: scale(0.55);
-  }
-  /* line 65, ../sass/media/_ipad_landscape.scss */
-  #view-american .subhead {
-    position: relative;
-    width: 100vw;
-    font-size: 2rem;
-    text-align: center;
-    z-index: 1;
-  }
-
-  /* line 74, ../sass/media/_ipad_landscape.scss */
-  .american-item {
-    font-size: .9rem;
-  }
-
-  /* line 78, ../sass/media/_ipad_landscape.scss */
-  #view-frosting {
-    font-size: .75rem;
-  }
-  /* line 81, ../sass/media/_ipad_landscape.scss */
-  #view-frosting .frosting-title-rotated {
-    right: -2.8em;
-  }
-  /* line 85, ../sass/media/_ipad_landscape.scss */
-  #view-frosting img {
+  #alton-cupacakes-bottom {
+    display: block;
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -2543,163 +2463,86 @@ h3 {
     transform: scale(0.75);
   }
 
-  /* line 90, ../sass/media/_ipad_landscape.scss */
-  #view-frosting_mix-ins {
-    font-size: .9rem;
-    background-size: auto 100%;
+  /* line 23, ../sass/media/_ipad_landscape.scss */
+  .frosting-mix-slide p {
+    font-size: 1em;
   }
 
-  /* line 95, ../sass/media/_ipad_landscape.scss */
-  #frosting-mix-item-blueberry {
-    right: 30vw;
-    top: 5vw;
-  }
-
-  /* line 100, ../sass/media/_ipad_landscape.scss */
-  #frosting-mix-item-stout {
-    right: 55vw;
-    top: 12vw;
-  }
-
-  /* line 105, ../sass/media/_ipad_landscape.scss */
-  #frosting-mix-item-almond {
-    right: 68vw;
-  }
-
-  /* line 109, ../sass/media/_ipad_landscape.scss */
-  #frosting-mix-item-cherry {
-    right: 67vw;
-  }
-
-  /* line 113, ../sass/media/_ipad_landscape.scss */
-  #frosting-mix-item-peanut {
-    right: 35vw;
-    top: 60vw;
-  }
-
-  /* line 118, ../sass/media/_ipad_landscape.scss */
-  #frosting-mix-item-jam {
-    right: 20vw;
-    top: 60vw;
-  }
-
-  /* line 123, ../sass/media/_ipad_landscape.scss */
-  #frosting-mix-in-slides {
-    right: 15vw;
-    top: 20vw;
-  }
-
-  /* line 128, ../sass/media/_ipad_landscape.scss */
-  .alton-paragraph {
-    display: none;
-  }
-
-  /* line 133, ../sass/media/_ipad_landscape.scss */
-  #recipe .recipe-ingredients {
-    max-width: 250px;
-  }
-  /* line 137, ../sass/media/_ipad_landscape.scss */
-  #recipe .recipe-directions {
-    width: calc(100% - 250px - 6rem);
-  }
-  /* line 140, ../sass/media/_ipad_landscape.scss */
-  #recipe .recipe-directions.flow {
-    width: auto;
-  }
-
-  /* line 146, ../sass/media/_ipad_landscape.scss */
-  #recipe-slide-title {
-    margin-top: 5rem;
-  }
-
-  /* line 151, ../sass/media/_ipad_landscape.scss */
-  .recipe_toggle h5 {
-    font-size: 3rem;
-  }
-
-  /* line 157, ../sass/media/_ipad_landscape.scss */
-  .recipe_description h5 {
-    font-size: 3rem;
-  }
-
-  /* line 162, ../sass/media/_ipad_landscape.scss */
-  .list-toggle {
-    font-size: 1.5rem;
-  }
-
-  /* line 167, ../sass/media/_ipad_landscape.scss */
+  /* line 28, ../sass/media/_ipad_landscape.scss */
   .container-toggle img {
     height: 25em;
   }
 }
 /* ipad mini: portrait*/
 @media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: portrait) {
-  /* line 7, ../sass/media/_ipad_portrait.scss */
-  html {
-    font-size: 14px;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    /* Disable selection/copy in UIWebView */
-  }
-
-  /* line 13, ../sass/media/_ipad_portrait.scss */
-  #cover-canvas {
-    width: 80vw;
-    margin-left: -40%;
-    margin-top: -80%;
-  }
-
-  /* line 20, ../sass/media/_ipad_portrait.scss */
-  #view-go-to .subhead {
-    font-size: 1.5rem;
-  }
-
-  /* line 25, ../sass/media/_ipad_portrait.scss */
-  .go-to-item {
-    font-size: 1.6rem;
-  }
-
-  /* line 30, ../sass/media/_ipad_portrait.scss */
-  #view-american h3 {
-    font-size: 4rem;
-  }
-  /* line 34, ../sass/media/_ipad_portrait.scss */
-  #view-american .american-list {
-    padding-left: 50vw;
-  }
-
-  /* line 39, ../sass/media/_ipad_portrait.scss */
-  #view-frosting {
-    font-size: .75rem;
-  }
-  /* line 42, ../sass/media/_ipad_portrait.scss */
-  #view-frosting .frosting-title-rotated {
-    right: -2.3em;
-  }
-
-  /* line 48, ../sass/media/_ipad_portrait.scss */
-  #recipe .recipe-ingredients {
-    max-width: 200px;
-  }
-  /* line 52, ../sass/media/_ipad_portrait.scss */
-  #recipe .recipe-directions {
-    width: calc(100% - 200px - 6rem);
-  }
-  /* line 55, ../sass/media/_ipad_portrait.scss */
-  #recipe .recipe-directions.flow {
-    width: auto;
-  }
-
-  /* line 61, ../sass/media/_ipad_portrait.scss */
-  #recipe-slide-title {
-    margin-top: 5rem;
-  }
+  /*
+      html{
+          font-size: 14px;
+      }
+  
+      #cover-canvas{
+          width: 80vw;
+          margin-left: -40%;
+          margin-top: -80%;
+      }
+  
+      #view-go-to{
+          .subhead{
+              font-size: 1.5rem;
+          }
+      }
+      
+      .go-to-item{
+          font-size: 1.6rem;
+      }
+  
+      #view-american{
+          h3{
+              font-size: 4rem;
+          }
+  
+          .american-list{
+              padding-left: 50vw;
+          }
+      }
+  
+      #view-frosting{
+          font-size: .75rem;
+  
+          .frosting-title-rotated{
+              right: -2.3em;
+          }
+      }
+  
+      #recipe{
+          .recipe-ingredients{
+              max-width: 200px;
+          }
+  
+          .recipe-directions{
+              width: calc(100% - 200px - 6rem);
+              
+              &.flow{
+                  width: auto;
+              }
+          }
+      }
+  
+      #recipe-slide-title{
+          margin-top: 5rem;
+      }
+  */
 }
-/* line 2, ../sass/device/_ipad.scss */
+/* line 1, ../sass/device/_ipad.scss */
+.ipad {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+}
+/* line 7, ../sass/device/_ipad.scss */
 .ipad #view-container {
   -webkit-mask: none;
 }
-/* line 6, ../sass/device/_ipad.scss */
+/* line 11, ../sass/device/_ipad.scss */
 .ipad #menu {
   -webkit-transform: translate3d(-150px, 0, 0);
   -moz-transform: translate3d(-150px, 0, 0);
@@ -2707,7 +2550,7 @@ h3 {
   -o-transform: translate3d(-150px, 0, 0);
   transform: translate3d(-150px, 0, 0);
 }
-/* line 10, ../sass/device/_ipad.scss */
+/* line 15, ../sass/device/_ipad.scss */
 .ipad #recipe {
   -webkit-transform: translate3d(0, 2000px, 0);
   -moz-transform: translate3d(0, 2000px, 0);
@@ -2715,7 +2558,7 @@ h3 {
   -o-transform: translate3d(0, 2000px, 0);
   transform: translate3d(0, 2000px, 0);
 }
-/* line 13, ../sass/device/_ipad.scss */
+/* line 18, ../sass/device/_ipad.scss */
 .ipad #recipe.in {
   -webkit-transform: translate3d(0, 0px, 0);
   -moz-transform: translate3d(0, 0px, 0);
@@ -2723,22 +2566,22 @@ h3 {
   -o-transform: translate3d(0, 0px, 0);
   transform: translate3d(0, 0px, 0);
 }
-/* line 18, ../sass/device/_ipad.scss */
+/* line 23, ../sass/device/_ipad.scss */
 .ipad #view-cover {
   background-image: url(../assets/images/textures/fabric-brown-dots.jpg);
   background-color: #75514b;
 }
-/* line 23, ../sass/device/_ipad.scss */
+/* line 28, ../sass/device/_ipad.scss */
 .ipad #view-go-to {
   background-image: url(../assets/images/textures/fabric-turqoise.jpg);
   background-color: #8aedf5;
 }
-/* line 28, ../sass/device/_ipad.scss */
+/* line 33, ../sass/device/_ipad.scss */
 .ipad #view-american {
   background-image: url(../assets/images/textures/fabric-red.jpg);
   background-color: #c71e3b;
 }
-/* line 33, ../sass/device/_ipad.scss */
+/* line 38, ../sass/device/_ipad.scss */
 .ipad #view-frosting {
   background-image: url(../assets/images/textures/fabric-brown.jpg);
   background-color: #c71e3b;

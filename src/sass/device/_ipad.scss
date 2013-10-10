@@ -1,4 +1,9 @@
 .ipad{
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+
+
     #view-container{
         -webkit-mask: none;
     }
@@ -9,7 +14,7 @@
 
     #recipe{
         @include transform(translate3d(0, 2000px, 0));
-
+        
         &.in{
             @include transform(translate3d(0, 0px, 0));
         }
