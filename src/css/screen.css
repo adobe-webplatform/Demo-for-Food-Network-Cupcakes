@@ -452,28 +452,16 @@ body.menu-in #main-container {
   margin: auto;
   text-align: center;
 }
-@media screen and (max-width: 1200px) {
-  /* line 35, ../sass/components/_section-goto.scss */
-  #view-go-to img {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-}
-@media screen and (max-width: 700px) {
-  /* line 35, ../sass/components/_section-goto.scss */
-  #view-go-to img {
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
-    transform: scale(0.5);
-  }
+/* line 35, ../sass/components/_section-goto.scss */
+#view-go-to img {
+  position: absolute;
+  top: 10vh;
+  height: 120vh;
+  max-height: 700px;
+  z-index: 0;
 }
 
-/* line 46, ../sass/components/_section-goto.scss */
+/* line 44, ../sass/components/_section-goto.scss */
 .go-to-item {
   display: inline-block;
   position: relative;
@@ -489,7 +477,7 @@ body.menu-in #main-container {
   color: white;
   cursor: pointer;
 }
-/* line 61, ../sass/components/_section-goto.scss */
+/* line 59, ../sass/components/_section-goto.scss */
 .go-to-item:before {
   content: '';
   position: absolute;
@@ -505,55 +493,97 @@ body.menu-in #main-container {
   transition: -webkit-transform 1s, opacity 0.2s;
 }
 
-/* line 75, ../sass/components/_section-goto.scss */
+/* line 73, ../sass/components/_section-goto.scss */
 #section-1-img-left {
-  position: absolute;
-  top: -10vh;
-  left: -60vh;
-  height: 120vh;
-  z-index: 0;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 1200px) {
+  /* line 73, ../sass/components/_section-goto.scss */
+  #section-1-img-left {
+    -webkit-transform: translateX(-50%) scale(0.8);
+    -moz-transform: translateX(-50%) scale(0.8);
+    -ms-transform: translateX(-50%) scale(0.8);
+    -o-transform: translateX(-50%) scale(0.8);
+    transform: translateX(-50%) scale(0.8);
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 73, ../sass/components/_section-goto.scss */
+  #section-1-img-left {
+    -webkit-transform: translateX(-50%) scale(0.5);
+    -moz-transform: translateX(-50%) scale(0.5);
+    -ms-transform: translateX(-50%) scale(0.5);
+    -o-transform: translateX(-50%) scale(0.5);
+    transform: translateX(-50%) scale(0.5);
+  }
 }
 
-/* line 83, ../sass/components/_section-goto.scss */
+/* line 86, ../sass/components/_section-goto.scss */
 #section-1-img-right {
-  position: absolute;
-  top: -10vh;
-  right: -60vh;
-  height: 120vh;
-  z-index: 0;
+  right: 0;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  transform: translateX(50%);
+}
+@media screen and (max-width: 1200px) {
+  /* line 86, ../sass/components/_section-goto.scss */
+  #section-1-img-right {
+    -webkit-transform: translateX(50%) scale(0.8);
+    -moz-transform: translateX(50%) scale(0.8);
+    -ms-transform: translateX(50%) scale(0.8);
+    -o-transform: translateX(50%) scale(0.8);
+    transform: translateX(50%) scale(0.8);
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 86, ../sass/components/_section-goto.scss */
+  #section-1-img-right {
+    -webkit-transform: translateX(50%) scale(0.5);
+    -moz-transform: translateX(50%) scale(0.5);
+    -ms-transform: translateX(50%) scale(0.5);
+    -o-transform: translateX(50%) scale(0.5);
+    transform: translateX(50%) scale(0.5);
+  }
 }
 
-/* line 92, ../sass/components/_section-goto.scss */
+/* line 100, ../sass/components/_section-goto.scss */
 .marble_bg {
   background-image: url(../assets/images/section-1/marble_surface.jpg);
   background-size: cover;
   background-position: bottom;
 }
 
-/* line 98, ../sass/components/_section-goto.scss */
+/* line 106, ../sass/components/_section-goto.scss */
 .recipe_toggle {
   position: relative;
   margin: 5rem 5rem;
   font-family: arvo;
 }
-/* line 103, ../sass/components/_section-goto.scss */
+/* line 111, ../sass/components/_section-goto.scss */
 .recipe_toggle h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 108, ../sass/components/_section-goto.scss */
+/* line 116, ../sass/components/_section-goto.scss */
 .recipe_toggle .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 114, ../sass/components/_section-goto.scss */
+/* line 122, ../sass/components/_section-goto.scss */
 .recipe_toggle p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 120, ../sass/components/_section-goto.scss */
+/* line 128, ../sass/components/_section-goto.scss */
 .recipe_description {
   position: relative;
   margin: 5rem 5rem;
@@ -562,24 +592,24 @@ body.menu-in #main-container {
   color: #404040;
   z-index: 2;
 }
-/* line 128, ../sass/components/_section-goto.scss */
+/* line 136, ../sass/components/_section-goto.scss */
 .recipe_description h5 {
   font-size: 4rem;
   font-weight: 500;
 }
-/* line 133, ../sass/components/_section-goto.scss */
+/* line 141, ../sass/components/_section-goto.scss */
 .recipe_description .byline {
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
-/* line 139, ../sass/components/_section-goto.scss */
+/* line 147, ../sass/components/_section-goto.scss */
 .recipe_description p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-/* line 146, ../sass/components/_section-goto.scss */
+/* line 154, ../sass/components/_section-goto.scss */
 #view-go-to_chocolate img, #view-go-to_vanilla img {
   position: absolute;
   right: 0px;
@@ -589,7 +619,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 157, ../sass/components/_section-goto.scss */
+/* line 165, ../sass/components/_section-goto.scss */
 #view-go-to_c-buttercream img, #view-go-to_v-buttercream img {
   position: absolute;
   right: 0px;
@@ -599,7 +629,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 168, ../sass/components/_section-goto.scss */
+/* line 176, ../sass/components/_section-goto.scss */
 #view-go-to_marbling img {
   position: absolute;
   right: 0px;
@@ -609,7 +639,7 @@ body.menu-in #main-container {
   z-index: 0;
 }
 
-/* line 179, ../sass/components/_section-goto.scss */
+/* line 187, ../sass/components/_section-goto.scss */
 #view-go-to_vanilla .video-btn {
   position: absolute;
   right: 100px;
@@ -2443,17 +2473,26 @@ h3 {
 /* ipad mini: landscape*/
 @media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
   /* line 7, ../sass/media/_ipad_landscape.scss */
+  #navigation {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+
+  /* line 11, ../sass/media/_ipad_landscape.scss */
   .go-to-item {
     font-size: 1.2rem;
   }
 
-  /* line 12, ../sass/media/_ipad_landscape.scss */
+  /* line 16, ../sass/media/_ipad_landscape.scss */
   .alton-paragraph img {
     width: 100px;
     -webkit-shape-outside: circle(0, 0, 0);
   }
 
-  /* line 18, ../sass/media/_ipad_landscape.scss */
+  /* line 22, ../sass/media/_ipad_landscape.scss */
   #alton-cupacakes-bottom {
     display: block;
     -webkit-transform: scale(0.75);
@@ -2463,86 +2502,88 @@ h3 {
     transform: scale(0.75);
   }
 
-  /* line 23, ../sass/media/_ipad_landscape.scss */
+  /* line 27, ../sass/media/_ipad_landscape.scss */
   .frosting-mix-slide p {
     font-size: 1em;
   }
 
-  /* line 28, ../sass/media/_ipad_landscape.scss */
+  /* line 32, ../sass/media/_ipad_landscape.scss */
   .container-toggle img {
     height: 25em;
   }
 }
 /* ipad mini: portrait*/
 @media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: portrait) {
-  /*
-      html{
-          font-size: 14px;
-      }
-  
-      #cover-canvas{
-          width: 80vw;
-          margin-left: -40%;
-          margin-top: -80%;
-      }
-  
-      #view-go-to{
-          .subhead{
-              font-size: 1.5rem;
-          }
-      }
-      
-      .go-to-item{
-          font-size: 1.6rem;
-      }
-  
-      #view-american{
-          h3{
-              font-size: 4rem;
-          }
-  
-          .american-list{
-              padding-left: 50vw;
-          }
-      }
-  
-      #view-frosting{
-          font-size: .75rem;
-  
-          .frosting-title-rotated{
-              right: -2.3em;
-          }
-      }
-  
-      #recipe{
-          .recipe-ingredients{
-              max-width: 200px;
-          }
-  
-          .recipe-directions{
-              width: calc(100% - 200px - 6rem);
-              
-              &.flow{
-                  width: auto;
-              }
-          }
-      }
-  
-      #recipe-slide-title{
-          margin-top: 5rem;
-      }
-  */
+  /* line 7, ../sass/media/_ipad_portrait.scss */
+  html {
+    font-size: 14px;
+  }
+
+  /* line 11, ../sass/media/_ipad_portrait.scss */
+  #navigation {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  /* line 15, ../sass/media/_ipad_portrait.scss */
+  #view-frosting {
+    font-size: .75rem;
+  }
+  /* line 18, ../sass/media/_ipad_portrait.scss */
+  #view-frosting .frosting-title-rotated {
+    right: -2.3em;
+  }
+
+  /* line 23, ../sass/media/_ipad_portrait.scss */
+  .frosting-item--seven {
+    top: 40%;
+  }
+
+  /* line 27, ../sass/media/_ipad_portrait.scss */
+  #view-frostin-mix-in-palette {
+    font-size: .8rem;
+    margin-top: 100px;
+  }
+
+  /* line 32, ../sass/media/_ipad_portrait.scss */
+  .frosting-mix-item span {
+    width: 100px;
+  }
+
+  /* line 36, ../sass/media/_ipad_portrait.scss */
+  .frosting-mix-slide p {
+    font-size: 1em;
+  }
 }
 /* line 1, ../sass/device/_ipad.scss */
 .ipad {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
 }
-/* line 7, ../sass/device/_ipad.scss */
+/* line 6, ../sass/device/_ipad.scss */
+.ipad #navigation {
+  bottom: auto;
+}
+/* line 10, ../sass/device/_ipad.scss */
+.ipad .nav-item {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  -webkit-mask: url(../assets/images/textures/nav_item_bg.png);
+  -webkit-clip-path: polygon(94.251px 22.122px, 82.255px 18.092px, 73.919px 27.612px, 61.289px 26.824px, 55.701px 38.177px, 43.298px 40.684px, 40.839px 53.096px, 29.506px 58.728px, 30.342px 71.354px, 20.854px 79.728px, 24.93px 91.707px, 17.932px 102.25px, 24.97px 112.766px, 20.938px 124.763px, 30.459px 133.098px, 29.672px 145.729px, 41.023px 151.317px, 43.53px 163.72px, 55.943px 166.181px, 61.576px 177.513px, 74.2px 176.676px, 82.575px 186.164px, 94.552px 182.088px, 105.096px 189.086px, 115.612px 182.049px, 127.609px 186.079px, 135.944px 176.56px, 148.574px 177.347px, 154.162px 165.994px, 166.567px 163.486px, 169.026px 151.075px, 180.358px 145.442px, 179.522px 132.816px, 189.01px 124.443px, 184.934px 112.464px, 191.932px 101.92px, 184.893px 91.404px, 188.924px 79.409px, 179.405px 71.074px, 180.193px 58.442px, 168.84px 52.855px, 166.333px 40.45px, 153.92px 37.99px, 148.288px 26.659px, 135.665px 27.496px, 127.29px 18.007px, 115.31px 22.082px, 104.768px 15.086px);
+}
+/* line 18, ../sass/device/_ipad.scss */
+.ipad .nav-item-title {
+  margin-left: .25em;
+}
+/* line 22, ../sass/device/_ipad.scss */
 .ipad #view-container {
   -webkit-mask: none;
 }
-/* line 11, ../sass/device/_ipad.scss */
+/* line 26, ../sass/device/_ipad.scss */
 .ipad #menu {
   -webkit-transform: translate3d(-150px, 0, 0);
   -moz-transform: translate3d(-150px, 0, 0);
@@ -2550,7 +2591,7 @@ h3 {
   -o-transform: translate3d(-150px, 0, 0);
   transform: translate3d(-150px, 0, 0);
 }
-/* line 15, ../sass/device/_ipad.scss */
+/* line 30, ../sass/device/_ipad.scss */
 .ipad #recipe {
   -webkit-transform: translate3d(0, 2000px, 0);
   -moz-transform: translate3d(0, 2000px, 0);
@@ -2558,7 +2599,7 @@ h3 {
   -o-transform: translate3d(0, 2000px, 0);
   transform: translate3d(0, 2000px, 0);
 }
-/* line 18, ../sass/device/_ipad.scss */
+/* line 33, ../sass/device/_ipad.scss */
 .ipad #recipe.in {
   -webkit-transform: translate3d(0, 0px, 0);
   -moz-transform: translate3d(0, 0px, 0);
@@ -2566,22 +2607,22 @@ h3 {
   -o-transform: translate3d(0, 0px, 0);
   transform: translate3d(0, 0px, 0);
 }
-/* line 23, ../sass/device/_ipad.scss */
+/* line 38, ../sass/device/_ipad.scss */
 .ipad #view-cover {
   background-image: url(../assets/images/textures/fabric-brown-dots.jpg);
   background-color: #75514b;
 }
-/* line 28, ../sass/device/_ipad.scss */
+/* line 43, ../sass/device/_ipad.scss */
 .ipad #view-go-to {
   background-image: url(../assets/images/textures/fabric-turqoise.jpg);
   background-color: #8aedf5;
 }
-/* line 33, ../sass/device/_ipad.scss */
+/* line 48, ../sass/device/_ipad.scss */
 .ipad #view-american {
   background-image: url(../assets/images/textures/fabric-red.jpg);
   background-color: #c71e3b;
 }
-/* line 38, ../sass/device/_ipad.scss */
+/* line 53, ../sass/device/_ipad.scss */
 .ipad #view-frosting {
   background-image: url(../assets/images/textures/fabric-brown.jpg);
   background-color: #c71e3b;
