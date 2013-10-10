@@ -1,0 +1,14 @@
+{
+  "name": "leapjs",
+  "homepage": "https://github.com/leapmotion/leapjs",
+  "version": "0.2.1",
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.1",
+    "commit": "35ba50032dc711a8b4ad9c49787b6cb328c4c7e9"
+  },
+  "_source": "git://github.com/leapmotion/leapjs.git",
+  "_target": "0.2.1",
+  "_originalSource": "leapjs"
+}
