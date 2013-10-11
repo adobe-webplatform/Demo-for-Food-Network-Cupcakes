@@ -32,15 +32,21 @@ define([], function (require) {
                 url: 'view-go-to/marbling',
                 array: [
                     'marbling techniques',
-                    'marbling'
+                    'marbling',
+                    'marble',
+                    'marble cupcakes',
+                    'marble cupcake'
                 ]
             },
             {
                 url: 'view-go-to/vanilla-mix',
                 array: [
                     'vanilla mix ins',
+                    'vanilla mix in',
                     'vanilla mix-ins',
+                    'vanilla mix-in',
                     'vanilla mixins',
+                    'vanilla mixin',
                     'vanilla mix'
                 ]
             },
@@ -48,8 +54,11 @@ define([], function (require) {
                 url: 'view-go-to/chocolate-mix',
                 array: [
                     'chocolate mix ins',
+                    'chocolate mix in',
                     'chocolate mix-ins',
+                    'chocolate mix-in',
                     'chocolate mixins',
+                    'chocolate mixin',
                     'chocolate mix'
                 ]
             },
@@ -73,16 +82,22 @@ define([], function (require) {
                 url: 'view-go-to/vanilla',
                 array: [
                     'go to vanilla cupcakes',
+                    'go to vanilla cupcake',
                     'goto vanilla cupcakes',
-                    'vanilla cupcakes'
+                    'goto vanilla cupcake',
+                    'vanilla cupcakes',
+                    'vanilla cupcake'
                 ]
             },
             {
                 url: 'view-go-to/chocolate',
                 array: [
                     'go to chocolate cupcakes',
+                    'go to chocolate cupcake',
                     'goto chocolate cupcakes',
-                    'chocolate cupcakes'
+                    'goto chocolate cupcake',
+                    'chocolate cupcakes',
+                    'chocolate cupcake'
                 ]
             },
             {

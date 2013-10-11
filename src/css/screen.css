@@ -2062,6 +2062,7 @@ body.menu-in #main-container {
   position: absolute;
   top: 10px;
   left: 8rem;
+  min-width: 10em;
   padding: .5rem 1rem;
   font-family: lavanderia;
   font-size: 3rem;
@@ -2074,15 +2075,15 @@ body.menu-in #main-container {
   -o-transition: opacity 0.2s linear, background-color 0.2s;
   transition: opacity 0.2s linear, background-color 0.2s;
 }
-/* line 58, ../sass/components/_speech-btn.scss */
+/* line 59, ../sass/components/_speech-btn.scss */
 #speech-bubble.in {
   opacity: 1;
 }
-/* line 62, ../sass/components/_speech-btn.scss */
+/* line 63, ../sass/components/_speech-btn.scss */
 #speech-bubble.good {
   background-color: green;
 }
-/* line 66, ../sass/components/_speech-btn.scss */
+/* line 67, ../sass/components/_speech-btn.scss */
 #speech-bubble.bad {
   background-color: red;
 }
@@ -2749,22 +2750,26 @@ h3 {
   background-color: #873e3e;
 }
 /* line 53, ../sass/device/_no_touch.scss */
+.no-touch #speech-btn.active:hover {
+  background-color: #3e873f;
+}
+/* line 57, ../sass/device/_no_touch.scss */
 .no-touch #timer-btn:hover {
   background-color: #0084bf;
 }
-/* line 57, ../sass/device/_no_touch.scss */
+/* line 61, ../sass/device/_no_touch.scss */
 .no-touch #timer-pause-btn:hover {
   background-color: #669d10;
 }
-/* line 61, ../sass/device/_no_touch.scss */
+/* line 65, ../sass/device/_no_touch.scss */
 .no-touch #timer-pause-btn.play:hover {
   background-color: #b98e13;
 }
-/* line 65, ../sass/device/_no_touch.scss */
+/* line 69, ../sass/device/_no_touch.scss */
 .no-touch .american-item:hover {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 70, ../sass/device/_no_touch.scss */
+/* line 74, ../sass/device/_no_touch.scss */
 .no-touch .alton-item:hover:before {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -2773,7 +2778,7 @@ h3 {
   transform: rotate(360deg);
   opacity: 1;
 }
-/* line 77, ../sass/device/_no_touch.scss */
+/* line 81, ../sass/device/_no_touch.scss */
 .no-touch .go-to-item:hover:before {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -2782,7 +2787,7 @@ h3 {
   transform: rotate(360deg);
   opacity: 1;
 }
-/* line 83, ../sass/device/_no_touch.scss */
+/* line 87, ../sass/device/_no_touch.scss */
 .no-touch .list-toggle li:hover {
   color: #115b5c;
 }

@@ -50,6 +50,10 @@
         background-color: darken(#bd6e6e, 20%);
     }
 
+    #speech-btn.active:hover{
+        background-color: darken(#6ebd70, 20%);
+    }
+
     #timer-btn:hover{
         background-color: #0084bf;
     }
