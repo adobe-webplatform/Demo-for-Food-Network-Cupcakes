@@ -22,6 +22,7 @@ define([],
 		
 	Vars = Backbone.Model.extend({
 		initialize: function () {
+		    this.set('defaultTransitionTime', 0.6);
 		    this.set('transitionTime', 0.6);
         }
 	});

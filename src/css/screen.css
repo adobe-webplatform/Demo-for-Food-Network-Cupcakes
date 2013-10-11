@@ -2068,22 +2068,24 @@ body.menu-in #main-container {
   font-size: 3rem;
   background-color: orange;
   border-radius: .5em;
+  z-index: 2;
   opacity: 0;
+  pointer-events: none;
   -webkit-mask: url(../assets/images/textures/red_texture.png);
   -webkit-transition: opacity 0.2s linear, background-color 0.2s;
   -moz-transition: opacity 0.2s linear, background-color 0.2s;
   -o-transition: opacity 0.2s linear, background-color 0.2s;
   transition: opacity 0.2s linear, background-color 0.2s;
 }
-/* line 59, ../sass/components/_speech-btn.scss */
+/* line 61, ../sass/components/_speech-btn.scss */
 #speech-bubble.in {
   opacity: 1;
 }
-/* line 63, ../sass/components/_speech-btn.scss */
+/* line 65, ../sass/components/_speech-btn.scss */
 #speech-bubble.good {
   background-color: green;
 }
-/* line 67, ../sass/components/_speech-btn.scss */
+/* line 69, ../sass/components/_speech-btn.scss */
 #speech-bubble.bad {
   background-color: red;
 }

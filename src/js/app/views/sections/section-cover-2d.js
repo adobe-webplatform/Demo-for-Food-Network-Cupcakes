@@ -30,17 +30,17 @@ define([], function (require) {
 			this.canvas = this.$canvas[0];
 			this.ctx = this.canvas.getContext('2d');
 		
-            //blur canvas
+            //color canvas
             this.colorcanvas = document.createElement('canvas');
             this.colorcanvas.width = this.canvas.width;
             this.colorcanvas.height = this.canvas.height;
             this.colorctx = this.colorcanvas.getContext('2d');
 
             //blur canvas
-            this.blurcanvas = document.createElement('canvas');
-            this.blurcanvas.width = this.canvas.width;
-            this.blurcanvas.height = this.canvas.height;
-            this.blurctx = this.blurcanvas.getContext('2d');
+            //this.blurcanvas = document.createElement('canvas');
+            //this.blurcanvas.width = this.canvas.width;
+            //this.blurcanvas.height = this.canvas.height;
+            //this.blurctx = this.blurcanvas.getContext('2d');
 
             //draw canvas
             this.drawcanvas = document.createElement('canvas');
@@ -96,12 +96,6 @@ define([], function (require) {
             this.render();
         },
 
-		//animate: function () {
-            //if (this.animating) {
-            //    this.interval = requestAnimationFrame(this.animate.bind(this));
-            //}
-		//},
-		
 		render: function () {
             this.ctx.globalAlpha = 1;
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -123,7 +117,6 @@ define([], function (require) {
 		
 		destroy: function () {
             TweenMax.killTweensOf(this);
-			//this.$el.unbind('click');
 		}
 	});
 		

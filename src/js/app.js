@@ -278,7 +278,22 @@ define([], function (require) {
          * key events
          */
 		handle_KEYDOWN: function (e) {
+            if (e.keyCode === 16) {  //SHIFT
+                e.preventDefault();
+                Vars.set('transitionTime', 3);
+            }
 			UserEvent.trigger('keydown', e);
+		},
+
+        /**
+         * key events
+         */
+		handle_KEYUP: function (e) {
+            if (e.keyCode === 16) {  //SHIFT
+                setTimeout(function () {
+                    Vars.set('transitionTime', Vars.get('defaultTransitionTime'));
+                }, 4000);
+            }
 		},
 		
         /**
@@ -301,6 +316,7 @@ define([], function (require) {
          */
 		addEventListeners: function () {
             $('body').bind('keydown', this.handle_KEYDOWN.bind(this));
+            $('body').bind('keyup', this.handle_KEYUP.bind(this));
 			$('body').bind('mousewheel', this.handle_MOUSEWHEEL.bind(this));
 			$(window).bind('resize', this.handle_RESIZE);
 
