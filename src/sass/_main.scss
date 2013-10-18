@@ -92,6 +92,7 @@ h3{
     -webkit-align-items: center;
     -webkit-justify-content: center;
 	position: absolute;
+	bottom: 30px;
     width: 100vw;
     margin-top: 5rem;
 	z-index: 3;
@@ -99,7 +100,7 @@ h3{
 
     @media screen and (max-width: 800px) {
         position: absolute;
-        bottom: 0;
+        bottom: 30px;
         margin-top: 0rem;
         @include transform(none);
 	    -webkit-mask: url(../assets/images/textures/nav_item_bg.png);
@@ -107,7 +108,7 @@ h3{
 
     @media screen and (max-height: 640px) {
         position: absolute;
-        bottom: 0;
+        bottom: 30px;
     }
 }
 
@@ -129,12 +130,13 @@ h3{
 #main-container{
     width: 100vw;
     height: 100vh;
+	position: relative;
 }
 
 #view-container{
 	position: absolute;
 	width: 100vw;
-	height: 100vh;
+    height: 100vh;
 	z-index: 1;
     -webkit-mask-image: none;
 
@@ -148,10 +150,12 @@ footer{
 	z-index: 10000;
 	position: fixed;
 	bottom: 0;
+	height: 20px;
 	font-size: 10px;
 	padding: 5px;
 	color: #ccc;
 	background: black;
+	overflow: auto;
 	
 	a{
 		color: #666;

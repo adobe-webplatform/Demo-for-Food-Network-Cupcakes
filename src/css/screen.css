@@ -1892,7 +1892,7 @@ body.menu-in #main-container {
 /* line 1, ../sass/components/_timer-view.scss */
 #timer {
   position: fixed;
-  bottom: 10px;
+  bottom: 40px;
   right: 0;
   z-index: 2;
   -webkit-transform: translateX(200px);
@@ -2004,7 +2004,7 @@ body.menu-in #main-container {
 #speech-ui {
   position: fixed;
   left: 0;
-  bottom: 10px;
+  bottom: 40px;
   font-family: arvo;
   font-size: 1rem;
   z-index: 5;
@@ -2405,6 +2405,7 @@ h3 {
   -webkit-align-items: center;
   -webkit-justify-content: center;
   position: absolute;
+  bottom: 30px;
   width: 100vw;
   margin-top: 5rem;
   z-index: 3;
@@ -2418,7 +2419,7 @@ h3 {
   /* line 89, ../sass/_main.scss */
   #navigation {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     margin-top: 0rem;
     -webkit-transform: none;
     -moz-transform: none;
@@ -2432,11 +2433,11 @@ h3 {
   /* line 89, ../sass/_main.scss */
   #navigation {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
   }
 }
 
-/* line 114, ../sass/_main.scss */
+/* line 115, ../sass/_main.scss */
 .subhead {
   width: 50%;
   margin: auto;
@@ -2445,7 +2446,7 @@ h3 {
   text-align: center;
 }
 
-/* line 122, ../sass/_main.scss */
+/* line 123, ../sass/_main.scss */
 #background {
   position: absolute;
   width: 100vw;
@@ -2453,13 +2454,14 @@ h3 {
   z-index: 0;
 }
 
-/* line 129, ../sass/_main.scss */
+/* line 130, ../sass/_main.scss */
 #main-container {
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
 
-/* line 134, ../sass/_main.scss */
+/* line 136, ../sass/_main.scss */
 #view-container {
   position: absolute;
   width: 100vw;
@@ -2467,23 +2469,25 @@ h3 {
   z-index: 1;
   -webkit-mask-image: none;
 }
-/* line 141, ../sass/_main.scss */
+/* line 143, ../sass/_main.scss */
 #view-container.mask {
   -webkit-mask-image: -webkit-canvas(mask);
   -webkit-mask-size: 100% 100%;
 }
 
-/* line 147, ../sass/_main.scss */
+/* line 149, ../sass/_main.scss */
 footer {
   z-index: 10000;
   position: fixed;
   bottom: 0;
+  height: 20px;
   font-size: 10px;
   padding: 5px;
   color: #ccc;
   background: black;
+  overflow: auto;
 }
-/* line 156, ../sass/_main.scss */
+/* line 160, ../sass/_main.scss */
 footer a {
   color: #666;
 }

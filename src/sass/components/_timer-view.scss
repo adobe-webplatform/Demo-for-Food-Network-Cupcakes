@@ -1,6 +1,6 @@
 #timer{
     position: fixed;
-    bottom: 10px;
+    bottom: 40px;
     right: 0;
     z-index: 2;
     @include transform(translateX(200px));
