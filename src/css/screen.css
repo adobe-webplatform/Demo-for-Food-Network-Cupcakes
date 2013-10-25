@@ -1805,7 +1805,7 @@ body.menu-in #main-container {
 #recipe-slide-state {
   position: absolute;
   box-sizing: border-box;
-  bottom: 0;
+  bottom: 20px;
   width: 100%;
   padding: 1em;
   text-align: center;

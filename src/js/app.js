@@ -280,6 +280,7 @@ define([], function (require) {
 		handle_KEYDOWN: function (e) {
             if (e.keyCode === 16) {  //SHIFT
                 e.preventDefault();
+				e.stopPropagation();
                 Vars.set('transitionTime', 3);
             }
 			UserEvent.trigger('keydown', e);
