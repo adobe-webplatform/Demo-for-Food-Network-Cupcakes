@@ -34,10 +34,12 @@ require.config({
 
 
 require(['app', 'jquery'], function (app) {
-
+    /*
+    * NO LONGER USE REGIONS IN CHROME
     if (!regionsSupported()) {
         return;
     }
+    */
 
     var $preloader = $('#preloader');
     $preloader.bind('webkitTransitionEnd', function () {

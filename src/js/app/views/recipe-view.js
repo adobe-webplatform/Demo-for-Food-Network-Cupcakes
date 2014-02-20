@@ -79,7 +79,7 @@ define([], function (require) {
 
         handle_slideBtn_CLICK: function (e) {
             e.preventDefault();
-            this.maximize();
+			AppEvent.trigger('maximize');
         }
 
 	});

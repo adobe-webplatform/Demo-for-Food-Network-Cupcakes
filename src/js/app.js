@@ -78,7 +78,6 @@ define([], function (require) {
          * start application
          */
 		start: function () {
-			
 			this.pages = new Pages();
 			this.router = new AppRouter();
 			this.bg = new BgView();
@@ -320,6 +319,7 @@ define([], function (require) {
             $('body').bind('keyup', this.handle_KEYUP.bind(this));
 			$('body').bind('mousewheel', this.handle_MOUSEWHEEL.bind(this));
 			$(window).bind('resize', this.handle_RESIZE);
+			$(window).bind('orientationchange', this.handle_RESIZE);
 
             $('.video-btn').bind('click', function (e) {
                 e.preventDefault();

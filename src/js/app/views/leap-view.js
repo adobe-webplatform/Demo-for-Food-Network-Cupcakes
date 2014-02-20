@@ -27,12 +27,18 @@ define([], function (require) {
 
 	LeapView = Backbone.View.extend({
 
-		initialize: function () {	
-		    if (Leap) {
-                Leap.loop({enableGestures: true}, this.update.bind(this));
-            }
+		initialize: function () {
+			this.connected = false;
+		    AppEvent.on('maximize', this.start.bind(this));
 		},
-
+		
+		start: function () {
+			if (Leap && this.connected !== true) {
+                Leap.loop({enableGestures: true}, this.update.bind(this));
+				this.connected = true;
+            }	
+		},
+		
         update: function (frame) {
             if (!_animating &&
                 frame.gestures.length > 0 && 

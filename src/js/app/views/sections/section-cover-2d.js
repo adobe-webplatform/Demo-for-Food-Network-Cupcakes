@@ -12,12 +12,12 @@ define([], function (require) {
 	require('vendor/tweenmax/src/uncompressed/plugins/ColorPropsPlugin');
 	require('raf');
 
-    //TweenPlugin.activate([ColorPropsPlugin]);
-
 	View = Backbone.View.extend({
 
 		initialize: function () {			
 			this.$el = $('#view-cover');
+
+			//TweenLite.ticker.useRAF(false);
 
             this.colorlist = [
                 'rgb(27, 177, 178)', 
@@ -36,12 +36,6 @@ define([], function (require) {
             this.colorcanvas.height = this.canvas.height;
             this.colorctx = this.colorcanvas.getContext('2d');
 
-            //blur canvas
-            //this.blurcanvas = document.createElement('canvas');
-            //this.blurcanvas.width = this.canvas.width;
-            //this.blurcanvas.height = this.canvas.height;
-            //this.blurctx = this.blurcanvas.getContext('2d');
-
             //draw canvas
             this.drawcanvas = document.createElement('canvas');
             this.drawcanvas.width = this.canvas.width;
@@ -55,34 +49,37 @@ define([], function (require) {
             this.delta = 0;
             this.animating = false;
 
-            //this.setup();
 		},
 		
 		start: function () {
             AppEvent.trigger('hidenav');
-            
 			this.applyRandomColor();
 		},
 
         setup: function () {
-            //this.applyRandomColor();
+	
         },
 
         handle_CLICK: function (e) {
-            //this.applyRandomColor(); 
+	
         },
 
         applyRandomColor: function () {
             var color = this.colorlist[Math.floor(Math.random() * this.colorlist.length)];
 
-            TweenMax.killTweensOf(this);
-            this.tween = TweenMax.to(this, 2, {
-                colorProps: {color: color}, 
-                onUpdate: this.drawColor.bind(this),
-                onComplete: this.applyRandomColor.bind(this)
-            });
+			this.tween = TweenMax.to(this, 2, {
+	        	colorProps: {color: color}, 
+	            onUpdate: this.drawColor.bind(this),
+	            onComplete: this.updateColor.bind(this)
+	        });
+
         },
 
+		updateColor: function () {
+			clearTimeout(this.to);
+			this.to = setTimeout(this.applyRandomColor.bind(this), 3000);
+		},
+		
         drawColor: function () {
             this.colorctx.clearRect(0, 0, this.colorcanvas.width, this.colorcanvas.height);
 
@@ -104,7 +101,6 @@ define([], function (require) {
             this.ctx.globalAlpha = 0.3;
             this.ctx.globalCompositeOperation = 'color-burn';
             this.ctx.drawImage(this.colorcanvas, 0, 0, this.canvas.width, this.canvas.height);
-            //this.ctx.drawImage(this.blurcanvas, 0, 0, this.canvas.width, this.canvas.height);
         },
 		
 		resize: function () {
