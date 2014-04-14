@@ -22,24 +22,24 @@ $teal: rgb(33, 176, 178);
         text-align: center;
         cursor: pointer;
         @include transition(color .2s);
-    
+
         @media screen and (max-width: 650px) {
             display: inline-block;
             padding: .5em 1em;
             border-bottom: none;
             border-right: 5px double white;
         }
-        
+
         @media screen and (max-width: 509px) {
             padding: .5em .3em;
         }
-        
+
         @media screen and (max-width: 423px) {
             display: block;
             border-right: none;
             border-bottom: 5px double white;
         }
-        
+
         &:last-child {
             border-bottom: none;
             border-right: none;
@@ -82,7 +82,7 @@ $teal: rgb(33, 176, 178);
     @media screen and (max-width: 980px) {
         width: auto;
     }
-    
+
     @media screen and (max-width: 650px) {
         position: static;
         margin: 1em auto;
@@ -153,29 +153,28 @@ $teal: rgb(33, 176, 178);
 
 .mix-rum-raisin{
     font-size: 1.3rem;
-    -webkit-shape-inside: polygon(nonzero, -4px 143px, 139px 143px, 149px 211px, 334px 402px, -7px 397px);
+    width: 40%;
 }
 
 .mix-mocha{
     height: 70%;
-    -webkit-shape-inside: polygon(nonzero, 2px 28px, 178px 28px, 181px 194px, 122px 387px, 0px 389px);
+    width: 40%;
 }
 
 .mix-orange{
-    -webkit-shape-inside: polygon(nonzero, 0px 0px, 151px 1px, 216px 64px, 402px 96px, 420px 170px, -1px 170px);
+    width: 50%;
 }
 
 .mix-chips{
-    -webkit-shape-inside: polygon(nonzero, -3px 30px, 150px 30px, 292px 386px, 0px 385px);
+    width: 60%;
 }
 
 .mix-poppy{
     height: 100%;
     text-align: right;
-    -webkit-shape-inside: polygon(nonzero, 0px 24px, 428px 24px, 429px 356px, 276px 202px, 0px 102px);
 }
 
 .mix-sprinkles{
     height: 100%;
-    -webkit-shape-inside: polygon(nonzero, -2px 24px, 153px 24px, 135px 177px, 169px 388px, 0px 389px);
+    width: 35%;
 }

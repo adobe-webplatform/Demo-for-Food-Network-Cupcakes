@@ -1,9 +1,10 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* import base css */
-/* line 17, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +26,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -1234,7 +1235,7 @@ body.menu-in #main-container {
   padding-bottom: 25%;
   width: 35%;
   background: rgba(255, 255, 255, 0.5);
-  -webkit-clip-path: ellipse(50%, 50%, 50%, 50%);
+  -webkit-clip-path: ellipse(50% 50% at 50% 50%);
   -webkit-transition: -webkit-clip-path 1s;
   -moz-transition: -webkit-clip-path 1s;
   -o-transition: -webkit-clip-path 1s;
@@ -1242,7 +1243,7 @@ body.menu-in #main-container {
 }
 /* line 364, ../sass/components/_section-frosting.scss */
 #frosting-mix-in-slides.hide {
-  -webkit-clip-path: ellipse(50%, 50%, 0, 0%);
+  -webkit-clip-path: ellipse(0 0% at 50% 50%);
 }
 
 /* line 369, ../sass/components/_section-frosting.scss */
@@ -1277,9 +1278,8 @@ body.menu-in #main-container {
 /* line 398, ../sass/components/_section-frosting.scss */
 .frosting-mix-slide p {
   width: 100%;
-  height: 100%;
+  height: 60%;
   font-size: 0.6em;
-  -webkit-shape-inside: ellipse(50%, 30%, 50%, 50%);
 }
 
 /* line 1, ../sass/components/_video-btn.scss */
@@ -1453,7 +1453,7 @@ body.menu-in #main-container {
 /* line 49, ../sass/components/_recipe-view.scss */
 #recipe sup {
   position: relative;
-  top: -0.8em;
+  top: -.8em;
 }
 /* line 54, ../sass/components/_recipe-view.scss */
 #recipe .byline {
@@ -2265,36 +2265,35 @@ body.menu-in #main-container {
 /* line 154, ../sass/components/_toggle-gallery.scss */
 .mix-rum-raisin {
   font-size: 1.3rem;
-  -webkit-shape-inside: polygon(nonzero, -4px 143px, 139px 143px, 149px 211px, 334px 402px, -7px 397px);
+  width: 40%;
 }
 
 /* line 159, ../sass/components/_toggle-gallery.scss */
 .mix-mocha {
   height: 70%;
-  -webkit-shape-inside: polygon(nonzero, 2px 28px, 178px 28px, 181px 194px, 122px 387px, 0px 389px);
+  width: 40%;
 }
 
 /* line 164, ../sass/components/_toggle-gallery.scss */
 .mix-orange {
-  -webkit-shape-inside: polygon(nonzero, 0px 0px, 151px 1px, 216px 64px, 402px 96px, 420px 170px, -1px 170px);
+  width: 50%;
 }
 
 /* line 168, ../sass/components/_toggle-gallery.scss */
 .mix-chips {
-  -webkit-shape-inside: polygon(nonzero, -3px 30px, 150px 30px, 292px 386px, 0px 385px);
+  width: 60%;
 }
 
 /* line 172, ../sass/components/_toggle-gallery.scss */
 .mix-poppy {
   height: 100%;
   text-align: right;
-  -webkit-shape-inside: polygon(nonzero, 0px 24px, 428px 24px, 429px 356px, 276px 202px, 0px 102px);
 }
 
-/* line 178, ../sass/components/_toggle-gallery.scss */
+/* line 177, ../sass/components/_toggle-gallery.scss */
 .mix-sprinkles {
   height: 100%;
-  -webkit-shape-inside: polygon(nonzero, -2px 24px, 153px 24px, 135px 177px, 169px 388px, 0px 389px);
+  width: 35%;
 }
 
 /* line 2, ../sass/_main.scss */

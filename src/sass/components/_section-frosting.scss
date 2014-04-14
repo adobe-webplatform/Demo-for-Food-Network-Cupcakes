@@ -270,7 +270,7 @@
     text-decoration: none;
     width: 16%;
     padding-top: 16%;
-    
+
     &:hover{
         color: darken(#d84a1a, 20%);
     }
@@ -358,11 +358,11 @@
     padding-bottom: 25%;
     width: 35%;
     background: rgba(255, 255, 255, 0.5);
-    -webkit-clip-path: ellipse(50%, 50%, 50%, 50%);
+    -webkit-clip-path: ellipse(50% 50% at 50% 50%);
     @include transition(-webkit-clip-path 1s);
 
     &.hide{
-        -webkit-clip-path: ellipse(50%, 50%, 0, 0%);
+        -webkit-clip-path: ellipse(0 0% at 50% 50%);
     }
 }
 
@@ -397,8 +397,7 @@
 
     p{
         width: 100%;
-        height: 100%;
+        height: 60%;
         font-size: 0.6em;
-        -webkit-shape-inside: ellipse(50%, 30%, 50%, 50%);
     }
 }
