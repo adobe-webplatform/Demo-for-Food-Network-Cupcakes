@@ -37,13 +37,18 @@ define([], function (require) {
             this.$viewcontainer = $('#view-container');
 
 			this.canvas = {width: window.innerWidth, height: window.innerHeight};
-            this.setSize();
-			this.ctx = document.getCSSCanvasContext('2d', 'mask', this.canvas.width, this.canvas.height);
-					
-			this.transitions = [
-				new TransitionDots(this.canvas, this.ctx),
-				new TransitionCircle(this.canvas, this.ctx)
-			];
+			this.setSize();
+			if (document.getCSSCanvasContext) {
+				this.ctx = document.getCSSCanvasContext('2d', 'mask', this.canvas.width, this.canvas.height);
+			}
+			
+			if (this.ctx) {
+				this.transitions = [
+					new TransitionDots(this.canvas, this.ctx),
+					new TransitionCircle(this.canvas, this.ctx)
+				];
+			}
+
 			
 			this.currentTransition = 0;
 			
@@ -58,20 +63,27 @@ define([], function (require) {
 			var page = Vars.get('pages').findWhere({id: num});
 			this.currentTransition = page.get('mask');
 			
-			this.transitions[this.currentTransition].draw();
+			if (this.transitions) {
+				this.transitions[this.currentTransition].draw();
+
+			}
 		},
 		
 		goto: function (num) {
 			var page = Vars.get('pages').findWhere({id: num});
 			this.nextTransition = page.get('mask');
 			
-            this.$viewcontainer.addClass('mask'); //add mask
-			this.transitions[this.currentTransition].animOut(this.handle_ANIM_OUT.bind(this));
+			this.$viewcontainer.addClass('mask'); //add mask
+			if (this.transitions) {
+				this.transitions[this.currentTransition].animOut(this.handle_ANIM_OUT.bind(this));
+			}
 		},
 		
 		handle_ANIM_OUT: function () {
 			this.currentTransition = this.nextTransition;
-			this.transitions[this.currentTransition].animIn(this.handle_ANIM_OUT_COMPLETE.bind(this));
+			if (this.transitions) {
+				this.transitions[this.currentTransition].animIn(this.handle_ANIM_OUT_COMPLETE.bind(this));
+			}
 		},
 
         handle_ANIM_OUT_COMPLETE: function () {
@@ -100,8 +112,10 @@ define([], function (require) {
 
             this.resizeTimeout = setTimeout(function () { //throttle resize
 
-                this.setSize();
-                this.ctx = document.getCSSCanvasContext('2d', 'mask', this.canvas.width, this.canvas.height);
+				this.setSize();
+				if (document.getCSSCanvasContext) {
+					this.ctx = document.getCSSCanvasContext('2d', 'mask', this.canvas.width, this.canvas.height);
+				}
                 //this.transitions[this.currentTransition].resize();
                 //this.transitions[this.currentTransition].draw();
             }.bind(this), 200);
